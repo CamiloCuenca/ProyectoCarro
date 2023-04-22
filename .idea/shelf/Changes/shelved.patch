@@ -1,0 +1,34 @@
+Index: src/main/java/com/tucarro/proyectocarro/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/tucarro/proyectocarro/HelloApplication.java b/src/main/java/com/tucarro/proyectocarro/HelloApplication.java
+new file mode 100644
+--- /dev/null	(date 1682202928361)
++++ b/src/main/java/com/tucarro/proyectocarro/HelloApplication.java	(date 1682202928361)
+@@ -0,0 +1,23 @@
++package com.tucarro.proyectocarro;
++
++import javafx.application.Application;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
++import javafx.stage.Stage;
++
++import java.io.IOException;
++
++public class HelloApplication extends Application {
++    @Override
++    public void start(Stage stage) throws IOException {
++        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Inicio-view.fxml"));
++        Scene scene = new Scene(fxmlLoader.load(), 674, 426);
++        stage.setTitle("Hello!");
++        stage.setScene(scene);
++        stage.show();
++    }
++
++    public static void main(String[] args) {
++        launch();
++    }
++}
+\ No newline at end of file
