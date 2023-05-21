@@ -5,4 +5,9 @@ public class Cliente extends  Persona{
         super(nombre, apellido, cedula, correo, contraseña);
     }
 
+    public Cliente() {
+
+    }
+
+
 }

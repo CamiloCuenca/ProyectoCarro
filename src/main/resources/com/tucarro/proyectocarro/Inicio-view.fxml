@@ -57,6 +57,7 @@
                   <Font size="14.0" />
                </font>
             </PasswordField>
+            <Button fx:id="btnRegistrarse" layoutX="211.0" layoutY="386.0" mnemonicParsing="false" onAction="#registrarButtonOnCation" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
          </children>
       </AnchorPane>
    </right>

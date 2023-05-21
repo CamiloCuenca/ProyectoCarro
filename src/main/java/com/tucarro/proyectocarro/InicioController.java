@@ -11,14 +11,18 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Cliente;
+import model.Empleado;
 import model.RegistroEmpleados;
+
+
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class InicioController {
-    public static ArrayList<String> listanombres = new RegistroEmpleados().llenarUsusarios();
-    public static ArrayList<String> listaContrasenas = new RegistroEmpleados().llenarCedulaususarios();
+
+    public static ArrayList<Cliente> listaClientes= new RegistroEmpleados().buscarCliente();
     public static String nombre;
     public static String contrasena;
     @FXML
@@ -39,14 +43,19 @@ public class InicioController {
 
     public void loginButtonOnAction(ActionEvent event) throws IOException {
 
-        if(lblNombre.getText().equals("") || lblContrasena.getText().equals("")){
-            loginerror.setText("Por favor llenar todos los campos requeridos");
-        }else {
             nombre = txtNombre.getText();
             contrasena = pswContasena.getText();
-            for(int i =0;i<listanombres.size();i++){
 
-                if (listanombres.get(i).contains(nombre) && listaContrasenas.get(i).contains(contrasena)){
+            for(int i =0;i<listaClientes.size();i++){
+
+                if(nombre.isEmpty()&&contrasena.isEmpty()){
+                    loginerror.setText("LLene todos los campos");
+                } else if (nombre.isEmpty() || contrasena.isEmpty()) {
+                    loginerror.setText("algunos campos no estan llenos");
+
+                }
+
+                else if(listaClientes.get(i).getNombre().contains(nombre) && listaClientes.get(i).getContraseña().contains(contrasena)){
                     loginerror.setText("Se inicio Secion correctamente");
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("VentanaPrincipal.fxml"));
@@ -55,13 +64,14 @@ public class InicioController {
                     stage.show();
                     // en esta linea , esconde el stage del login y carga el nuevo stage
                     ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
-
                     break;
-                }else {
-                    loginerror.setText("error");
+                }else{
+                    loginerror.setText("Error no se encuentra registrado");
                 }
+
+
             }
-        }
+
 
 
 
@@ -70,6 +80,16 @@ public class InicioController {
     public void cancelButtonOnAction(ActionEvent event) {
         Stage stage= (Stage) btnCancelar.getScene().getWindow();
         stage.close();
+
+    }
+
+
+    public void registrarButtonOnCation(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
 
     }
 }
