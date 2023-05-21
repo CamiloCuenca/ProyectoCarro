@@ -3,13 +3,16 @@ package model;
 import java.util.ArrayList;
 
 public class RegistroEmpleados {
-    ArrayList<Cliente> clientes = new ArrayList<>();
+   public static  ArrayList<Cliente> clientes = new ArrayList<>();
+   public static  ArrayList<Empleado> empleados = new ArrayList<>();
 
 
-
-    public ArrayList<Cliente> añandirCliente(Cliente cliente){
-        clientes.add(cliente);
-        return clientes;
+    public  ArrayList<Empleado> getEmpleados() {
+        Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345",123);
+        empleadox.setNombre("Pedro");
+        empleadox.setContraseña("12345");
+        empleados.add(empleadox);
+        return empleados;
     }
 
     public ArrayList<Cliente> buscarCliente(){
@@ -28,7 +31,7 @@ public class RegistroEmpleados {
         clientey.setCorreo("camilo@gotmail");
         clientey.setContraseña("12345");
 
-        clientes.add(clientey);
+        //clientes.add(clientey);
         clientes.add(clientex);
         return clientes;
     }

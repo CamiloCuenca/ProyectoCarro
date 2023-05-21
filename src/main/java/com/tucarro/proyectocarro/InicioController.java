@@ -26,6 +26,8 @@ public class InicioController {
     public static String nombre;
     public static String contrasena;
     @FXML
+    private Button btnEmpleado;
+    @FXML
     private Button btnCancelar;
     @FXML
     private Label loginerror;
@@ -46,7 +48,7 @@ public class InicioController {
             nombre = txtNombre.getText();
             contrasena = pswContasena.getText();
 
-            for(int i =0;i<listaClientes.size();i++){
+            for(int i =0;i<RegistroEmpleados.clientes.size();i++){
 
                 if(nombre.isEmpty()&&contrasena.isEmpty()){
                     loginerror.setText("LLene todos los campos");
@@ -55,7 +57,7 @@ public class InicioController {
 
                 }
 
-                else if(listaClientes.get(i).getNombre().contains(nombre) && listaClientes.get(i).getContraseña().contains(contrasena)){
+                else if(RegistroEmpleados.clientes.get(i).getNombre().equals(nombre) && RegistroEmpleados.clientes.get(i).getContraseña().equals(contrasena)){
                     loginerror.setText("Se inicio Secion correctamente");
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("VentanaPrincipal.fxml"));
@@ -91,6 +93,17 @@ public class InicioController {
         stage.setScene(escena);
         stage.show();
 
+    }
+
+    @FXML
+    void loginEmpleado(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("loginEmpleado.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
     }
 }
 

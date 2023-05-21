@@ -58,6 +58,11 @@
                </font>
             </PasswordField>
             <Button fx:id="btnRegistrarse" layoutX="211.0" layoutY="386.0" mnemonicParsing="false" onAction="#registrarButtonOnCation" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
+            <Button fx:id="btnEmpleado" layoutX="375.0" layoutY="386.0" mnemonicParsing="false" onAction="#loginEmpleado" opacity="0.5" style="-fx-background-radius: 50;" text="Soy Empleado">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </right>

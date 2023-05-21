@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.RegistroClientesController">
    <top>
       <AnchorPane prefHeight="94.0" prefWidth="604.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <children>
@@ -35,7 +34,7 @@
             <TextField fx:id="txtCedula" layoutX="227.0" layoutY="126.0" promptText="Cedula" />
             <TextField fx:id="txtCorreo" layoutX="227.0" layoutY="172.0" promptText="ejemolo@gmail.com" />
             <PasswordField fx:id="pwrContraseña" layoutX="227.0" layoutY="219.0" />
-            <Button fx:id="btnaceptar" layoutX="273.0" layoutY="273.0" mnemonicParsing="false" text="Aceptar" />
+            <Button fx:id="btnaceptar" layoutX="273.0" layoutY="273.0" mnemonicParsing="false" onAction="#AceptarButtonOnAction" text="Aceptar" />
          </children>
       </AnchorPane>
    </center>

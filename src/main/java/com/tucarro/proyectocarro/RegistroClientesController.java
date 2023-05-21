@@ -2,6 +2,7 @@ package com.tucarro.proyectocarro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,10 +35,14 @@ public class RegistroClientesController {
 
 
 
-    public void AceptarButtonOnAction(ActionEvent event) throws IOException {
+    public void AceptarButtonOnAction(ActionEvent event){
+          Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
+          //Cliente clientePrueba = new Cliente("Carlos","Perez","100","correo","12345");
+          //RegistroEmpleados.clientes.add(clientePrueba);
+          RegistroEmpleados.clientes.add(clientex);
 
-
-
+        // en esta linea , esconde el stage del Registro
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
     }
 
 
