@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/3126647.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/b2b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/candado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCarro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCasa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoTransacciones.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/logo.png" afterDir="false" />
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/CardVehiculoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/esenaInicioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/cardVehiculo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/3126647.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/b2b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/candado.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCarro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCasa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoTransacciones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -64,16 +60,35 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/camilo/IdeaProjects/ProyectoCarro/src/main/resources"
+    "last_opened_file_path": "C:/Users/camilo/IdeaProjects/ProyectoCarro"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources\com.tuCarro.Img" />
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.tucarro.proyectocarro" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="model" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tucarro.proyectocarro.HelloApplication" />
+      <module name="ProyectoCarro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tucarro.proyectocarro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,6 +99,29 @@
       <option name="presentableId" value="Default" />
       <updated>1682202527287</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
+      <created>1682203486092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682203486092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
   </component>
 </project>

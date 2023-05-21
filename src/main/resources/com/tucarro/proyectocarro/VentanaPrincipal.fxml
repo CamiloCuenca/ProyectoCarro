@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.ventanaPrincipalController">
    <top>
       <AnchorPane prefHeight="106.0" prefWidth="927.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <children>
@@ -63,10 +68,38 @@
          </children></AnchorPane>
    </left>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="534.0" prefWidth="778.0" />
+            <HBox prefHeight="41.0" prefWidth="755.0">
+               <children>
+                  <Label prefHeight="33.0" prefWidth="163.0" text="Vehiculos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets top="5.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="6.0" left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+            </HBox>
+            <ScrollPane prefHeight="301.0" prefWidth="729.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
          </children>
-      </Pane>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
    </center>
 </BorderPane>

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class RegistroEmpleados {
 
 
+
+
+
     public ArrayList<String> llenarUsusarios() {
         ArrayList<String> listaNombre = new ArrayList<>();
         listaNombre.add("Juan Camilo");
