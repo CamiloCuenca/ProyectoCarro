@@ -21,8 +21,7 @@ public  abstract class Persona {
 
 
 
-
-    //Get and Set
+//Get and Set
 
 
 

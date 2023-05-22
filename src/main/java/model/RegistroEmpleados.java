@@ -1,10 +1,15 @@
 package model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 public class RegistroEmpleados {
    public static  ArrayList<Cliente> clientes = new ArrayList<>();
    public static  ArrayList<Empleado> empleados = new ArrayList<>();
+
+
 
 
     public  ArrayList<Empleado> getEmpleados() {

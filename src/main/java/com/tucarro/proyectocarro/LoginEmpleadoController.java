@@ -22,7 +22,7 @@ public class LoginEmpleadoController {
 
     private String nombre;
     private String contrasena;
-    private String ID;
+    private int ID;
     public static ArrayList<Empleado> listaEmpleados= new RegistroEmpleados ().getEmpleados();
 
     @FXML
@@ -43,6 +43,7 @@ public class LoginEmpleadoController {
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
+        ID = Integer.parseInt(txtID.getText());
 
         for(int i = 0; i< RegistroEmpleados.empleados.size(); i++){
 
@@ -53,7 +54,7 @@ public class LoginEmpleadoController {
 
             }
 
-            else if(RegistroEmpleados.empleados.get(i).getNombre().equals(nombre) && RegistroEmpleados.empleados.get(i).getContraseña().equals(contrasena)){
+            else if(RegistroEmpleados.empleados.get(i).getNombre().equals(nombre) && RegistroEmpleados.empleados.get(i).getContraseña().equals(contrasena) && RegistroEmpleados.empleados.get(i).getId()==ID){
                 loginError.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaEmpleado.fxml"));

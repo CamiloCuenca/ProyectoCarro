@@ -7,7 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+
 
 import java.io.IOException;
 
@@ -16,18 +18,17 @@ public class VentanaEmpleadoController {
 
     @FXML
     private Button btnClientes;
+    @FXML
+    private BorderPane borderPane;
 
     @FXML
     void clientes(ActionEvent event) throws IOException {
 
-
-
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("clientes.fxml"));
-        Scene escena = new Scene(root);
-
-        stage.setScene(escena);
-        stage.show();
+       FXMLLoader loader = new FXMLLoader();
+       loader.setLocation(getClass().getResource("clientes.fxml"));
+       AnchorPane pane = (AnchorPane) loader.load() ;
+       borderPane.setCenter(pane);
 
     }
 }
