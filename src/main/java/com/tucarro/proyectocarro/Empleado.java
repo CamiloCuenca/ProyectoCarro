@@ -1,6 +1,10 @@
-package model;
+package com.tucarro.proyectocarro;
+import com.tucarro.proyectocarro.Cliente;
+import model.Persona;
+import model.Vehiculo;
+
 import java.util.ArrayList;
-public class Empleado extends Persona{
+public class Empleado extends Persona {
     //Atributos
     //private ArrayList<Reportes> reportes = new  ArrayList<Reportes>();
     private enum tipoEstado{ACTIVO,BLOQUEADO};

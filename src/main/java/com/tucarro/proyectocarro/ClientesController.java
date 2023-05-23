@@ -1,18 +1,22 @@
 package com.tucarro.proyectocarro;
 
+import com.tucarro.proyectocarro.Cliente;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import model.*;
+import javafx.stage.Stage;
 import model.Persona;
 import model.RegistroEmpleados;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -45,9 +49,9 @@ public class ClientesController implements Initializable {
         colCorreos.setCellValueFactory(new PropertyValueFactory<>("correo"));
 
         // Crear lista de clientes
-        ArrayList<Persona> listaClientes = new ArrayList<>();
-        listaClientes.add(new Cliente("Juan", "Pérez", "123456789", "juan@example.com", "contraseña1"));
-        listaClientes.add(new Cliente("María", "López", "987654321", "maria@example.com", "contraseña2"));
+        ArrayList<Cliente> listaClientes = RegistroEmpleados.clientes;
+        //listaClientes.add(new Cliente("Juan", "Pérez", "123456789", "juan@example.com", "contraseña1"));
+        //listaClientes.add(new Cliente("María", "López", "987654321", "maria@example.com", "contraseña2"));
 
         // Convertir la lista a un ObservableList
         ObservableList<Persona> datosClientes = FXCollections.observableArrayList(listaClientes);
@@ -58,7 +62,14 @@ public class ClientesController implements Initializable {
     }
 
     @FXML
-    void agregar(ActionEvent event) {
+    void agregar(ActionEvent event) throws IOException {
+
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+
 
 
 

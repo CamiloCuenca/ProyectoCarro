@@ -1,7 +1,7 @@
 package model;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.tucarro.proyectocarro.Cliente;
+import com.tucarro.proyectocarro.Empleado;
 
 import java.util.ArrayList;
 
@@ -9,13 +9,17 @@ public class RegistroEmpleados {
    public static  ArrayList<Cliente> clientes = new ArrayList<>();
    public static  ArrayList<Empleado> empleados = new ArrayList<>();
 
+   public static ArrayList<Administrador> administradores = new ArrayList<>();
 
 
+    public ArrayList<Administrador> getAdministradores (){
+        Administrador admin1 = new Administrador("Profe","smit","1234567890","profe@gmail.com","12345");
+        administradores.add(admin1);
+        return administradores;
+    }
 
     public  ArrayList<Empleado> getEmpleados() {
         Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345",123);
-        empleadox.setNombre("Pedro");
-        empleadox.setContraseña("12345");
         empleados.add(empleadox);
         return empleados;
     }

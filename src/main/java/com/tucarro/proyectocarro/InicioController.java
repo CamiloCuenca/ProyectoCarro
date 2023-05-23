@@ -11,8 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Cliente;
-import model.Empleado;
+import model.Administrador;
 import model.RegistroEmpleados;
 
 
@@ -23,6 +22,7 @@ import java.util.ArrayList;
 public class InicioController {
 
     public static ArrayList<Cliente> listaClientes= new RegistroEmpleados().buscarCliente();
+    public static ArrayList<Administrador> listaAdministradores= new RegistroEmpleados().getAdministradores();
     public static String nombre;
     public static String contrasena;
     @FXML
@@ -67,7 +67,18 @@ public class InicioController {
                     // en esta linea , esconde el stage del login y carga el nuevo stage
                     ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
                     break;
-                }else{
+                } else if (RegistroEmpleados.administradores.get(i).getNombre().equals(nombre) && RegistroEmpleados.administradores.get(i).getContraseña().equals(contrasena)) {
+                    loginerror.setText("Se inicio Secion correctamente");
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("VentanaAdministrador.fxml"));
+                    Scene escena = new Scene(root);
+                    stage.setScene(escena);
+                    stage.show();
+                    // en esta linea , esconde el stage del login y carga el nuevo stage
+                    ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+
+                } else{
                     loginerror.setText("Error no se encuentra registrado");
                 }
 

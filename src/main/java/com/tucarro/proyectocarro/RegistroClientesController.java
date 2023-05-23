@@ -6,11 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.Cliente;
 import model.RegistroEmpleados;
-import com.tucarro.proyectocarro.InicioController.*;
-import java.io.IOException;
-import java.util.ArrayList;
 
 
 public class RegistroClientesController {

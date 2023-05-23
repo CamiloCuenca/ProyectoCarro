@@ -5,4 +5,6 @@ module com.tucarro.proyectocarro {
 
     opens com.tucarro.proyectocarro to javafx.fxml;
     exports com.tucarro.proyectocarro;
+    exports model;
+    opens model to javafx.fxml;
 }
