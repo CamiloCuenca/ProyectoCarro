@@ -3,11 +3,11 @@ package model;
 public  abstract class Persona {
 
     //Atributos
-    private String nombre ;
+    private String nombre;
     private String apellido;
-    private String cedula ;
-    private String correo ;
-    private String contraseña ;
+    private String cedula;
+    private String correo;
+    private String contraseña;
 
     //Constructor
     public Persona(String nombre, String apellido, String cedula, String correo, String contraseña) {

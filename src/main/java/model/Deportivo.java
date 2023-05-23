@@ -1,56 +1,37 @@
 package model;
 
-public class Deportivo extends Automovil{
+public class Deportivo extends AbsAutomovil {
+    // Atributos
     private int caballosDeFuerza;
     private double tiempo100kl;
 
-    public Deportivo(int caballosDeFuerza, double tiempo100kl, String marca, String modelo, String numPlaca,
-                     int cambios, int velocidadMaxima, int cilindraje,
-                     String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-                     TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
-                     TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
-                     TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision,
-                     TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
-                esNuevo,
-                tieneABS, disponibilidad, numerosPasajeros, numeroPuertas, numBolasAire, tieneCamaraReversa,
-                tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
-                tieneAsistentePerCarril);
+    // Constructor
+    public Deportivo(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+                     int numerosPasajeros, int numeroPuertas, int numBolasAire, int caballosDeFuerza, double tiempo100kl,
+                     String[] fotos, TipoCombustible tipoCombustible,
+                     TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas,
+                numBolasAire,
+                fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad);
         this.caballosDeFuerza = caballosDeFuerza;
         this.tiempo100kl = tiempo100kl;
-
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
-        String v = "Sedan" + ", \nMarca: "
-                + getMarca() + ", \nModelo: "
-                + getModelo() + ", \nNumero Placa: "
-                + getNumPlaca() + ", \nCambios: "
-                + getCambios() + ", \nVelodidadMaxima: "
-                + getVelocidadMaxima() + ", \nCilindraje: "
-                + getCilindraje() + ", \nTipo Combustible: "
-                + getTipoCombustible() + ", \nTipo Trasmisión: "
-                + getTipoTrasmision() + "; \n Es nuevo: "
-                + getEsNuevo() + ", \nTiene ABS: "
-                + getTieneABS() + ", \nDisponibilidad: "
-                + getDisponibilidad() + ", \nNumero de pasajeros: "
-                + getNumerosPasajeros() + ", \nNumero de puertas: "
-                + getNumeroPuertas() + ",\nNumero de bolsas de aire: "
-                + getNumBolasAire() + ", \nCamara de Reversa: "
-                + getTieneCamaraReversa() + ", \nAire Acondicionado: "
-                + getTieneAireAcondicionado() + ", \nVelocidad Crucero: "
-                + getTieneVelocidadCrucero() + ", \nSensor Colisión: "
-                + getTieneSensorColision() + ", \nSensor Cruzado: "
-                + gettIeneSensorCruzado() + ", \nAsistente de Permanencia: "
-                + getTieneAsistentePerCarril() + ", \nCaballos de Fuerza: "
-                + caballosDeFuerza + ", \nTiempo para 100kl: "
-                + tiempo100kl;
-
+        String v = "Deportivo" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
+                + getNumPlaca() + ", \nCambios: " + getCambios() + ", \nVelodidadMaxima: " + getVelocidadMaxima()
+                + ", \nCilindraje: " + getCilindraje() + ", \nNumeros de pasajeros: " + getNumerosPasajeros()
+                + ", \nNuermo de puertas: " + getNumeroPuertas() + ", \nNumero de bolsas de aire: " + getNumBolasAire()
+                + ", \nCaballos de fuerza: " + caballosDeFuerza + ", \nTiempo de 0kl a 100kl: " + tiempo100kl
+                + ", \nTipo Combustible: " + getTipoCombustible()
+                + ", \nTipo Trasmisión: " + getTipoTrasmision() + "; \n Es nuevo: " + getEsNuevo()
+                + ", \nDisponibilidad: " + getDisponibilidad();
         return v;
-
     }
 
+    // GETTRES Y SETTERS
     public int getCaballosDeFuerza() {
         return caballosDeFuerza;
     }
@@ -68,3 +49,4 @@ public class Deportivo extends Automovil{
     }
 
 }
+

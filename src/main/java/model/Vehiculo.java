@@ -1,7 +1,7 @@
 package model;
 
 public abstract class Vehiculo {
-
+    // Atributos clase padre
     private String marca;
     private String modelo;
     private String numPlaca;
@@ -28,21 +28,16 @@ public abstract class Vehiculo {
 
     EsNuevo esNuevo;
 
-    public enum TieneABS {
-        SI, NO
-    };
-
-    TieneABS tieneABS;
-
     public enum Disponibilidad {
         DISPONIBLE, VENDIDO
     };
 
     Disponibilidad disponibilidad;
 
+    // Constructor
     public Vehiculo(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
                     String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-                    TieneABS tieneABS, Disponibilidad disponibilidad) {
+                    Disponibilidad disponibilidad) {
         this.marca = marca;
         this.modelo = modelo;
         this.numPlaca = numPlaca;
@@ -53,10 +48,14 @@ public abstract class Vehiculo {
         this.tipoCombustible = tipoCombustible;
         this.tipoTrasmision = tipoTrasmision;
         this.esNuevo = esNuevo;
-        this.tieneABS = tieneABS;
         this.disponibilidad = disponibilidad;
     }
 
+    // Metodo imprimir
+    @Override
+    public abstract String toString();
+
+    // GETTERS Y SETTRES
     public String getMarca() {
         return marca;
     }
@@ -137,14 +136,6 @@ public abstract class Vehiculo {
         this.esNuevo = esNuevo;
     }
 
-    public TieneABS getTieneABS() {
-        return tieneABS;
-    }
-
-    public void setTieneABS(TieneABS tieneABS) {
-        this.tieneABS = tieneABS;
-    }
-
     public Disponibilidad getDisponibilidad() {
         return disponibilidad;
     }
@@ -152,8 +143,5 @@ public abstract class Vehiculo {
     public void setDisponibilidad(Disponibilidad disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
-
-    @Override
-    public abstract String toString();
 
 }
