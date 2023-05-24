@@ -3,6 +3,7 @@ package com.tucarro.proyectocarro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,7 +24,21 @@ public class VentanaAdministradorController {
     private Button btnEmpleados;
 
     @FXML
+    private Button btnRegresar;
+
+    @FXML
     private Button btnRegistros;
+
+    @FXML
+    void Regresar(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Inicio-view.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+    }
 
     //private static ArrayList<Empleado> empleadoArrayList = new RegistroEmpleados().getEmpleados();
     @FXML

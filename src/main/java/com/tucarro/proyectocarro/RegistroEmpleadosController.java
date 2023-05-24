@@ -2,13 +2,18 @@ package com.tucarro.proyectocarro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.RegistroEmpleados;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,6 +24,9 @@ public class RegistroEmpleadosController implements Initializable {
 
     @FXML
     private Button btnAgregar;
+
+    @FXML
+    private Button btnRegresar;
 
     @FXML
     private TextField txtApellido;
@@ -39,6 +47,16 @@ public class RegistroEmpleadosController implements Initializable {
     private TextField txtNombre;
     @FXML
     private ChoiceBox<String> cbEstado;
+
+    @FXML
+    void Regresar(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("VentanaAdministrador.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+    }
 
     @FXML
     void AgregarAction(ActionEvent event) {
