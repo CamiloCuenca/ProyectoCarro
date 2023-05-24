@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/CardVehiculoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/esenaInicioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/cardVehiculo.fxml" afterDir="false" />
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se modifico varias clases interfaz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/3126647.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/b2b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/candado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCarro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCasa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoTransacciones.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,27 +28,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2Oni0ZxgMx4kUFwHxicH13gKLP9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/camilo/IdeaProjects/ProyectoCarro"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources\com.tuCarro.Img" />
@@ -76,8 +47,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tucarro.proyectocarro.HelloApplication" />
+    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tucarro.proyectocarro.main" />
       <module name="ProyectoCarro" />
       <extension name="coverage">
         <pattern>
@@ -106,7 +77,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682203486092</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se modifico dos botones">
+      <created>1684902633326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684902633326</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se modificaron algunas interfaz">
+      <created>1684904237007</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684904237007</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se modifico varias clases interfaz">
+      <created>1684906151877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684906151877</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,9 +111,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
+    <MESSAGE value="Se modifico dos botones" />
+    <MESSAGE value="Se modificaron algunas interfaz" />
+    <MESSAGE value="Se modifico varias clases interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se modifico varias clases interfaz" />
   </component>
 </project>
