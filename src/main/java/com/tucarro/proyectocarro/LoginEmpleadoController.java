@@ -27,6 +27,10 @@ public class LoginEmpleadoController {
     private Button btnAceptar;
 
     @FXML
+    private Button btnRegresar;
+
+
+    @FXML
     private PasswordField pswContrasena;
 
     @FXML
@@ -37,6 +41,17 @@ public class LoginEmpleadoController {
     @FXML
     private Label loginError;
 
+    @FXML
+    void Regresar(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Inicio-view.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        // en esta linea , esconde el stage del login y carga el nuevo stage
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+    }
     @FXML
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();

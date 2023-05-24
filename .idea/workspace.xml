@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

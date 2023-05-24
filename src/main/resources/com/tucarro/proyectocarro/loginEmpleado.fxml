@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginEmpleadoController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
@@ -19,11 +18,12 @@
                   <Image url="@../../../com.tuCarro.Img/logo.png" />
                </image>
             </ImageView>
+            <Button fx:id="btnRegresar" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="28.0" prefWidth="91.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textAlignment="JUSTIFY" textFill="#ff5500" />
          </children>
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="154.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
