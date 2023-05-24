@@ -22,14 +22,14 @@
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="350.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="129.0" layoutY="31.0" text="Nombre" />
             <Label layoutX="129.0" layoutY="64.0" text="Apellido" />
-            <Label layoutX="127.0" layoutY="97.0" text="Cedula" />
-            <Label layoutX="127.0" layoutY="136.0" text="Correo" />
-            <Label layoutX="115.0" layoutY="176.0" text="Contraseña" />
-            <Label layoutX="139.0" layoutY="215.0" text="ID" />
+            <Label layoutX="132.0" layoutY="97.0" text="Cedula" />
+            <Label layoutX="133.0" layoutY="136.0" text="Correo" />
+            <Label layoutX="104.0" layoutY="176.0" text="Contraseña" />
+            <Label layoutX="155.0" layoutY="215.0" text="ID" />
             <Label layoutX="133.0" layoutY="251.0" text="Estado" />
             <TextField fx:id="txtNombre" layoutX="182.0" layoutY="27.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-radius: 50;" />
             <TextField fx:id="txtApellido" layoutX="182.0" layoutY="60.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-radius: 50;" />
@@ -37,8 +37,8 @@
             <TextField fx:id="txtCorreo" layoutX="181.0" layoutY="132.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-radius: 50;" />
             <TextField fx:id="txtContrasena" layoutX="181.0" layoutY="172.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-radius: 50;" />
             <TextField fx:id="TxtId" layoutX="182.0" layoutY="211.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-radius: 50;" />
-            <Button fx:id="btnAgregar" layoutX="441.0" layoutY="291.0" mnemonicParsing="false" onAction="#AgregarAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 50;" text="Agregar" />
-            <ChoiceBox fx:id="cbEstado" layoutX="225.0" layoutY="247.0" prefWidth="150.0" />
+            <Button fx:id="btnAgregar" layoutX="256.0" layoutY="290.0" mnemonicParsing="false" onAction="#AgregarAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 50;" text="Agregar" />
+            <ChoiceBox fx:id="cbEstado" layoutX="225.0" layoutY="247.0" prefWidth="150.0" style="-fx-background-color: #ff3d26;" />
          </children>
       </AnchorPane>
    </left>
