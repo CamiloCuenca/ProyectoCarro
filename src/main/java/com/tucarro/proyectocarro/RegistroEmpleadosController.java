@@ -49,7 +49,7 @@ public class RegistroEmpleadosController implements Initializable {
 
     }
 
-    private  String estado[] ={"Si","NO"};
+    private  String estado[] ={"SI","NO"};
     private String estadoEmpleado;
 
     private tipoEstado aux ;
@@ -61,7 +61,7 @@ public class RegistroEmpleadosController implements Initializable {
     }
     public void getEstado(ActionEvent event){
         estadoEmpleado = cbEstado.getValue();
-        if(estadoEmpleado.equals("Si")){
+        if(estadoEmpleado.equals("SI")){
             aux= tipoEstado.SI;
         } else if (estadoEmpleado.equals("NO")) {
             aux=  tipoEstado.NO;
@@ -71,7 +71,7 @@ public class RegistroEmpleadosController implements Initializable {
     }
 
     public tipoEstado validar(){
-        if(estadoEmpleado.equals("Si")){
+        if(estadoEmpleado.equals("SI")){
             return tipoEstado.SI;
         } else if (estadoEmpleado.equals("NO")) {
             return  tipoEstado.NO;

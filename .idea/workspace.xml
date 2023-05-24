@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/CardVehiculoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/esenaInicioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Vehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/cardVehiculo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RegistroEmpleados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/3126647.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/b2b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/candado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCarro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoCasa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/iconoTransacciones.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,27 +28,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2Oni0ZxgMx4kUFwHxicH13gKLP9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/camilo/IdeaProjects/ProyectoCarro"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources\com.tuCarro.Img" />
@@ -76,8 +47,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tucarro.proyectocarro.HelloApplication" />
+    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tucarro.proyectocarro.main" />
       <module name="ProyectoCarro" />
       <extension name="coverage">
         <pattern>
@@ -119,6 +90,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
