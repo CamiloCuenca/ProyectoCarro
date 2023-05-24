@@ -6,11 +6,11 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.RegistroEmpleados;
-
+import model.DataBase;
 
 public class RegistroClientesController {
 
+    //Atributos
     @FXML
     private Button btnaceptar;
 
@@ -30,12 +30,13 @@ public class RegistroClientesController {
     private TextField txtNombre;
 
 
-
+    /**Este método se encarga de la accion "Aceptar" el cual nos permite registrar un nuevo cliente.
+     *
+     * @param event
+     */
     public void AceptarButtonOnAction(ActionEvent event){
           Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
-          //Cliente clientePrueba = new Cliente("Carlos","Perez","100","correo","12345");
-          //RegistroEmpleados.clientes.add(clientePrueba);
-          RegistroEmpleados.clientes.add(clientex);
+          DataBase.clientes.add(clientex);
 
         // en esta linea , esconde el stage del Registro
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();

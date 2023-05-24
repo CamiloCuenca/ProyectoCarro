@@ -3,29 +3,28 @@ package com.tucarro.proyectocarro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.RegistroEmpleados;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class VentanaAdministradorController {
 
+    //Atributos
     @FXML
     private BorderPane borderPane;
-
     @FXML
     private Button btnEmpleados;
-
     @FXML
     private Button btnRegistros;
 
-    //private static ArrayList<Empleado> empleadoArrayList = new RegistroEmpleados().getEmpleados();
+    /**Este método me muestra el panel donde se encuentra la tabla de Empleados.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void Empleado(ActionEvent event) throws IOException {
 
@@ -37,6 +36,11 @@ public class VentanaAdministradorController {
 
     }
 
+    /**Este método me muestra el panel donde se encuntra la tabla de los registros.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void Registro(ActionEvent event) throws IOException {
 

@@ -1,6 +1,5 @@
 package com.tucarro.proyectocarro;
 
-import com.tucarro.proyectocarro.Cliente;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,16 +13,16 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Persona;
-import model.RegistroEmpleados;
+import model.DataBase;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ClientesController implements Initializable {
+public class TablaClientesController implements Initializable {
 
-
+    // Atributos
     @FXML
     private TableColumn<Persona, String> colApellido;
 
@@ -39,7 +38,13 @@ public class ClientesController implements Initializable {
     @FXML
     private TableView<Persona> tblClientes;
 
-
+    /**
+     * Este método inizializa los atributos de la tabla de clientes
+     * tomandolos de un ArrayList de Clientes que se Encuentra en el DataBase.
+     *
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Configurar las columnas
@@ -49,9 +54,8 @@ public class ClientesController implements Initializable {
         colCorreos.setCellValueFactory(new PropertyValueFactory<>("correo"));
 
         // Crear lista de clientes
-        ArrayList<Cliente> listaClientes = RegistroEmpleados.clientes;
-        //listaClientes.add(new Cliente("Juan", "Pérez", "123456789", "juan@example.com", "contraseña1"));
-        //listaClientes.add(new Cliente("María", "López", "987654321", "maria@example.com", "contraseña2"));
+        ArrayList<Cliente> listaClientes = DataBase.clientes;
+
 
         // Convertir la lista a un ObservableList
         ObservableList<Persona> datosClientes = FXCollections.observableArrayList(listaClientes);
@@ -61,6 +65,12 @@ public class ClientesController implements Initializable {
 
     }
 
+    /** Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
+     * ventana la cual es para registrar un nuevo clientes.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void agregar(ActionEvent event) throws IOException {
 
@@ -69,10 +79,6 @@ public class ClientesController implements Initializable {
         Scene escena = new Scene(root);
         stage.setScene(escena);
         stage.show();
-
-
-
-
 
     }
 }

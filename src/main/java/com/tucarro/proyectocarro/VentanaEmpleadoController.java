@@ -15,12 +15,17 @@ import java.io.IOException;
 
 public class VentanaEmpleadoController {
 
-
+    //Atributos
     @FXML
     private Button btnClientes;
     @FXML
     private BorderPane borderPane;
 
+    /**Este metodo se encarga de mostrar el panel donde se encuentra la tabla de los clientes.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void clientes(ActionEvent event) throws IOException {
 

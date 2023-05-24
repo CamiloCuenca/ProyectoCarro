@@ -8,8 +8,6 @@ import com.tucarro.proyectocarro.tipoEstado;
 import java.util.ArrayList;
 public class Empleado extends Persona {
     //Atributos
-    //private ArrayList<Reportes> reportes = new  ArrayList<Reportes>();
-    //public static enum tipoEstado{ACTIVO,BLOQUEADO};
 
     private com.tucarro.proyectocarro.tipoEstado estado;
 
@@ -62,27 +60,9 @@ public class Empleado extends Persona {
         this.id = id;
     }
 
-    public ArrayList<Cliente> registrarCliente(Cliente cliente){
-        clientes.add(cliente);
-        return clientes;
-    }
+    // Método para buscar un Cliente
 
    public boolean buscarClientes(String nombre , String contrasena){
-
-       Cliente clientex = new Cliente();
-       Cliente clientey = new Cliente();
-
-       clientex.setNombre("Juan");
-       clientex.setApellido("cuenca");
-       clientex.setCedula("1004779025");
-       clientex.setCorreo("camilo@gotmail");
-       clientex.setContraseña("12345");
-
-       clientey.setNombre("Camilo");
-       clientey.setApellido("cuenca");
-       clientey.setCedula("1004779025");
-       clientey.setCorreo("camilo@gotmail");
-       clientey.setContraseña("12345");
 
         for(int i =0;i<clientes.size();i++){
             if(clientes.get(i).getNombre().equals(nombre) && clientes.get(i).getNombre().equals(contrasena)){

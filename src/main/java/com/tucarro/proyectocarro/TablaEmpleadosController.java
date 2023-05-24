@@ -14,14 +14,16 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Persona;
-import model.RegistroEmpleados;
+import model.DataBase;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class EmpleadosController implements Initializable {
+public class TablaEmpleadosController implements Initializable {
+
+    //Atributos
 
     @FXML
     private Button btnAgregar;
@@ -53,8 +55,17 @@ public class EmpleadosController implements Initializable {
     @FXML
     private TableView<Persona> tblEmpleados;
 
-    public static ArrayList<Empleado> listaEmpleados= new RegistroEmpleados ().getEmpleados();
+    // Inizializo un ArrayList de empleados que va a ser metodo de quemar valores
+    // de un empleado el cual esta en el DataBase , para que haci el metodo funciones y estos valores queden quemados
+    //en el codigo
+    public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
 
+    /** Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
+     * ventana la cual es para registrar un nuevo Empleado.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void Agregar(ActionEvent event) throws IOException {
         Stage stage = new Stage();
@@ -65,16 +76,30 @@ public class EmpleadosController implements Initializable {
 
     }
 
+    /** Este metodo nos permite editar los atributos de un empleado
+     *
+     * @param event
+     */
     @FXML
     void Editar(ActionEvent event) {
 
     }
 
+    /**Este método nos permite eliminar un Empleado,
+     *
+     * @param event
+     */
     @FXML
     void Eliminar(ActionEvent event) {
 
     }
 
+    /** Este método inizializa los atributos de la tabla de empleados
+     * tomandolos de un ArrayList de Empleados  que se Encuentra en el DataBase.
+     *
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Configurar las columnas
@@ -85,9 +110,8 @@ public class EmpleadosController implements Initializable {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
 
-        // Crear lista de clientes
-        ArrayList<Empleado> listaEmpleados = RegistroEmpleados.empleados;
-        //listaEmpleados.add(new Empleado("Carlos","fuentes","1004556789","correop@gmai.com","12345",1234));
+        // Crear lista de Empleados
+        ArrayList<Empleado> listaEmpleados = DataBase.empleados;
 
         // Convertir la lista a un ObservableList
         ObservableList<Persona> datosEmpleados = FXCollections.observableArrayList(listaEmpleados);

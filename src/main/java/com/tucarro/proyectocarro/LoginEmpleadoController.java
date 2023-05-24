@@ -11,39 +11,42 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.RegistroEmpleados;
+import model.DataBase;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class LoginEmpleadoController {
 
+    //Atributos
     private String nombre;
     private String contrasena;
     private int ID;
-    public static ArrayList<Empleado> listaEmpleados= new RegistroEmpleados ().getEmpleados();
-
+    public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
     @FXML
     private Button btnAceptar;
-
     @FXML
     private PasswordField pswContrasena;
-
     @FXML
     private TextField txtID;
-
     @FXML
     private TextField txtNombre;
     @FXML
     private Label loginError;
 
+    /** este método se encarga de la accion del boton "Aceptar" el cual se encarga de verificar
+     * si el empleado si esta registrado , y avre una nueva ventana para las funciones que cumple el epmpleado.
+     *
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
         ID = Integer.parseInt(txtID.getText());
 
-        for(int i = 0; i< RegistroEmpleados.empleados.size(); i++){
+        for(int i = 0; i< DataBase.empleados.size(); i++){
 
             if(nombre.isEmpty()&&contrasena.isEmpty()){
                 loginError.setText("LLene todos los campos");
@@ -52,7 +55,7 @@ public class LoginEmpleadoController {
 
             }
 
-            else if(RegistroEmpleados.empleados.get(i).getNombre().equals(nombre) && RegistroEmpleados.empleados.get(i).getContraseña().equals(contrasena) && RegistroEmpleados.empleados.get(i).getId()==ID){
+            else if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId()==ID){
                 loginError.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaEmpleado.fxml"));
@@ -66,9 +69,6 @@ public class LoginEmpleadoController {
                 loginError.setText("Error no se encuentra registrado");
             }
 
-
         }
-
-
     }
 }

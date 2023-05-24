@@ -7,16 +7,17 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Administrador extends Persona {
-
+    //Atributos
     private static  ArrayList<Empleado> empleados = new ArrayList<>();
     public Administrador(String nombre, String apellido, String cedula, String correo, String contraseña) {
         super(nombre, apellido, cedula, correo, contraseña);
     }
+    //Métodos
     public void verReporte(){
 
     }
     public static  void RegistrarEmpleado(String nombre , String apellido , String Contrasena , String correo , String cedula , int id ){
-        Empleado empleadox = new Empleado(nombre,apellido,cedula,correo,Contrasena,id, tipoEstado.SI);
+        Empleado empleadox = new Empleado(nombre,apellido,cedula,correo,Contrasena,id, tipoEstado.ACTIVO);
         empleados.add(empleadox);
     }
 
