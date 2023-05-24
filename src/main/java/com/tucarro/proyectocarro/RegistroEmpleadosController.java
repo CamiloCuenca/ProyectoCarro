@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 public class RegistroEmpleadosController implements Initializable {
 
+    public Button btnRegresar;
     @FXML
     private TextField TxtId;
 

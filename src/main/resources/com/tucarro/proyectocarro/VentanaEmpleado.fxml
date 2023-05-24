@@ -19,6 +19,12 @@
          <ImageView fitHeight="96.0" fitWidth="140.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/Persons.png" />
          </ImageView>
+         <Label alignment="CENTER" layoutX="446.0" prefHeight="95.0" prefWidth="226.0" style="-fx-background-color: #333333;" text="Empleado" textFill="#ff3d26">
+            <font>
+               <Font name="System Italic" size="14.0" />
+            </font>
+         </Label>
+         <Button fx:id="btnRegresar" layoutX="186.0" layoutY="35.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
       </AnchorPane>
    </top>
    <right>
