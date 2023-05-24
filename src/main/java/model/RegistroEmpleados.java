@@ -2,6 +2,7 @@ package model;
 
 import com.tucarro.proyectocarro.Cliente;
 import com.tucarro.proyectocarro.Empleado;
+import com.tucarro.proyectocarro.tipoEstado;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class RegistroEmpleados {
     }
 
     public  ArrayList<Empleado> getEmpleados() {
-        Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345",123);
+        Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345",123, tipoEstado.SI);
         empleados.add(empleadox);
         return empleados;
     }

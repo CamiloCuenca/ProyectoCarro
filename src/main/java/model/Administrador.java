@@ -1,21 +1,22 @@
 package model;
 
 import com.tucarro.proyectocarro.Empleado;
+import com.tucarro.proyectocarro.tipoEstado;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Administrador extends Persona {
 
-    private ArrayList<Empleado> empleados = new ArrayList<>();
+    private static  ArrayList<Empleado> empleados = new ArrayList<>();
     public Administrador(String nombre, String apellido, String cedula, String correo, String contraseña) {
         super(nombre, apellido, cedula, correo, contraseña);
     }
     public void verReporte(){
 
     }
-    public void RegistrarEmpleado(String nombre , String apellido , String Contrasena , String correo , String cedula , int id ){
-        Empleado empleadox = new Empleado(nombre,apellido,cedula,correo,Contrasena,id);
+    public static  void RegistrarEmpleado(String nombre , String apellido , String Contrasena , String correo , String cedula , int id ){
+        Empleado empleadox = new Empleado(nombre,apellido,cedula,correo,Contrasena,id, tipoEstado.SI);
         empleados.add(empleadox);
     }
 

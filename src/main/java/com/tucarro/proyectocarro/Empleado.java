@@ -1,22 +1,28 @@
 package com.tucarro.proyectocarro;
+
 import com.tucarro.proyectocarro.Cliente;
 import model.Persona;
 import model.Vehiculo;
+import com.tucarro.proyectocarro.tipoEstado;
 
 import java.util.ArrayList;
 public class Empleado extends Persona {
     //Atributos
     //private ArrayList<Reportes> reportes = new  ArrayList<Reportes>();
-    private enum tipoEstado{ACTIVO,BLOQUEADO};
-    private tipoEstado estado;
+    //public static enum tipoEstado{ACTIVO,BLOQUEADO};
+
+    private com.tucarro.proyectocarro.tipoEstado estado;
+
     private int id;
+
     private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 
     //Constructor
-    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, int id) {
+    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, int id,tipoEstado estado) {
         super(nombre, apellido, cedula, correo, contraseña);
         this.id=id;
+        this.estado=estado;
     }
 
 
@@ -44,7 +50,7 @@ public class Empleado extends Persona {
         return estado;
     }
 
-    public void setEstado(tipoEstado estado) {
+    public void setEstado (tipoEstado estado) {
         this.estado = estado;
     }
 
