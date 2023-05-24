@@ -12,66 +12,31 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaEmpleadoController">
    <top>
-      <AnchorPane prefHeight="84.0" prefWidth="673.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="293.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/logo.png" />
-               </image>
-            </ImageView>
-         </children>
+      <AnchorPane prefHeight="97.0" prefWidth="673.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="80.0" fitWidth="104.0" layoutX="293.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/logo.png" />
+         </ImageView>
+         <ImageView fitHeight="96.0" fitWidth="140.0" pickOnBounds="true">
+            <Image url="@../../../com.tuCarro.Img/Persons.png" />
+         </ImageView>
       </AnchorPane>
    </top>
-   <left>
-      <VBox prefHeight="421.0" prefWidth="109.0" style="-fx-background-color: #1111;" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="116.0" text="Funciones">
+   <right>
+      <AnchorPane prefHeight="423.0" prefWidth="673.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="410.0" fitWidth="534.0" layoutX="140.0" layoutY="-2.0" pickOnBounds="true">
+            <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
+         </ImageView>
+         <VBox alignment="TOP_CENTER" layoutX="1.0" pickOnBounds="false" prefHeight="409.0" prefWidth="139.0" scaleShape="false" style="-fx-background-color: #333333;">
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="154.0" style="-fx-background-color: #000000;" text="Funciones" textFill="#ff3d26">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
                <font>
-                  <Font name="System Bold Italic" size="15.0" />
+                  <Font name="System Italic" size="14.0" />
                </font>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
             </Label>
-            <Button fx:id="btnClientes" mnemonicParsing="false" onAction="#clientes" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #2222;" text="Clientes">
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #2222;" text="Vehiculos">
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #2222;" text="Transacciones">
-               <opaqueInsets>
-                  <Insets top="40.0" />
-               </opaqueInsets>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-         <padding>
-            <Insets left="5.0" right="5.0" top="10.0" />
-         </padding>
-      </VBox>
-   </left>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="326.0" fitWidth="562.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
-               </image>
-            </ImageView>
-         </children>
+            <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#Cliente" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Clientes" textFill="#ff3d26" />
+         </VBox>
       </AnchorPane>
-   </center>
+   </right>
 </BorderPane>

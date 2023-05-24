@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class VentanaEmpleadoController {
 
+    public Button btnCliente;
     //Atributos
     @FXML
     private Button btnClientes;
@@ -27,13 +28,15 @@ public class VentanaEmpleadoController {
      * @throws IOException
      */
     @FXML
-    void clientes(ActionEvent event) throws IOException {
-
+    void Cliente(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-       FXMLLoader loader = new FXMLLoader();
-       loader.setLocation(getClass().getResource("clientes.fxml"));
-       AnchorPane pane = (AnchorPane) loader.load() ;
-       borderPane.setCenter(pane);
-
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("clientes.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load() ;
+        borderPane.setCenter(pane);
     }
+
+
+
+
 }

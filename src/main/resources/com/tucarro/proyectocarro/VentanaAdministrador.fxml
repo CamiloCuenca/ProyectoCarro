@@ -12,19 +12,19 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="731.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaAdministradorController">
    <top>
-      <AnchorPane prefHeight="104.0" prefWidth="640.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="104.0" prefWidth="640.0" style="-fx-background-color: #ff3d26; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
          <ImageView fitHeight="114.0" fitWidth="123.0" layoutX="304.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
          <Button fx:id="btnRegresar" layoutX="187.0" layoutY="42.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
-         <ImageView fitHeight="114.0" fitWidth="140.0" layoutX="-1.0" pickOnBounds="true">
-            <Image url="@../../../com.tuCarro.Img/Person.png"/>
+         <ImageView fitHeight="114.0" fitWidth="140.0" layoutY="1.0" pickOnBounds="true">
+            <Image url="@../../../com.tuCarro.Img/Person.png" />
          </ImageView>
       </AnchorPane>
    </top>
    <left>
-      <VBox prefHeight="521.0" prefWidth="137.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <Label alignment="CENTER" prefHeight="17.0" prefWidth="138.0" text="Funciones" textFill="#ff3d26">
+      <VBox alignment="TOP_CENTER" prefHeight="404.0" prefWidth="140.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
+         <Label alignment="CENTER" prefHeight="17.0" prefWidth="138.0" style="-fx-background-color: #000000;" text="Funciones" textFill="#ff3d26">
             <VBox.margin>
                <Insets bottom="10.0" />
             </VBox.margin>
@@ -45,11 +45,9 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="565.0" style="-fx-background-color: #fff; -fx-border-color: #000000;"
-                  BorderPane.alignment="CENTER">
-         <ImageView fitHeight="320.0" fitWidth="580.0" layoutX="11.0" layoutY="46.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../com.tuCarro.Img/ElFondo.png"/>
+      <AnchorPane prefHeight="200.0" prefWidth="565.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="401.0" fitWidth="590.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" style="-fx-effect: 15;">
+            <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
          </ImageView>
       </AnchorPane>
    </center>

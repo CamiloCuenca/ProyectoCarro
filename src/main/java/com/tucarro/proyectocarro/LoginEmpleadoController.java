@@ -27,8 +27,6 @@ public class LoginEmpleadoController {
     private Button btnAceptar;
     @FXML
     private Button btnRegresar;
-
-
     @FXML
     private PasswordField pswContrasena;
     @FXML

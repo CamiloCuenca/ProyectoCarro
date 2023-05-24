@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -22,6 +23,7 @@ import java.util.ResourceBundle;
 
 public class TablaClientesController implements Initializable {
 
+    public Button btnAgregar;
     // Atributos
     @FXML
     private TableColumn<Persona, String> colApellido;
@@ -72,7 +74,7 @@ public class TablaClientesController implements Initializable {
      * @throws IOException
      */
     @FXML
-    void agregar(ActionEvent event) throws IOException {
+    void Agregar(ActionEvent event) throws IOException {
 
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
