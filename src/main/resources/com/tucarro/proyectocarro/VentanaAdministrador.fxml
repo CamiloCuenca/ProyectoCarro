@@ -46,4 +46,15 @@
          </children>
       </VBox>
    </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="353.0" fitWidth="609.0" layoutX="11.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>
