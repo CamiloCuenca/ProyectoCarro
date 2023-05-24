@@ -2,13 +2,18 @@ package com.tucarro.proyectocarro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import model.RegistroEmpleados;
+import javafx.stage.Stage;
+import model.DataBase;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -43,13 +48,13 @@ public class RegistroEmpleadosController implements Initializable {
     @FXML
     void AgregarAction(ActionEvent event) {
         Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),TxtId.getAnchor(),aux);
-        RegistroEmpleados.empleados.add(empleadox);
+        DataBase.empleados.add(empleadox);
 
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
 
     }
 
-    private  String estado[] ={"Si","NO"};
+    private  String estado[] ={"ACTIVO","BLOQUEADO"};
     private String estadoEmpleado;
 
     private tipoEstado aux ;
@@ -61,22 +66,23 @@ public class RegistroEmpleadosController implements Initializable {
     }
     public void getEstado(ActionEvent event){
         estadoEmpleado = cbEstado.getValue();
-        if(estadoEmpleado.equals("Si")){
-            aux= tipoEstado.SI;
-        } else if (estadoEmpleado.equals("NO")) {
-            aux=  tipoEstado.NO;
+        if(estadoEmpleado.equals("ACTIVO")){
+            aux= tipoEstado.ACTIVO;
+        } else if (estadoEmpleado.equals("BLOQUEADO")) {
+            aux=  tipoEstado.BLOQUEADO;
         }
 
 
     }
 
-    public tipoEstado validar(){
-        if(estadoEmpleado.equals("Si")){
-            return tipoEstado.SI;
-        } else if (estadoEmpleado.equals("NO")) {
-            return  tipoEstado.NO;
-        }
-        return tipoEstado.SI;
+
+    public void Regresar(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("VentanaAdministrador.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
 
     }
 }
