@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <children>
@@ -19,42 +24,42 @@
          </children>
       </AnchorPane>
    </left>
-   <right>
+   <center>
       <AnchorPane prefHeight="426.0" prefWidth="478.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="lblNombre" layoutX="36.0" layoutY="169.0" text="Nombre">
+            <Label fx:id="lblNombre" layoutX="25.0" layoutY="195.0" text="Nombre">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblContrasena" layoutX="14.0" layoutY="205.0" text="Contraseña">
+            <Label fx:id="lblContrasena" layoutX="14.0" layoutY="233.0" text="Contraseña">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="txtNombre" layoutX="101.0" layoutY="164.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+            <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="pswContasena" layoutX="101.0" layoutY="200.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+            <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="btnAceptar" layoutX="150.0" layoutY="267.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar">
+            <Button fx:id="btnAceptar" layoutX="145.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="204.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="199.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../com.tuCarro.Img/candado.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginerror" alignment="CENTER" layoutX="91.0" layoutY="234.0" textFill="#ea3535" />
-            <Button fx:id="btnRegistrarse" layoutX="256.0" layoutY="268.0" mnemonicParsing="false" onAction="#registrarButtonOnCation" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
+            <Label fx:id="loginerror" alignment="CENTER" layoutX="131.0" layoutY="267.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
+            <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#registrarButtonOnCation" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
          </children>
       </AnchorPane>
-   </right>
+   </center>
 </BorderPane>
