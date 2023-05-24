@@ -22,21 +22,21 @@
       </TableView>
       <HBox layoutX="149.0" layoutY="350.0" prefHeight="49.0" prefWidth="259.0">
          <children>
-            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" text="Agregar">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" text="Editar">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" text="Eliminar">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Button>
+             <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar">
+                 <HBox.margin>
+                     <Insets right="10.0" />
+                 </HBox.margin>
+             </Button>
+             <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Editar">
+                 <HBox.margin>
+                     <Insets right="10.0" />
+                 </HBox.margin>
+             </Button>
+             <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Eliminar">
+                 <HBox.margin>
+                     <Insets right="10.0" />
+                 </HBox.margin>
+             </Button>
          </children>
       </HBox>
    </children>
