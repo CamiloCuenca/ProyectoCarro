@@ -19,13 +19,13 @@
       </columns>
     </TableView>
     <AnchorPane layoutX="119.0" layoutY="342.0" prefHeight="41.0" prefWidth="355.0">
-        <Button fx:id="btnEliminar" layoutX="227.0" layoutY="11.0" mnemonicParsing="false" onAction="#Eliminar"
+        <Button fx:id="btnEliminar" layoutX="229.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar"
                 prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
                 text="Eliminar"/>
-        <Button fx:id="btnEditar" layoutX="149.0" layoutY="11.0" mnemonicParsing="false" onAction="#Editar"
+        <Button fx:id="btnEditar" layoutX="153.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar"
                 prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
                 text="Editar"/>
-        <Button fx:id="btnAgregar" layoutX="71.0" layoutY="11.0" mnemonicParsing="false" onAction="#Agregar"
+        <Button fx:id="btnAgregar" layoutX="74.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar"
                 prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
                 text="Agregar"/>
     </AnchorPane>

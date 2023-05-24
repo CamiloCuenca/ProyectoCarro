@@ -15,20 +15,15 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.ventanaPrincipalController">
    <top>
-      <AnchorPane prefHeight="106.0" prefWidth="927.0" style="-fx-background-color: #ff3d26;"
-                  BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="106.0" prefWidth="927.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <ImageView fitHeight="121.0" fitWidth="206.0" layoutX="394.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../../com.tuCarro.Img/logo.png"/>
+            <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
-         <Button fx:id="Regresar" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#Regresar"
-                 prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;"
-                 text="Regresar" textFill="#ff3d26"/>
-         <TextField layoutX="602.0" layoutY="51.0" prefHeight="25.0" prefWidth="207.0" promptText="Buscar..."
-                    style="-fx-background-radius: 20;"/>
-         <Button layoutX="816.0" layoutY="49.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0"
-                 style="-fx-background-radius: 50; -fx-background-color: #000000;" text="Buscar" textFill="#ff3d26">
+         <Button fx:id="Regresar" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
+         <TextField layoutX="602.0" layoutY="51.0" prefHeight="25.0" prefWidth="207.0" promptText="Buscar..." style="-fx-background-radius: 20;" />
+         <Button layoutX="816.0" layoutY="49.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-radius: 50; -fx-background-color: #000000;" text="Buscar" textFill="#ff3d26">
             <font>
-               <Font name="System Bold Italic" size="12.0"/>
+               <Font name="System Bold Italic" size="12.0" />
             </font>
          </Button>
       </AnchorPane>
@@ -36,33 +31,31 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <padding>
-            <Insets left="20.0"/>
+            <Insets left="20.0" />
          </padding>
          <BorderPane.margin>
-            <Insets right="9.0"/>
+            <Insets right="9.0" />
          </BorderPane.margin>
          <HBox prefHeight="41.0" prefWidth="901.0">
             <VBox.margin>
-               <Insets/>
+               <Insets />
             </VBox.margin>
             <padding>
-               <Insets top="8.0"/>
+               <Insets top="8.0" />
             </padding>
             <AnchorPane prefHeight="47.0" prefWidth="885.0">
-               <Label alignment="CENTER" layoutX="406.0" layoutY="4.0" prefHeight="21.0" prefWidth="73.0"
-                      style="-fx-background-radius: 15;" text="Vehiculos">
+               <Label alignment="CENTER" layoutX="406.0" layoutY="4.0" prefHeight="21.0" prefWidth="73.0" style="-fx-background-radius: 15;" text="Vehiculos">
                   <font>
-                     <Font name="System Italic" size="15.0"/>
+                     <Font name="System Italic" size="15.0" />
                   </font>
                </Label>
             </AnchorPane>
          </HBox>
-         <ScrollPane prefHeight="472.0" prefWidth="848.0"
-                     style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+         <ScrollPane prefHeight="472.0" prefWidth="848.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
             <opaqueInsets>
-               <Insets/>
+               <Insets />
             </opaqueInsets>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0"/>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
          </ScrollPane>
       </VBox>
    </center>

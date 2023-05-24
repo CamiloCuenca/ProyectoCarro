@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se hizo algunas modificaciones a la interfaz">
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se agrego una imagen, y se coloco la imgen en vistaAdministrador">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img/Person.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaAdministradorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroClientes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaAdministrador.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +37,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img" />
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources\com.tuCarro.Img" />
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources" />
     </key>
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684906151877</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se hizo algunas modificaciones a la interfaz">
+      <created>1684950089139</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684950089139</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,7 +133,8 @@
     <MESSAGE value="Se modificaron algunas interfaz" />
     <MESSAGE value="Se modifico varias clases interfaz" />
     <MESSAGE value="Se hizo algunas modificaciones a la interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se hizo algunas modificaciones a la interfaz" />
+    <MESSAGE value="Se agrego una imagen, y se coloco la imgen en vistaAdministrador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego una imagen, y se coloco la imgen en vistaAdministrador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

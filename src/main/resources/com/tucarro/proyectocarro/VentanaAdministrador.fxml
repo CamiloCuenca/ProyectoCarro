@@ -12,37 +12,34 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="731.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaAdministradorController">
    <top>
-      <AnchorPane prefHeight="104.0" prefWidth="640.0" style="-fx-background-color: #ff3d26;"
-                  BorderPane.alignment="CENTER">
-         <ImageView fitHeight="114.0" fitWidth="123.0" layoutX="304.0" layoutY="-1.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../com.tuCarro.Img/logo.png"/>
+      <AnchorPane prefHeight="104.0" prefWidth="640.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="114.0" fitWidth="123.0" layoutX="304.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
-         <Button fx:id="btnRegresar" layoutX="187.0" layoutY="42.0" mnemonicParsing="false" onAction="#Regresar"
-                 prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;"
-                 text="Regresar" textFill="#ff3d26"/>
+         <Button fx:id="btnRegresar" layoutX="187.0" layoutY="42.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
+         <ImageView fitHeight="114.0" fitWidth="140.0" layoutX="-1.0" pickOnBounds="true">
+            <Image url="@../../../com.tuCarro.Img/Person.png"/>
+         </ImageView>
       </AnchorPane>
    </top>
    <left>
       <VBox prefHeight="521.0" prefWidth="137.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <Label alignment="CENTER" prefHeight="17.0" prefWidth="138.0" text="Funciones" textFill="#ff3d26">
             <VBox.margin>
-               <Insets bottom="10.0"/>
+               <Insets bottom="10.0" />
             </VBox.margin>
             <font>
-               <Font name="System Italic" size="14.0"/>
+               <Font name="System Italic" size="14.0" />
             </font>
          </Label>
-         <Button fx:id="btnEmpleados" mnemonicParsing="false" onAction="#Empleado" prefHeight="26.0" prefWidth="125.0"
-                 style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Empleados" textFill="#ff3d26">
+         <Button fx:id="btnEmpleados" mnemonicParsing="false" onAction="#Empleado" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Empleados" textFill="#ff3d26">
             <VBox.margin>
-               <Insets bottom="10.0" left="5.0" right="5.0"/>
+               <Insets bottom="10.0" left="5.0" right="5.0" />
             </VBox.margin>
          </Button>
-         <Button fx:id="btnRegistros" mnemonicParsing="false" onAction="#Registro" prefHeight="26.0" prefWidth="127.0"
-                 style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Registros" textFill="#ff3d26">
+         <Button fx:id="btnRegistros" mnemonicParsing="false" onAction="#Registro" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Registros" textFill="#ff3d26">
             <VBox.margin>
-               <Insets bottom="10.0" left="5.0" right="5.0"/>
+               <Insets bottom="10.0" left="5.0" right="5.0" />
             </VBox.margin>
          </Button>
       </VBox>
