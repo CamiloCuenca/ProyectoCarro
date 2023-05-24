@@ -11,31 +11,30 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.RegistroClientesController">
    <top>
-      <AnchorPane prefHeight="94.0" prefWidth="604.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="87.0" fitWidth="143.0" layoutX="254.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/logo.png" />
-               </image>
-            </ImageView>
-         </children>
+      <AnchorPane prefHeight="94.0" prefWidth="604.0" style="-fx-background-color: #ff3d26;"
+                  BorderPane.alignment="CENTER">
+         <ImageView fitHeight="87.0" fitWidth="143.0" layoutX="254.0" layoutY="3.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/logo.png"/>
+         </ImageView>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="153.0" layoutY="43.0" prefHeight="17.0" prefWidth="44.0" text="Nombre" />
-            <Label layoutX="153.0" layoutY="88.0" text="Apellido" />
-            <Label layoutX="157.0" layoutY="130.0" text="Cedula" />
-            <Label layoutX="157.0" layoutY="176.0" text="Correo" />
-            <Label layoutX="145.0" layoutY="223.0" text="Contraseña" />
-            <TextField fx:id="txtNombre" layoutX="227.0" layoutY="39.0" promptText="nombre" />
-            <TextField fx:id="txtApellido" layoutX="227.0" layoutY="84.0" promptText="Apellido" />
-            <TextField fx:id="txtCedula" layoutX="227.0" layoutY="126.0" promptText="Cedula" />
-            <TextField fx:id="txtCorreo" layoutX="227.0" layoutY="172.0" promptText="ejemolo@gmail.com" />
-            <PasswordField fx:id="pwrContraseña" layoutX="227.0" layoutY="219.0" />
-            <Button fx:id="btnaceptar" layoutX="273.0" layoutY="273.0" mnemonicParsing="false" onAction="#AceptarButtonOnAction" text="Aceptar" />
-         </children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;"
+                  BorderPane.alignment="CENTER">
+         <Label layoutX="173.0" layoutY="43.0" prefHeight="18.0" prefWidth="55.0" text="Nombre"/>
+         <Label layoutX="175.0" layoutY="88.0" text="Apellido"/>
+         <Label layoutX="179.0" layoutY="130.0" text="Cedula"/>
+         <Label layoutX="179.0" layoutY="176.0" text="Correo"/>
+         <Label layoutX="154.0" layoutY="223.0" text="Contraseña"/>
+         <TextField fx:id="txtNombre" layoutX="227.0" layoutY="39.0" promptText="nombre"/>
+         <TextField fx:id="txtApellido" layoutX="227.0" layoutY="84.0" promptText="Apellido"/>
+         <TextField fx:id="txtCedula" layoutX="227.0" layoutY="126.0" promptText="Cedula"/>
+         <TextField fx:id="txtCorreo" layoutX="227.0" layoutY="172.0" promptText="ejemolo@gmail.com"/>
+         <PasswordField fx:id="pwrContraseña" layoutX="227.0" layoutY="219.0"/>
+         <Button fx:id="btnaceptar" layoutX="258.0" layoutY="257.0" mnemonicParsing="false"
+                 onAction="#AceptarButtonOnAction" prefHeight="26.0" prefWidth="89.0"
+                 style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar"/>
       </AnchorPane>
    </center>
 </BorderPane>

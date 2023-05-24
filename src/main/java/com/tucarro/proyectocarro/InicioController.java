@@ -31,6 +31,8 @@ public class InicioController {
     @FXML
     private Label loginerror;
     @FXML
+    private Button btnRegistrarse;
+    @FXML
     private Button btnAceptar;
     @FXML
     private Label lblNombre;
@@ -106,14 +108,7 @@ public class InicioController {
      * @param event
      * @throws IOException
      */
-    public void registrarButtonOnCation(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
-        Scene escena = new Scene(root);
-        stage.setScene(escena);
-        stage.show();
 
-    }
 
     /**Este metodo se encarga de la accion del boton "soy empleado" la cual nos abre una nueva ventana
      * donde podemos logiarnos como un empleado.
@@ -130,6 +125,14 @@ public class InicioController {
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+    }
+
+    public void Registrarse(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
     }
 }
 

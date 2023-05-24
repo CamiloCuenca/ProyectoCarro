@@ -26,6 +26,9 @@ public class VentanaAdministradorController {
     @FXML
     private Button btnRegistros;
 
+    @FXML
+    private Button btnRegresar;
+
     //private static ArrayList<Empleado> empleadoArrayList = new RegistroEmpleados().getEmpleados();
     @FXML
     void Empleado(ActionEvent event) throws IOException {
@@ -38,19 +41,24 @@ public class VentanaAdministradorController {
 
     }
 
+    public void Regresar(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Inicio-view.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        // en esta linea , esconde el stage del login y carga el nuevo stage
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+
+
+    }
+
     @FXML
     void Registro(ActionEvent event) throws IOException {
 
 
     }
 
-    public void Regresar(ActionEvent event) throws IOException {
 
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Inicio-view.fxml"));
-        Scene escena = new Scene(root);
-        stage.setScene(escena);
-        stage.show();
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
-    }
 }

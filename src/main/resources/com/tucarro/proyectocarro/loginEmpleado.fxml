@@ -11,34 +11,35 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginEmpleadoController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="167.0" fitWidth="193.0" layoutX="9.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/logo.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnRegresar" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="28.0" prefWidth="91.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textAlignment="JUSTIFY" textFill="#ff5500" />
-         </children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;"
+                  BorderPane.alignment="CENTER">
+         <ImageView fitHeight="167.0" fitWidth="193.0" layoutX="9.0" layoutY="42.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/logo.png"/>
+         </ImageView>
+         <Button fx:id="btnRegresar" layoutX="56.0" layoutY="200.0" mnemonicParsing="false" onAction="#Regresar"
+                 prefHeight="28.0" prefWidth="91.0" style="-fx-background-color: #000000; -fx-background-radius: 15;"
+                 text="Regresar" textAlignment="JUSTIFY" textFill="#ff5500"/>
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="154.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/candado.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="33.0" layoutY="183.0" text="Nombre" />
-            <Label layoutX="33.0" layoutY="220.0" text="Contraseña" />
-            <Label layoutX="57.0" layoutY="256.0" text="ID" />
-            <TextField fx:id="txtNombre" layoutX="105.0" layoutY="179.0" prefHeight="25.0" prefWidth="214.0" />
-            <TextField fx:id="txtID" layoutX="106.0" layoutY="252.0" prefHeight="25.0" prefWidth="214.0" />
-            <PasswordField fx:id="pswContrasena" layoutX="105.0" layoutY="216.0" prefHeight="25.0" prefWidth="213.0" />
-            <Button fx:id="btnAceptar" layoutX="106.0" layoutY="296.0" mnemonicParsing="false" onAction="#Aceptar" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" />
-            <Label fx:id="loginError" layoutX="111.0" layoutY="343.0" prefHeight="17.0" prefWidth="199.0" text="..." textFill="#ed1414" />
-         </children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;"
+                  BorderPane.alignment="CENTER">
+         <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="165.0" layoutY="51.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/candado.png"/>
+         </ImageView>
+         <Label layoutX="33.0" layoutY="183.0" text="Nombre"/>
+         <Label layoutX="33.0" layoutY="220.0" text="Contraseña"/>
+         <Label layoutX="57.0" layoutY="256.0" text="ID"/>
+         <TextField fx:id="txtNombre" layoutX="105.0" layoutY="179.0" prefHeight="25.0" prefWidth="214.0"/>
+         <TextField fx:id="txtID" layoutX="106.0" layoutY="252.0" prefHeight="25.0" prefWidth="214.0"/>
+         <PasswordField fx:id="pswContrasena" layoutX="105.0" layoutY="216.0" prefHeight="25.0" prefWidth="213.0"/>
+         <Button fx:id="btnAceptar" layoutX="106.0" layoutY="296.0" mnemonicParsing="false" onAction="#Aceptar"
+                 prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
+                 text="Aceptar"/>
+         <Label fx:id="loginError" layoutX="111.0" layoutY="343.0" prefHeight="17.0" prefWidth="199.0" text="..."
+                textFill="#ed1414"/>
       </AnchorPane>
    </center>
 </BorderPane>

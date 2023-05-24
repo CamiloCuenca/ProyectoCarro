@@ -13,53 +13,45 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/logo.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnEmpleado" layoutX="43.0" layoutY="214.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="28.0" prefWidth="117.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Soy Empleado" textFill="#ff3d26" />
-            <Button fx:id="btnCancelar" layoutX="43.0" layoutY="248.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="28.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cancelar" textFill="#ff3d26" />
-         </children>
+         <ImageView fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/logo.png" />
+         </ImageView>
+         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="28.0" prefWidth="117.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Soy Empleado" textFill="#ff3d26" />
+         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="28.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cancelar" textFill="#ff3d26" />
       </AnchorPane>
    </left>
    <center>
       <AnchorPane prefHeight="426.0" prefWidth="478.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="lblNombre" layoutX="25.0" layoutY="195.0" text="Nombre">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblContrasena" layoutX="14.0" layoutY="233.0" text="Contraseña">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </PasswordField>
-            <Button fx:id="btnAceptar" layoutX="145.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="199.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../com.tuCarro.Img/candado.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="loginerror" alignment="CENTER" layoutX="131.0" layoutY="267.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
-            <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#registrarButtonOnCation" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
-         </children>
+         <Label fx:id="lblNombre" layoutX="25.0" layoutY="195.0" text="Nombre">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblContrasena" layoutX="14.0" layoutY="233.0" text="Contraseña">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </TextField>
+         <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </PasswordField>
+         <Button fx:id="btnAceptar" layoutX="145.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="199.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../com.tuCarro.Img/candado.png" />
+         </ImageView>
+         <Label fx:id="loginerror" alignment="CENTER" layoutX="131.0" layoutY="267.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
+         <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#Registrarse" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" />
       </AnchorPane>
    </center>
 </BorderPane>
