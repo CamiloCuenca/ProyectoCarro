@@ -35,13 +35,14 @@ public class LoginAdministradorController {
     private TextField txtNombre;
     @FXML
     private Label loginerror;
+    public static ArrayList<Administrador> listaAdministradores= new DataBase().setValoresQuemadosAdministrador();
 
     @FXML
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
 
-        for(int i = 0; i< DataBase.empleados.size(); i++){
+        for(int i = 0; i< DataBase.administradores.size(); i++){
 
             if(nombre.isEmpty()&&contrasena.isEmpty()){
                 loginerror.setText("LLene todos los campos");
