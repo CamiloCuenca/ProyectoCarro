@@ -29,8 +29,8 @@
          <TextField fx:id="txtNombre" layoutX="105.0" layoutY="179.0" prefHeight="25.0" prefWidth="214.0" />
          <PasswordField fx:id="pswContrasena" layoutX="105.0" layoutY="216.0" prefHeight="25.0" prefWidth="213.0" />
          <TextField fx:id="txtID" layoutX="106.0" layoutY="252.0" prefHeight="25.0" prefWidth="214.0" />
-         <Button fx:id="btnAceptar" layoutX="106.0" layoutY="296.0" mnemonicParsing="false" onAction="#Aceptar" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE" />
-         <Label fx:id="loginError" layoutX="111.0" layoutY="343.0" prefHeight="17.0" prefWidth="199.0" text="..." textFill="#ed1414" />
+         <Button fx:id="btnAceptar" layoutX="109.0" layoutY="312.0" mnemonicParsing="false" onAction="#Aceptar" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE" />
+         <Label fx:id="loginerror" alignment="CENTER" layoutX="103.0" layoutY="278.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
       </AnchorPane>
    </center>
 </BorderPane>

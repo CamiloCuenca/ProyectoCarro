@@ -11,15 +11,15 @@ public class Empleado extends Persona {
 
     private com.tucarro.proyectocarro.tipoEstado estado;
 
-    private int id;
+    private String id;
 
     private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 
     //Constructor
-    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, int id,tipoEstado estado) {
+    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, String id,tipoEstado estado) {
         super(nombre, apellido, cedula, correo, contraseña);
-        this.id=id;
+        this.id = id;
         this.estado=estado;
     }
 
@@ -52,11 +52,11 @@ public class Empleado extends Persona {
         this.estado = estado;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

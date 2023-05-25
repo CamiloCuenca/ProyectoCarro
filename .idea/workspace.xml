@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Ya">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginAdministradorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/LoginAdministrador.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,8 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Kotlin Class" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -30,16 +40,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Oni0ZxgMx4kUFwHxicH13gKLP9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro" />
       <recent name="$PROJECT_DIR$/src/main/resources/com.tuCarro.Img" />
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources\com.tuCarro.Img" />
       <recent name="C:\Users\camilo\IdeaProjects\ProyectoCarro\src\main\resources" />
@@ -154,6 +168,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados" />
     <MESSAGE value="Se modifico dos botones" />
     <MESSAGE value="Se modificaron algunas interfaz" />

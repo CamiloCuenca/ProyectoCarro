@@ -48,7 +48,7 @@ public class RegistroEmpleadosController implements Initializable {
 
     @FXML
     void AgregarAction(ActionEvent event) {
-        Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),TxtId.getAnchor(),aux);
+        Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),TxtId.getText(),aux);
         DataBase.empleados.add(empleadox);
 
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();

@@ -30,7 +30,7 @@ public class DataBase {
      * @return
      */
     public  ArrayList<Empleado> setValoresQuemadosEmpleado() {
-        Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345",123, tipoEstado.ACTIVO);
+        Empleado empleadox = new Empleado("Pedro","Perez","111","correo","12345","123", tipoEstado.ACTIVO);
         empleados.add(empleadox);
         return empleados;
     }

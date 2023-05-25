@@ -24,6 +24,7 @@ public class InicioController {
 
     public static String nombre;
     public static String contrasena;
+    public Button btnadmi;
     @FXML
     private Button btnEmpleado;
     @FXML
@@ -123,5 +124,21 @@ public class InicioController {
         stage.setScene(escena);
         stage.show();
     }
+
+    @FXML
+    void admi(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("LoginAdministrador.fxml"));
+        Scene escena = new Scene(root);
+        stage.setScene(escena);
+        stage.show();
+        // en esta linea , esconde el stage del login y carga el nuevo stage
+        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+    }
+
+
+
+
 }
 

@@ -16,8 +16,9 @@
          <ImageView fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
-         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="28.0" prefWidth="117.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Soy Empleado" textFill="#ff3d26" />
-         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="28.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cancelar" textFill="#ff3d26" />
+         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="254.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="23.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Empleado" textFill="#ff3d26" />
+         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="28.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cancelar" textFill="#ff3d26" />
+         <Button fx:id="btnadmi" layoutX="42.0" layoutY="222.0" mnemonicParsing="false" onAction="#admi" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="administrador" textFill="#ff3d26" />
       </AnchorPane>
    </left>
    <center>
@@ -42,7 +43,7 @@
                <Font size="14.0" />
             </font>
          </PasswordField>
-         <Button fx:id="btnAceptar" layoutX="145.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE">
+         <Button fx:id="btnAceptar" layoutX="119.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE">
             <font>
                <Font size="14.0" />
             </font>
@@ -51,7 +52,7 @@
             <Image url="@../../../com.tuCarro.Img/candado.png" />
          </ImageView>
          <Label fx:id="loginerror" alignment="CENTER" layoutX="131.0" layoutY="267.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
-         <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#Registrarse" prefHeight="29.0" prefWidth="97.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" textFill="WHITE" />
+         <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#Registrarse" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" textFill="WHITE" />
       </AnchorPane>
    </center>
 </BorderPane>

@@ -16,12 +16,12 @@ public class Administrador extends Persona {
     public void verReporte(){
 
     }
-    public static  void RegistrarEmpleado(String nombre , String apellido , String Contrasena , String correo , String cedula , int id ){
+    public static  void RegistrarEmpleado(String nombre , String apellido , String Contrasena , String correo , String cedula , String id ){
         Empleado empleadox = new Empleado(nombre,apellido,cedula,correo,Contrasena,id, tipoEstado.ACTIVO);
         empleados.add(empleadox);
     }
 
-    public void EliminarEmpleado(int id){
+    public void EliminarEmpleado(String id){
         Empleado empleado1 = buscarEmpleado(id);
         empleados.remove(empleado1);
 
@@ -34,7 +34,7 @@ public class Administrador extends Persona {
 
     }
 
-    public Empleado buscarEmpleado(int id){
+    public Empleado buscarEmpleado(String id){
         return empleados.stream().filter(x->x.getId()==id).collect(Collectors.toList()).get(0);
     }
 
