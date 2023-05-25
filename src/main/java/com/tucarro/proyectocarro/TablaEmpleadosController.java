@@ -58,7 +58,7 @@ public class TablaEmpleadosController implements Initializable {
     // Inizializo un ArrayList de empleados que va a ser metodo de quemar valores
     // de un empleado el cual esta en el DataBase , para que haci el metodo funciones y estos valores queden quemados
     //en el codigo
-    public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
+    //public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
 
     /** Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
      * ventana la cual es para registrar un nuevo Empleado.

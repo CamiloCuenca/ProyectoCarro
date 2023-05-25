@@ -40,23 +40,10 @@ public class DataBase {
      * @return
      */
     public ArrayList<Cliente> SetValoresQuemadosCliente(){
-        Cliente clientex = new Cliente();
-        Cliente clientey = new Cliente();
 
-        clientex.setNombre("Juan");
-        clientex.setApellido("cuenca");
-        clientex.setCedula("1004779025");
-        clientex.setCorreo("camilo@gotmail");
-        clientex.setContraseña("12345");
 
-        clientey.setNombre("Camilo");
-        clientey.setApellido("cuenca");
-        clientey.setCedula("1004779025");
-        clientey.setCorreo("camilo@gotmail");
-        clientey.setContraseña("12345");
-
-        //clientes.add(clientey);
-        clientes.add(clientex);
+       // clientes.add(clientey);
+       // clientes.add(clientex);
         return clientes;
     }
 

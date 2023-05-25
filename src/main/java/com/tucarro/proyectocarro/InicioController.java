@@ -19,8 +19,8 @@ import java.util.ArrayList;
 public class InicioController {
 
     //Atributos
-    public static ArrayList<Cliente> listaClientes= new DataBase().SetValoresQuemadosCliente();
-    public static ArrayList<Administrador> listaAdministradores= new DataBase().setValoresQuemadosAdministrador();
+    //public static ArrayList<Cliente> listaClientes= new DataBase().SetValoresQuemadosCliente();
+    //public static ArrayList<Administrador> listaAdministradores= new DataBase().setValoresQuemadosAdministrador();
 
     public static String nombre;
     public static String contrasena;
@@ -74,18 +74,7 @@ public class InicioController {
                     // en esta linea , esconde el stage del login y carga el nuevo stage
                     ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
                     break;
-                } else if (DataBase.administradores.get(i).getNombre().equals(nombre) && DataBase.administradores.get(i).getContraseña().equals(contrasena)) {
-                    loginerror.setText("Se inicio Secion correctamente");
-                    Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("VentanaAdministrador.fxml"));
-                    Scene escena = new Scene(root);
-                    stage.setScene(escena);
-                    stage.show();
-                    // en esta linea , esconde el stage del login y carga el nuevo stage
-                    ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
-
-
-                } else{
+                }  else{
                     loginerror.setText("Error no se encuentra registrado");
                 }
 

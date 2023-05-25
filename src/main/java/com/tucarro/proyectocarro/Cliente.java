@@ -10,10 +10,7 @@ public class Cliente extends Persona {
 
     }
 
-    // Constructor Basio
-    public Cliente() {
 
-    }
 
 
 }

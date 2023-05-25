@@ -35,8 +35,8 @@ public class RegistroClientesController {
      * @param event
      */
     public void AceptarButtonOnAction(ActionEvent event){
-          Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
-          DataBase.clientes.add(clientex);
+         // Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
+          DataBase.clientes.add(new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText()));
 
         // en esta linea , esconde el stage del Registro
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
