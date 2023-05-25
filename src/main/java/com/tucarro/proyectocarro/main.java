@@ -10,7 +10,7 @@ public class main extends Application {
     public void start(Stage stage) throws  Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Inicio-view.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load(),700,500);
+        Scene scene = new Scene(fxmlLoader.load(),700,450);
         stage.setScene(scene);
         stage.show();
     }

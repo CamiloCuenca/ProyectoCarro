@@ -6,18 +6,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.CardController">
-   <children>
-      <ImageView fx:id="Carroimage" fitHeight="185.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../com.tuCarro.Img/iconoCarro.png" />
-         </image>
-      </ImageView>
-      <VBox prefHeight="185.0" prefWidth="200.0">
-         <children>
-            <Label fx:id="carroName" prefHeight="17.0" prefWidth="56.0" text="Nombre" />
-            <Label fx:id="authorName" text="authorxd" />
-         </children>
-      </VBox>
-   </children>
+<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="185.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.tucarro.proyectocarro.CardController">
+   <ImageView fx:id="Carroimage" fitHeight="185.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../com.tuCarro.Img/iconoCarro.png"/>
+   </ImageView>
+   <VBox prefHeight="185.0" prefWidth="200.0">
+      <Label fx:id="carroName" prefHeight="17.0" prefWidth="56.0" text="Nombre"/>
+      <Label fx:id="authorName" text="authorxd"/>
+   </VBox>
 </HBox>
