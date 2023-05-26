@@ -40,32 +40,32 @@ public class RegistroClientesController {
     private static String contrasena;
 
 
-    /**Este método se encarga de la accion "Aceptar" el cual nos permite registrar un nuevo cliente.
+    /**
+     * Este método se encarga de la accion "Aceptar" el cual nos permite registrar un nuevo cliente.
      *
      * @param event
      */
-    public void AceptarButtonOnAction(ActionEvent event){
+    public void AceptarButtonOnAction(ActionEvent event) {
         nombre = txtNombre.getText();
         apellido = txtApellido.getText();
         cedula = txtCedula.getText();
         correo = txtCorreo.getText();
         contrasena = pswContrasena.getText();
-        if (nombre.isEmpty()&&apellido.isEmpty()&&cedula.isEmpty()&&correo.isEmpty()&&contrasena.isEmpty()){
+        if (nombre.isEmpty() && apellido.isEmpty() && cedula.isEmpty() && correo.isEmpty() && contrasena.isEmpty()) {
             LoginRerrir.setText("LLene todos los campos");
-        }else if (nombre.isEmpty()||apellido.isEmpty()||cedula.isEmpty()||correo.isEmpty()||contrasena.isEmpty()){
+        } else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
             LoginRerrir.setText("Algunos campos no estan llenos");
-        }else{
-            DataBase.clientes.add(new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pswContrasena.getText()));
-            ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        } else {
+            DataBase.clientes.add(new Cliente(txtNombre.getText(), txtApellido.getText(), txtCedula.getText(), txtCorreo.getText(), pswContrasena.getText()));
+            ((Node) (event.getSource())).getScene().getWindow().hide();
         }
 
 
-         // Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
+        // Cliente clientex = new Cliente(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),pwrContraseña.getText());
 
 
         // en esta linea , esconde el stage del Registr
     }
-
 
 
 }

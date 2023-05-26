@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="a">
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroClientesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/RegistroEmpleadosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Empleados.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroClientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroClientes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroEmpleados.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/RegistroEmpleados.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaAdministrador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaAdministrador.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaClientesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaClientesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaEmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaEmpleadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaEmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/VentanaEmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/ventanaPrincipalController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,6 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="2Oni0ZxgMx4kUFwHxicH13gKLP9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,6 +60,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -164,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685082883691</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml">
+      <created>1685130957061</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685130957061</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +242,7 @@
     <MESSAGE value="Ya" />
     <MESSAGE value="Se creo la interfaz administrador y su respectivo funcionamiento" />
     <MESSAGE value="Hice algunas modificaciones en lo ulltimo que hicimos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hice algunas modificaciones en lo ulltimo que hicimos" />
+    <MESSAGE value="Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml" />
   </component>
 </project>

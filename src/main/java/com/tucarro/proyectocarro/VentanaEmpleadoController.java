@@ -11,7 +11,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 
 public class VentanaEmpleadoController {
@@ -28,9 +27,8 @@ public class VentanaEmpleadoController {
     private Button btnVehiculos;
 
 
-
-
-    /**Este metodo se encarga de mostrar el panel donde se encuentra la tabla de los clientes.
+    /**
+     * Este metodo se encarga de mostrar el panel donde se encuentra la tabla de los clientes.
      *
      * @param event
      * @throws IOException
@@ -40,7 +38,7 @@ public class VentanaEmpleadoController {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("clientes.fxml"));
-        AnchorPane pane = (AnchorPane) loader.load() ;
+        AnchorPane pane = (AnchorPane) loader.load();
         borderPane.setCenter(pane);
     }
 
@@ -52,7 +50,7 @@ public class VentanaEmpleadoController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
     }
 
@@ -61,11 +59,9 @@ public class VentanaEmpleadoController {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("tablasVehiculos.fxml"));
-        AnchorPane pane = (AnchorPane) loader.load() ;
+        AnchorPane pane = (AnchorPane) loader.load();
         borderPane.setCenter(pane);
     }
-
-
 
 
 }

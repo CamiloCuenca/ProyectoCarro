@@ -11,10 +11,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Administrador;
 import model.DataBase;
+
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class InicioController {
 
@@ -45,7 +44,8 @@ public class InicioController {
     private PasswordField pswContasena;
 
 
-    /**Este método se encarga de la accion del boton "Aceptar" en el cual nos verifica si el cliente
+    /**
+     * Este método se encarga de la accion del boton "Aceptar" en el cual nos verifica si el cliente
      * ya se encuentra registrado en la DataBase
      *
      * @param event
@@ -53,39 +53,40 @@ public class InicioController {
      */
     public void loginButtonOnAction(ActionEvent event) throws IOException {
 
-            nombre = txtNombre.getText();
-            contrasena = pswContasena.getText();
-        if(nombre.isEmpty()&&contrasena.isEmpty()){
+        nombre = txtNombre.getText();
+        contrasena = pswContasena.getText();
+        if (nombre.isEmpty() && contrasena.isEmpty()) {
             loginerror.setText("LLene todos los campos");
         } else if (nombre.isEmpty() || contrasena.isEmpty()) {
             loginerror.setText("algunos campos no estan llenos");
 
         }
 
-            for(int i = 0; i< DataBase.clientes.size(); i++){
-                if(DataBase.clientes.get(i).getNombre().equals(nombre) && DataBase.clientes.get(i).getContraseña().equals(contrasena)){
-                    loginerror.setText("Se inicio Secion correctamente");
-                    Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("VentanaPrincipal.fxml"));
-                    Scene escena = new Scene(root);
-                    stage.setScene(escena);
-                    stage.show();
-                    // en esta linea , esconde el stage del login y carga el nuevo stage
-                    ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
-                    break;
-                }  else{
-                    loginerror.setText("Error no se encuentra registrado");
-                }
-
+        for (int i = 0; i < DataBase.clientes.size(); i++) {
+            if (DataBase.clientes.get(i).getNombre().equals(nombre) && DataBase.clientes.get(i).getContraseña().equals(contrasena)) {
+                loginerror.setText("Se inicio Secion correctamente");
+                Stage stage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("VentanaPrincipal.fxml"));
+                Scene escena = new Scene(root);
+                stage.setScene(escena);
+                stage.show();
+                // en esta linea , esconde el stage del login y carga el nuevo stage
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+                break;
+            } else {
+                loginerror.setText("Error no se encuentra registrado");
             }
+
+        }
     }
 
-    /**Este método se encarga de la accion del boton "cerrar" el cual cierra la aplicacion
+    /**
+     * Este método se encarga de la accion del boton "cerrar" el cual cierra la aplicacion
      *
      * @param event
      */
     public void cancelButtonOnAction(ActionEvent event) {
-        Stage stage= (Stage) btnCancelar.getScene().getWindow();
+        Stage stage = (Stage) btnCancelar.getScene().getWindow();
         stage.close();
 
     }
@@ -98,7 +99,8 @@ public class InicioController {
      */
 
 
-    /**Este metodo se encarga de la accion del boton "soy empleado" la cual nos abre una nueva ventana
+    /**
+     * Este metodo se encarga de la accion del boton "soy empleado" la cual nos abre una nueva ventana
      * donde podemos logiarnos como un empleado.
      *
      * @param event
@@ -112,7 +114,7 @@ public class InicioController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
     public void Registrarse(ActionEvent actionEvent) throws IOException {
@@ -131,11 +133,9 @@ public class InicioController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
     }
-
-
 
 
 }

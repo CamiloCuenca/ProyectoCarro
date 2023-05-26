@@ -10,10 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.DataBase;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class VentanaAdministradorController {
 
@@ -36,7 +34,7 @@ public class VentanaAdministradorController {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Empleados.fxml"));
-        AnchorPane pane = (AnchorPane) loader.load() ;
+        AnchorPane pane = (AnchorPane) loader.load();
         borderPane.setCenter(pane);
 
     }
@@ -48,8 +46,7 @@ public class VentanaAdministradorController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
-
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
 
     }

@@ -7,13 +7,14 @@ import javafx.stage.Stage;
 
 public class main extends Application {
     @Override
-    public void start(Stage stage) throws  Exception{
+    public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Inicio-view.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load(),700,430);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 430);
         stage.setScene(scene);
         stage.show();
     }
+
     public static void main(String[] args) {
         launch(args);
     }

@@ -1,11 +1,10 @@
 package com.tucarro.proyectocarro;
 
-import com.tucarro.proyectocarro.Cliente;
 import model.Persona;
 import model.Vehiculo;
-import com.tucarro.proyectocarro.tipoEstado;
 
 import java.util.ArrayList;
+
 public class Empleado extends Persona {
     //Atributos
 
@@ -17,10 +16,10 @@ public class Empleado extends Persona {
     private ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
 
     //Constructor
-    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, String id,tipoEstado estado) {
+    public Empleado(String nombre, String apellido, String cedula, String correo, String contraseña, String id, tipoEstado estado) {
         super(nombre, apellido, cedula, correo, contraseña);
         this.id = id;
-        this.estado=estado;
+        this.estado = estado;
     }
 
 
@@ -48,7 +47,7 @@ public class Empleado extends Persona {
         return estado;
     }
 
-    public void setEstado (tipoEstado estado) {
+    public void setEstado(tipoEstado estado) {
         this.estado = estado;
     }
 
@@ -62,18 +61,17 @@ public class Empleado extends Persona {
 
     // Método para buscar un Cliente
 
-   public boolean buscarClientes(String nombre , String contrasena){
+    public boolean buscarClientes(String nombre, String contrasena) {
 
-        for(int i =0;i<clientes.size();i++){
-            if(clientes.get(i).getNombre().equals(nombre) && clientes.get(i).getNombre().equals(contrasena)){
+        for (int i = 0; i < clientes.size(); i++) {
+            if (clientes.get(i).getNombre().equals(nombre) && clientes.get(i).getNombre().equals(contrasena)) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
         return false;
-   }
-
+    }
 
 
 }

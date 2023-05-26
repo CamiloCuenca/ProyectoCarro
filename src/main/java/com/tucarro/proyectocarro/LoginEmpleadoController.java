@@ -49,7 +49,7 @@ public class LoginEmpleadoController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
     }
     @FXML

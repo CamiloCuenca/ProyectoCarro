@@ -1,4 +1,5 @@
 package com.tucarro.proyectocarro;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +21,7 @@ public class LoginAdministradorController {
 
     private static String nombre;
     private static String contrasena;
-    public static ArrayList<Administrador> listaAdministrador= new DataBase().setValoresQuemadosAdministrador();
+    public static ArrayList<Administrador> listaAdministrador = new DataBase().setValoresQuemadosAdministrador();
 
     @FXML
     private Button btnAceptar;
@@ -35,23 +36,23 @@ public class LoginAdministradorController {
     private TextField txtNombre;
     @FXML
     private Label loginerror;
-    public static ArrayList<Administrador> listaAdministradores= new DataBase().setValoresQuemadosAdministrador();
+
+    public static ArrayList<Administrador> listaAdministradores = new DataBase().setValoresQuemadosAdministrador();
 
     @FXML
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
 
-        for(int i = 0; i< DataBase.administradores.size(); i++){
+        if (nombre.isEmpty() && contrasena.isEmpty()) {
+            loginerror.setText("LLene todos los campos");
+        } else if (nombre.isEmpty() || contrasena.isEmpty()) {
+            loginerror.setText("algunos campos no estan llenos");
 
-            if(nombre.isEmpty()&&contrasena.isEmpty()){
-                loginerror.setText("LLene todos los campos");
-            } else if (nombre.isEmpty() || contrasena.isEmpty()) {
-                loginerror.setText("algunos campos no estan llenos");
+        }
 
-            }
-
-            else if(DataBase.administradores.get(i).getNombre().equals(nombre) && DataBase.administradores.get(i).getContraseña().equals(contrasena)){
+        for (int i = 0; i < DataBase.administradores.size(); i++) {
+            if (DataBase.administradores.get(i).getNombre().equals(nombre) && DataBase.administradores.get(i).getContraseña().equals(contrasena)) {
                 loginerror.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaAdministrador.fxml"));
@@ -59,9 +60,9 @@ public class LoginAdministradorController {
                 stage.setScene(escena);
                 stage.show();
                 // en esta linea , esconde el stage del login y carga el nuevo stage
-                ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+                ((Node) (event.getSource())).getScene().getWindow().hide();
                 break;
-            }else{
+            } else {
                 loginerror.setText("Error no se encuentra registrado");
             }
 
@@ -78,7 +79,7 @@ public class LoginAdministradorController {
         stage.setScene(escena);
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
 
     }

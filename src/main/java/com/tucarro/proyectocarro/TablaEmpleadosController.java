@@ -13,8 +13,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.Persona;
 import model.DataBase;
+import model.Persona;
 
 import java.io.IOException;
 import java.net.URL;
@@ -60,7 +60,8 @@ public class TablaEmpleadosController implements Initializable {
     //en el codigo
     //public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
 
-    /** Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
+    /**
+     * Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
      * ventana la cual es para registrar un nuevo Empleado.
      *
      * @param event
@@ -76,7 +77,8 @@ public class TablaEmpleadosController implements Initializable {
 
     }
 
-    /** Este metodo nos permite editar los atributos de un empleado
+    /**
+     * Este metodo nos permite editar los atributos de un empleado
      *
      * @param event
      */
@@ -85,7 +87,8 @@ public class TablaEmpleadosController implements Initializable {
 
     }
 
-    /**Este método nos permite eliminar un Empleado,
+    /**
+     * Este método nos permite eliminar un Empleado,
      *
      * @param event
      */
@@ -94,7 +97,8 @@ public class TablaEmpleadosController implements Initializable {
 
     }
 
-    /** Este método inizializa los atributos de la tabla de empleados
+    /**
+     * Este método inizializa los atributos de la tabla de empleados
      * tomandolos de un ArrayList de Empleados  que se Encuentra en el DataBase.
      *
      * @param url

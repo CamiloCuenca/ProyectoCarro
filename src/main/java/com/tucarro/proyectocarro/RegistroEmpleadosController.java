@@ -67,36 +67,36 @@ public class RegistroEmpleadosController implements Initializable {
         correo = txtCorreo.getText();
         contrasena = txtContrasena.getText();
         ID = txtId.getText();
-        if (nombre.isEmpty()&&apellido.isEmpty()&&cedula.isEmpty()&&correo.isEmpty()&&contrasena.isEmpty()&&ID.isEmpty()){
+        if (nombre.isEmpty() && apellido.isEmpty() && cedula.isEmpty() && correo.isEmpty() && contrasena.isEmpty() && ID.isEmpty()) {
             labError.setText("llene todos los espacios");
-        }else if (nombre.isEmpty()||apellido.isEmpty()||cedula.isEmpty()||correo.isEmpty()||contrasena.isEmpty()||ID.isEmpty()){
+        } else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || correo.isEmpty() || contrasena.isEmpty() || ID.isEmpty()) {
             labError.setText("Algunos campos no estan llenos");
-        }else {
-            Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),txtId.getText(),aux);
+        } else {
+            Empleado empleadox = new Empleado(txtNombre.getText(), txtApellido.getText(), txtCedula.getText(), txtCorreo.getText(), txtContrasena.getText(), txtId.getText(), aux);
             DataBase.empleados.add(empleadox);
-            ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+            ((Node) (event.getSource())).getScene().getWindow().hide();
         }
-
 
 
     }
 
-    private  String estado[] ={"ACTIVO","BLOQUEADO"};
+    private String estado[] = {"ACTIVO", "BLOQUEADO"};
     private String estadoEmpleado;
 
-    private tipoEstado aux ;
+    private tipoEstado aux;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cbEstado.getItems().addAll(estado);
         cbEstado.setOnAction(this::getEstado);
     }
-    public void getEstado(ActionEvent event){
+
+    public void getEstado(ActionEvent event) {
         estadoEmpleado = cbEstado.getValue();
-        if(estadoEmpleado.equals("ACTIVO")){
-            aux= tipoEstado.ACTIVO;
+        if (estadoEmpleado.equals("ACTIVO")) {
+            aux = tipoEstado.ACTIVO;
         } else if (estadoEmpleado.equals("BLOQUEADO")) {
-            aux=  tipoEstado.BLOQUEADO;
+            aux = tipoEstado.BLOQUEADO;
         }
 
 
@@ -109,7 +109,7 @@ public class RegistroEmpleadosController implements Initializable {
         Scene escena = new Scene(root);
         stage.setScene(escena);
         stage.show();
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
 
     }
 }

@@ -13,8 +13,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.Persona;
 import model.DataBase;
+import model.Persona;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,7 +67,8 @@ public class TablaClientesController implements Initializable {
 
     }
 
-    /** Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
+    /**
+     * Este método es el encargado de la accion de el boton "Agregar" el cual nos abre una nueva
      * ventana la cual es para registrar un nuevo clientes.
      *
      * @param event
