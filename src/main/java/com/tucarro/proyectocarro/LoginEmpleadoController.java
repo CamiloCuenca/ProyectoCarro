@@ -57,17 +57,18 @@ public class LoginEmpleadoController {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
         ID = txtID.getText();
+        if(nombre.isEmpty()&&contrasena.isEmpty()&&ID.isEmpty()){
+            loginerror.setText("LLene todos los campos");
+        } else if (nombre.isEmpty() || contrasena.isEmpty()) {
+            loginerror.setText("algunos campos no estan llenos");
+
+        }
 
         for(int i = 0; i< DataBase.empleados.size(); i++){
 
-            if(nombre.isEmpty()&&contrasena.isEmpty()&&ID.isEmpty()){
-                loginerror.setText("LLene todos los campos");
-            } else if (nombre.isEmpty() || contrasena.isEmpty()) {
-                loginerror.setText("algunos campos no estan llenos");
 
-            }
 
-            else if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID)){
+            if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID)){
                 loginerror.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaEmpleado.fxml"));

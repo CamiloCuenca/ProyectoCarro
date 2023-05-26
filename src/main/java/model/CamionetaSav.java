@@ -29,18 +29,15 @@ public class CamionetaSav extends AbsCamioneta {
     TieneAsistentePerCarril tieneAsistentePerCarril;
 
     // Constructor
-    public CamionetaSav(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
-                        int numerosPasajeros, int numeroPuertas, int numBolasAire, int capMaletero, String[] fotos,
-                        TipoCombustible tipoCombustible,
-                        TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad,
-                        TieneAireAcondicionado tieneAireAcondicionado, TieneCamaraReversa tieneCamaraReversa, TieneABS tieneABS,
-                        EsCuatroxCuatro esCuatroxCuatro) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas,
-                numBolasAire,
-                fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad, tieneAireAcondicionado,
-                tieneCamaraReversa,
-                tieneABS, esCuatroxCuatro);
+
+
+    public CamionetaSav(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje, int numerosPasajeros, int numeroPuertas, int numBolasAire, String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad, TieneAireAcondicionado tieneAireAcondicionado, TieneCamaraReversa tieneCamaraReversa, TieneABS tieneABS, EsCuatroxCuatro esCuatroxCuatro, int capMaletero, TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas, numBolasAire, fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad, tieneAireAcondicionado, tieneCamaraReversa, tieneABS, esCuatroxCuatro);
         this.capMaletero = capMaletero;
+        this.tieneVelocidadCrucero = tieneVelocidadCrucero;
+        this.tieneSensorColision = tieneSensorColision;
+        this.tIeneSensorCruzado = tIeneSensorCruzado;
+        this.tieneAsistentePerCarril = tieneAsistentePerCarril;
     }
 
     // Metodo imprimir

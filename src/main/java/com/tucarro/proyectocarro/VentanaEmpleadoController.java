@@ -24,6 +24,9 @@ public class VentanaEmpleadoController {
     private BorderPane borderPane;
     @FXML
     private Button btnRegresar;
+    @FXML
+    private Button btnVehiculos;
+
 
 
 
@@ -50,6 +53,12 @@ public class VentanaEmpleadoController {
         stage.show();
         // en esta linea , esconde el stage del login y carga el nuevo stage
         ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
+    }
+
+
+    @FXML
+    void Vehiculos(ActionEvent event) {
 
     }
 
