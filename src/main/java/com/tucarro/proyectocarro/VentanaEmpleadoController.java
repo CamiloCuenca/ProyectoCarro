@@ -56,10 +56,13 @@ public class VentanaEmpleadoController {
 
     }
 
-
     @FXML
-    void Vehiculos(ActionEvent event) {
-
+    void Vehiculos(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("tablasVehiculos.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load() ;
+        borderPane.setCenter(pane);
     }
 
 

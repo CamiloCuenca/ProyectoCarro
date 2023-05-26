@@ -29,7 +29,7 @@
    </top>
    <center>
       <AnchorPane prefHeight="409.0" prefWidth="511.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="410.0" fitWidth="509.0" layoutX="14.0" pickOnBounds="true">
+         <ImageView fitHeight="409.0" fitWidth="533.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
          </ImageView>
       </AnchorPane>
