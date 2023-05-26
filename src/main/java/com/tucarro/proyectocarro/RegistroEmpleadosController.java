@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.DataBase;
@@ -19,9 +20,10 @@ import java.util.ResourceBundle;
 
 public class RegistroEmpleadosController implements Initializable {
 
+    @FXML
     public Button btnRegresar;
     @FXML
-    private TextField TxtId;
+    private TextField txtId;
 
     @FXML
     private Button btnAgregar;
@@ -45,13 +47,37 @@ public class RegistroEmpleadosController implements Initializable {
     private TextField txtNombre;
     @FXML
     private ChoiceBox<String> cbEstado;
+    @FXML
+    private Label labError;
+
+
+    private static String nombre;
+    private static String apellido;
+    private static String cedula;
+    private static String correo;
+    private static String contrasena;
+    private static String ID;
+
 
     @FXML
     void AgregarAction(ActionEvent event) {
-        Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),TxtId.getText(),aux);
-        DataBase.empleados.add(empleadox);
+        nombre = txtNombre.getText();
+        apellido = txtApellido.getText();
+        cedula = txtCedula.getText();
+        correo = txtCorreo.getText();
+        contrasena = txtContrasena.getText();
+        ID = txtId.getText();
+        if (nombre.isEmpty()&&apellido.isEmpty()&&cedula.isEmpty()&&correo.isEmpty()&&contrasena.isEmpty()&&ID.isEmpty()){
+            labError.setText("llene todos los espacios");
+        }else if (nombre.isEmpty()||apellido.isEmpty()||cedula.isEmpty()||correo.isEmpty()||contrasena.isEmpty()||ID.isEmpty()){
+            labError.setText("Algunos campos no estan llenos");
+        }else {
+            Empleado empleadox = new Empleado(txtNombre.getText(),txtApellido.getText(),txtCedula.getText(),txtCorreo.getText(),txtContrasena.getText(),txtId.getText(),aux);
+            DataBase.empleados.add(empleadox);
+            ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+        }
 
-        ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+
 
     }
 

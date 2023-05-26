@@ -14,5 +14,5 @@
           <TableColumn fx:id="colCorreos" prefWidth="133.99998982747394" text="Correo" />
       </columns>
     </TableView>
-    <Button fx:id="btnAgregar" layoutX="219.0" layoutY="360.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" />
+    <Button fx:id="btnAgregar" layoutX="223.0" layoutY="360.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" textFill="WHITE" />
 </AnchorPane>

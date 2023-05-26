@@ -63,9 +63,6 @@ public class InicioController {
         }
 
             for(int i = 0; i< DataBase.clientes.size(); i++){
-
-
-
                 if(DataBase.clientes.get(i).getNombre().equals(nombre) && DataBase.clientes.get(i).getContraseña().equals(contrasena)){
                     loginerror.setText("Se inicio Secion correctamente");
                     Stage stage = new Stage();

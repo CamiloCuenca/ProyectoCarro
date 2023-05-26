@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="382.0" prefWidth="592.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaEmpleadosController">
-    <TableView fx:id="tblEmpleados" prefHeight="342.0" prefWidth="579.0">
+    <TableView fx:id="tblEmpleados" layoutX="11.0" prefHeight="342.0" prefWidth="568.0">
       <columns>
           <TableColumn fx:id="colNombre" prefWidth="92.0" text="Nombre" />
           <TableColumn fx:id="colApellido" prefWidth="89.99996948242188" text="Apellido" />
@@ -17,8 +17,8 @@
       </columns>
     </TableView>
     <AnchorPane layoutX="119.0" layoutY="342.0" prefHeight="41.0" prefWidth="355.0">
-        <Button fx:id="btnEliminar" layoutX="229.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Eliminar" />
-        <Button fx:id="btnEditar" layoutX="153.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Editar" />
-        <Button fx:id="btnAgregar" layoutX="74.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" />
+        <Button fx:id="btnEliminar" layoutX="229.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Eliminar" textFill="WHITE" />
+        <Button fx:id="btnEditar" layoutX="153.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Editar" textFill="WHITE" />
+        <Button fx:id="btnAgregar" layoutX="74.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" textFill="WHITE" />
     </AnchorPane>
 </AnchorPane>
