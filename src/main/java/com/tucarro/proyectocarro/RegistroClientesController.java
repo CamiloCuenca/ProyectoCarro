@@ -1,16 +1,28 @@
 package com.tucarro.proyectocarro;
 
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.transform.Rotate;
+import javafx.util.Duration;
 import model.DataBase;
 
-public class RegistroClientesController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class RegistroClientesController implements Initializable {
+
+    @FXML
+    private ImageView imaCarro;
     //Atributos
     @FXML
     private Button btnaceptar;
@@ -68,4 +80,16 @@ public class RegistroClientesController {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(imaCarro);
+        rotate.setDuration(Duration.millis(1700));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+    }
 }

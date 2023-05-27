@@ -13,12 +13,12 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="imaCarro" fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
-         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="254.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="23.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Empleado" textFill="#ff3d26" />
-         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="28.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cancelar" textFill="#ff3d26" />
-         <Button fx:id="btnadmi" layoutX="42.0" layoutY="222.0" mnemonicParsing="false" onAction="#admi" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="administrador" textFill="#ff3d26" />
+         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="27.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Empleado" textFill="#ff3d26" AnchorPane.topAnchor="237.0" />
+         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="270.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Salir" textFill="#ff3d26" />
+         <Button fx:id="btnadmi" layoutX="42.0" layoutY="205.0" mnemonicParsing="false" onAction="#admi" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Administrador" textFill="#ff3d26" AnchorPane.topAnchor="205.0" />
       </AnchorPane>
    </left>
    <center>

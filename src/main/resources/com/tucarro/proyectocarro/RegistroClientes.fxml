@@ -12,7 +12,7 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.RegistroClientesController">
    <top>
       <AnchorPane prefHeight="94.0" prefWidth="604.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="87.0" fitWidth="143.0" layoutX="254.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="imaCarro" fitHeight="87.0" fitWidth="143.0" layoutX="254.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
       </AnchorPane>

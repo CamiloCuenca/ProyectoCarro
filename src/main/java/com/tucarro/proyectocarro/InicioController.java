@@ -1,21 +1,28 @@
 package com.tucarro.proyectocarro;
 
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import model.DataBase;
+import model.Vehiculo;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class InicioController {
+public class InicioController implements Initializable {
 
     //Atributos
     //public static ArrayList<Cliente> listaClientes= new DataBase().SetValoresQuemadosCliente();
@@ -23,6 +30,7 @@ public class InicioController {
 
     public static String nombre;
     public static String contrasena;
+    @FXML
     public Button btnadmi;
     @FXML
     private Button btnEmpleado;
@@ -42,6 +50,8 @@ public class InicioController {
     private TextField txtNombre;
     @FXML
     private PasswordField pswContasena;
+    @FXML
+    private ImageView imaCarro;
 
 
     /**
@@ -86,9 +96,15 @@ public class InicioController {
      * @param event
      */
     public void cancelButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) btnCancelar.getScene().getWindow();
-        stage.close();
-
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("salir");
+        alert.setHeaderText("Estas a punto de desconectarte");
+        alert.setContentText("Estas seguro de desconectarte?");
+        if(alert.showAndWait().get() == ButtonType.OK) {
+            System.out.println("saliste correctamente");
+            Stage stage = (Stage) btnCancelar.getScene().getWindow();
+            stage.close();
+        }
     }
 
 
@@ -138,5 +154,18 @@ public class InicioController {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(imaCarro);
+        rotate.setDuration(Duration.millis(1700));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+
+    }
 }
 

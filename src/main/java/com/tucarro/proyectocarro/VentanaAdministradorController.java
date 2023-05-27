@@ -1,19 +1,31 @@
 package com.tucarro.proyectocarro;
 
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class VentanaAdministradorController {
+public class VentanaAdministradorController implements Initializable {
+
+    @FXML
+    private ImageView imaCarro;
 
     @FXML
     private BorderPane borderPane;
@@ -58,4 +70,16 @@ public class VentanaAdministradorController {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(imaCarro);
+        rotate.setDuration(Duration.millis(1700));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setInterpolator(Interpolator.LINEAR);
+        rotate.setByAngle(360);
+        rotate.setAxis(Rotate.Y_AXIS);
+        rotate.play();
+
+    }
 }

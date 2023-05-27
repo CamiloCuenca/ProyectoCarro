@@ -13,7 +13,7 @@
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="731.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaAdministradorController">
    <top>
       <AnchorPane prefHeight="119.0" prefWidth="723.0" style="-fx-background-color: #ff3d26; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="114.0" fitWidth="123.0" layoutX="304.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="imaCarro" fitHeight="114.0" fitWidth="123.0" layoutX="304.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
          <Button fx:id="btnRegresar" layoutX="187.0" layoutY="42.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
