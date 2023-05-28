@@ -70,8 +70,8 @@ public class VentanaEmpleadoController implements Initializable {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("tablasVehiculos.fxml"));
-        AnchorPane pane = (AnchorPane) loader.load();
-        borderPane.setCenter(pane);
+        BorderPane borderPane1 = (BorderPane) loader.load();
+        borderPane.setCenter(borderPane1);
     }
 
 

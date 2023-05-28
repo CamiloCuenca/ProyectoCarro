@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="382.0" prefWidth="592.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaEmpleadosController">
-    <TableView fx:id="tblEmpleados" layoutX="11.0" prefHeight="342.0" prefWidth="568.0">
+<AnchorPane prefHeight="383.0" prefWidth="927.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaEmpleadosController">
+    <TableView fx:id="tblEmpleados" layoutX="11.0" onMouseClicked="#seleccionar" prefHeight="376.0" prefWidth="625.0">
       <columns>
-          <TableColumn fx:id="colNombre" prefWidth="92.0" text="Nombre" />
-          <TableColumn fx:id="colApellido" prefWidth="89.99996948242188" text="Apellido" />
-          <TableColumn fx:id="colCedula" prefWidth="97.3333740234375" text="Cedula" />
-          <TableColumn fx:id="colCorreo" prefWidth="76.0" text="Correo" />
-          <TableColumn fx:id="colId" prefWidth="66.6666259765625" text="ID" />
-          <TableColumn fx:id="colEstado" prefWidth="170.0" text="Estado" />
+          <TableColumn fx:id="colNombre" prefWidth="101.33334636688232" text="Nombre" />
+          <TableColumn fx:id="colApellido" prefWidth="103.99996185302734" text="Apellido" />
+          <TableColumn fx:id="colCedula" prefWidth="125.33338928222656" text="Cedula" />
+          <TableColumn fx:id="colCorreo" prefWidth="126.0" text="Correo" />
+          <TableColumn fx:id="colId" prefWidth="53.333282470703125" text="ID" />
+          <TableColumn fx:id="colEstado" prefWidth="116.0" text="Estado" />
       </columns>
     </TableView>
-    <AnchorPane layoutX="119.0" layoutY="342.0" prefHeight="41.0" prefWidth="355.0">
+    <AnchorPane layoutX="597.0" layoutY="314.0" prefHeight="56.0" prefWidth="247.0">
         <Button fx:id="btnEliminar" layoutX="229.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Eliminar" textFill="WHITE" />
         <Button fx:id="btnEditar" layoutX="153.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Editar" textFill="WHITE" />
         <Button fx:id="btnAgregar" layoutX="74.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" textFill="WHITE" />
     </AnchorPane>
+   <TextField fx:id="txtNombre" layoutX="746.0" layoutY="23.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="txtApellido" layoutX="746.0" layoutY="59.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="txtCedula" layoutX="746.0" layoutY="96.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="TxtCorreo" layoutX="746.0" layoutY="131.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="txtId" layoutX="746.0" layoutY="205.0" style="-fx-background-radius: 15;" />
+   <ChoiceBox fx:id="cbEstado" layoutX="746.0" layoutY="239.0" prefWidth="150.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" />
+   <TextField fx:id="txtContrasena" layoutX="746.0" layoutY="169.0" style="-fx-background-radius: 15;" />
+   <Label fx:id="labError" layoutX="665.0" layoutY="280.0" prefHeight="26.0" prefWidth="231.0" textFill="#ff3d26">
+      <font>
+         <Font name="System Bold Italic" size="17.0" />
+      </font>
+   </Label>
+   <Label layoutX="665.0" layoutY="27.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Nombre" />
+   <Label layoutX="665.0" layoutY="63.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Apellido" />
+   <Label layoutX="665.0" layoutY="100.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Cedula" />
+   <Label layoutX="665.0" layoutY="135.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Correo" />
+   <Label layoutX="665.0" layoutY="173.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Contraseña" />
+   <Label layoutX="665.0" layoutY="209.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="ID" />
+   <Label layoutX="665.0" layoutY="243.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #FFF;" text="Estado" />
 </AnchorPane>

@@ -6,12 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.DataBase;
 import model.Persona;
@@ -24,6 +24,21 @@ import java.util.ResourceBundle;
 public class TablaEmpleadosController implements Initializable {
 
     //Atributos
+    @FXML
+    private TextField txtNombre;
+
+    @FXML
+    private TextField txtApellido;
+
+    @FXML
+    private TextField txtCedula;
+
+    @FXML
+    private TextField txtId;
+    @FXML
+    private TextField TxtCorreo;
+    @FXML
+    private ChoiceBox<String> cbEstado;
 
     @FXML
     private Button btnAgregar;
@@ -32,7 +47,7 @@ public class TablaEmpleadosController implements Initializable {
     private Button btnEditar;
 
     @FXML
-    private Button btnEliminar;
+    private Button btnEliminar ;
 
     @FXML
     private TableColumn<Persona, String> colApellido;
@@ -54,6 +69,22 @@ public class TablaEmpleadosController implements Initializable {
 
     @FXML
     private TableView<Persona> tblEmpleados;
+    @FXML
+    private Label labError;
+    @FXML
+    private TextField txtContrasena;
+
+
+
+    private static String nombre;
+    private static String apellido;
+    private static String cedula;
+    private static String correo;
+    private static String contrasena;
+    private static String ID;
+
+
+
 
     // Inizializo un ArrayList de empleados que va a ser metodo de quemar valores
     // de un empleado el cual esta en el DataBase , para que haci el metodo funciones y estos valores queden quemados
@@ -69,13 +100,54 @@ public class TablaEmpleadosController implements Initializable {
      */
     @FXML
     void Agregar(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("RegistroEmpleados.fxml"));
-        Scene escena = new Scene(root);
-        stage.setScene(escena);
-        stage.show();
+       // Stage stage = new Stage();
+       // Parent root = FXMLLoader.load(getClass().getResource("RegistroEmpleados.fxml"));
+        //Scene escena = new Scene(root);
+        //stage.setScene(escena);
+        //stage.show();
+
+        nombre = txtNombre.getText();
+        apellido = txtApellido.getText();
+        cedula = txtCedula.getText();
+        correo = TxtCorreo.getText();
+        contrasena = txtContrasena.getText();
+        ID = txtId.getText();
+        if (nombre.isEmpty() && apellido.isEmpty() && cedula.isEmpty() && correo.isEmpty() && contrasena.isEmpty() && ID.isEmpty()) {
+            labError.setText("llene todos los espacios");
+        } else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || correo.isEmpty() || contrasena.isEmpty() || ID.isEmpty()) {
+            labError.setText("Algunos campos no estan llenos");
+        } else {
+            Empleado empleadox = new Empleado(txtNombre.getText(), txtApellido.getText(), txtCedula.getText(), TxtCorreo.getText(), txtContrasena.getText(), txtId.getText(), aux);
+            DataBase.empleados.add(empleadox);
+
+        }
+
+
+
+
+
 
     }
+
+
+    private String estado[] = {"ACTIVO", "BLOQUEADO"};
+    private String estadoEmpleado;
+
+    private tipoEstado aux;
+
+
+    public void getEstado(ActionEvent event) {
+        estadoEmpleado = cbEstado.getValue();
+        if (estadoEmpleado.equals("ACTIVO")) {
+            aux = tipoEstado.ACTIVO;
+        } else if (estadoEmpleado.equals("BLOQUEADO")) {
+            aux = tipoEstado.BLOQUEADO;
+        }
+
+
+    }
+
+
 
     /**
      * Este metodo nos permite editar los atributos de un empleado
@@ -84,6 +156,27 @@ public class TablaEmpleadosController implements Initializable {
      */
     @FXML
     void Editar(ActionEvent event) {
+
+        //Persona p = this.tblEmpleados.getSelectionModel().getSelectedItem();
+        Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
+        if(a == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Debes seleccionar un empleado");
+            alert.showAndWait();
+        }else{
+
+            a.setNombre(txtNombre.getText());
+            a.setApellido(txtApellido.getText());
+            a.setCedula(txtCedula.getText());
+            a.setCorreo(TxtCorreo.getText());
+            a.setId(txtId.getText());
+            a.setContraseña(txtContrasena.getText());
+            a.setEstado(aux);
+            this.tblEmpleados.refresh();
+
+        }
 
     }
 
@@ -94,8 +187,43 @@ public class TablaEmpleadosController implements Initializable {
      */
     @FXML
     void Eliminar(ActionEvent event) {
+        Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
+        if(a == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Debes seleccionar un empleado");
+            alert.showAndWait();
+        }else{
+            DataBase.empleados.remove(a);
+            this.tblEmpleados.refresh();
+        }
+
 
     }
+
+    @FXML
+    void seleccionar(MouseEvent event) {
+        //Persona p = this.tblEmpleados.getSelectionModel().getSelectedItem();
+        Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
+
+        if(a != null){
+            this.txtNombre.setText(a.getNombre());
+            this.txtApellido.setText(a.getApellido());
+            this.txtCedula.setText(a.getCedula());
+            this.TxtCorreo.setText(a.getCorreo());
+            this.txtId.setText(a.getId());
+            this.txtContrasena.setText(a.getContraseña());
+            this.cbEstado.setValue(String.valueOf(aux));
+            //this.cbEstado.setValue(a.);
+
+        }
+
+    }
+
+
+
+
 
     /**
      * Este método inizializa los atributos de la tabla de empleados
@@ -123,5 +251,12 @@ public class TablaEmpleadosController implements Initializable {
         // Asignar los datos a la tabla
         tblEmpleados.setItems(datosEmpleados);
 
+
+        cbEstado.getItems().addAll(estado);
+        cbEstado.setOnAction(this::getEstado);
+
     }
+
+
+
 }

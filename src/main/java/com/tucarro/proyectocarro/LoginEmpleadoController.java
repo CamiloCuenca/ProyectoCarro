@@ -80,7 +80,7 @@ public class LoginEmpleadoController implements Initializable {
 
 
 
-            if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID)){
+            if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID) && DataBase.empleados.get(i).getEstado().equals(tipoEstado.ACTIVO)){
                 loginerror.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaEmpleado.fxml"));
@@ -90,8 +90,8 @@ public class LoginEmpleadoController implements Initializable {
                 // en esta linea , esconde el stage del login y carga el nuevo stage
                 ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
                 break;
-            }else{
-                loginerror.setText("Error no se encuentra registrado");
+            } else{
+                loginerror.setText("Error no se encuentra registrado o su cuenta fue bloqueada");
             }
 
         }

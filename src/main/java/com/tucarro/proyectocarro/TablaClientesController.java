@@ -40,6 +40,9 @@ public class TablaClientesController implements Initializable {
     @FXML
     private TableView<Persona> tblClientes;
 
+
+
+
     /**
      * Este método inizializa los atributos de la tabla de clientes
      * tomandolos de un ArrayList de Clientes que se Encuentra en el DataBase.

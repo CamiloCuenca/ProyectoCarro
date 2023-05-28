@@ -6,18 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="bordenPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="bordenPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablasVehiculosController">
    <top>
       <AnchorPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: #333333;" BorderPane.alignment="CENTER">
-         <Button fx:id="motos" layoutX="106.0" layoutY="18.0" mnemonicParsing="false" onAction="#Motos" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Motos" textFill="#ff3d26" />
-         <Button fx:id="automoviles" layoutX="203.0" layoutY="18.0" mnemonicParsing="false" onAction="#AutoMoviles" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Automoviles" textFill="#ff3d26" />
-         <Button fx:id="camionetas" layoutX="300.0" layoutY="18.0" mnemonicParsing="false" onAction="#Camionetas" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Camionetas" textFill="#ff3d26" />
-         <Button fx:id="camiones" layoutX="402.0" layoutY="18.0" mnemonicParsing="false" onAction="#Camiones" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Camiones" textFill="#ff3d26" />
+         <Button fx:id="btnMotos" layoutX="52.0" layoutY="18.0" mnemonicParsing="false" onAction="#Motos" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Motos" textFill="#ff3d26" />
+         <Button fx:id="btnAutomoviles" layoutX="167.0" layoutY="18.0" mnemonicParsing="false" onAction="#AutoMoviles" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Automoviles" textFill="#ff3d26" />
+         <Button fx:id="btnCamionetas" layoutX="279.0" layoutY="18.0" mnemonicParsing="false" onAction="#Camionetas" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Camionetas" textFill="#ff3d26" />
+         <Button fx:id="btnCamiones" layoutX="379.0" layoutY="18.0" mnemonicParsing="false" onAction="#Camiones" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Camiones" textFill="#ff3d26" />
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="338.0" prefWidth="598.0" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="344.0" fitWidth="600.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true">
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="344.0" fitWidth="514.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
          </ImageView>
       </AnchorPane>
