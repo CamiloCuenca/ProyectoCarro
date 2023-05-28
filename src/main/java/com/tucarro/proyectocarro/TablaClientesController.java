@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -45,6 +46,8 @@ public class TablaClientesController implements Initializable {
     @FXML
     private TextField TxtCorreo;
     @FXML
+    private  TextField pswContrasena;
+    @FXML
     private Button btnAgregar;
     @FXML
     private Button btnEditar;
@@ -55,6 +58,8 @@ public class TablaClientesController implements Initializable {
     private static String apellido;
     private static String cedula;
     private static String correo;
+
+    private static  String contrasena;
 
 
     /**
@@ -94,21 +99,76 @@ public class TablaClientesController implements Initializable {
     @FXML
     void Agregar(ActionEvent event) {
 
+        nombre = txtNombre.getText();
+        apellido = txtApellido.getText();
+        cedula = txtCedula.getText();
+        correo = TxtCorreo.getText();
+        contrasena = pswContrasena.getText();
+        if (nombre.isEmpty() && apellido.isEmpty() && cedula.isEmpty() && correo.isEmpty() && contrasena.isEmpty()) {
+            labError.setText("LLene todos los campos");
+        } else if (nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
+            labError.setText("Algunos campos no estan llenos");
+        } else {
+            DataBase.clientes.add(new Cliente(txtNombre.getText(), txtApellido.getText(), txtCedula.getText(), TxtCorreo.getText(), pswContrasena.getText()));
+
+        }
+
     }
 
 
     @FXML
     void Editar(ActionEvent event) {
+        Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
+        if(a == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Debes seleccionar un empleado");
+            alert.showAndWait();
+        }else{
+
+            a.setNombre(txtNombre.getText());
+            a.setApellido(txtApellido.getText());
+            a.setCedula(txtCedula.getText());
+            a.setCorreo(TxtCorreo.getText());
+            a.setContraseña(pswContrasena.getText());
+            this.tblClientes.refresh();
+
+        }
 
     }
 
     @FXML
     void Eliminar(ActionEvent event) {
 
+        Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
+        if(a == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Debes seleccionar un empleado");
+            alert.showAndWait();
+        }else{
+            DataBase.clientes.remove(a);
+            this.tblClientes.refresh();
+        }
+
+
     }
 
     @FXML
     void Seleccionar(MouseEvent event) {
+
+        Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
+
+        if(a != null){
+            this.txtNombre.setText(a.getNombre());
+            this.txtApellido.setText(a.getApellido());
+            this.txtCedula.setText(a.getCedula());
+            this.TxtCorreo.setText(a.getCorreo());
+            this.pswContrasena.setText(a.getContraseña());
+
+        }
 
     }
 

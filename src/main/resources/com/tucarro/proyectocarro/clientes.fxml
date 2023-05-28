@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -25,20 +26,16 @@
    <TextField fx:id="txtApellido" layoutX="718.0" layoutY="107.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
    <TextField fx:id="txtCedula" layoutX="718.0" layoutY="168.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
    <TextField fx:id="TxtCorreo" layoutX="718.0" layoutY="226.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
-   <Label fx:id="labError" layoutX="704.0" layoutY="269.0" prefHeight="26.0" prefWidth="193.0" textFill="#ff3d26">
+   <Label fx:id="labError" layoutX="651.0" layoutY="326.0" prefHeight="26.0" prefWidth="261.0" textFill="#ff3d26">
       <font>
          <Font name="System Bold Italic" size="17.0" />
       </font>
    </Label>
-    <AnchorPane layoutX="698.0" layoutY="295.0" prefHeight="56.0" prefWidth="193.0">
-        <Button fx:id="btnEliminar" layoutX="141.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar"
-                prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
-                text="Eliminar" textFill="WHITE"/>
-        <Button fx:id="btnEditar" layoutX="64.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar"
-                prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
-                text="Editar" textFill="WHITE"/>
-        <Button fx:id="btnAgregar" layoutX="-13.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar"
-                prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
-                text="Agregar" textFill="WHITE"/>
+    <AnchorPane layoutX="698.0" layoutY="352.0" prefHeight="56.0" prefWidth="193.0">
+        <Button fx:id="btnEliminar" layoutX="141.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Eliminar" textFill="WHITE" />
+        <Button fx:id="btnEditar" layoutX="64.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Editar" textFill="WHITE" />
+        <Button fx:id="btnAgregar" layoutX="-13.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" textFill="WHITE" />
     </AnchorPane>
+   <PasswordField fx:id="pswContrasena" layoutX="718.0" layoutY="282.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
+   <Label alignment="CENTER" layoutX="651.0" layoutY="286.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Contraseña" textFill="#ff3d26" />
 </AnchorPane>
