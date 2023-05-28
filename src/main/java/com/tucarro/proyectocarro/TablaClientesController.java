@@ -8,10 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.DataBase;
 import model.Persona;
@@ -23,24 +22,39 @@ import java.util.ResourceBundle;
 
 public class TablaClientesController implements Initializable {
 
-    public Button btnAgregar;
-    // Atributos
+    @FXML
+    private TableColumn<Persona, String> colNombres;
     @FXML
     private TableColumn<Persona, String> colApellido;
-
     @FXML
     private TableColumn<Persona, String> colCedulas;
 
     @FXML
     private TableColumn<Persona, String> colCorreos;
-
-    @FXML
-    private TableColumn<Persona, String> colNombres;
-
     @FXML
     private TableView<Persona> tblClientes;
+    @FXML
+    private Label labError;
 
+    @FXML
+    private TextField txtNombre;
+    @FXML
+    private TextField txtApellido;
+    @FXML
+    private TextField txtCedula;
+    @FXML
+    private TextField TxtCorreo;
+    @FXML
+    private Button btnAgregar;
+    @FXML
+    private Button btnEditar;
+    @FXML
+    private Button btnEliminar;
 
+    private static String nombre;
+    private static String apellido;
+    private static String cedula;
+    private static String correo;
 
 
     /**
@@ -78,13 +92,25 @@ public class TablaClientesController implements Initializable {
      * @throws IOException
      */
     @FXML
-    void Agregar(ActionEvent event) throws IOException {
-
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("RegistroClientes.fxml"));
-        Scene escena = new Scene(root);
-        stage.setScene(escena);
-        stage.show();
+    void Agregar(ActionEvent event) {
 
     }
+
+
+    @FXML
+    void Editar(ActionEvent event) {
+
+    }
+
+    @FXML
+    void Eliminar(ActionEvent event) {
+
+    }
+
+    @FXML
+    void Seleccionar(MouseEvent event) {
+
+    }
+
+
 }

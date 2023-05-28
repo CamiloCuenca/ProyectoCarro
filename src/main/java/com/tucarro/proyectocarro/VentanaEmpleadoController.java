@@ -37,6 +37,10 @@ public class VentanaEmpleadoController implements Initializable {
     @FXML
     private Button btnVehiculos;
 
+    @FXML
+    private Button btnOcultar;
+
+
 
     /**
      * Este metodo se encarga de mostrar el panel donde se encuentra la tabla de los clientes.
@@ -85,6 +89,11 @@ public class VentanaEmpleadoController implements Initializable {
         rotate.setByAngle(360);
         rotate.setAxis(Rotate.Y_AXIS);
         rotate.play();
+
+    }
+
+    @FXML
+    void Ocultar(ActionEvent event) {
 
     }
 }

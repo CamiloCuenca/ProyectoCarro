@@ -23,7 +23,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class VentanaAdministradorController implements Initializable {
-
+    @FXML
+    private Button Ocultar;
     @FXML
     private ImageView imaCarro;
 
@@ -66,6 +67,11 @@ public class VentanaAdministradorController implements Initializable {
     @FXML
     void Registro(ActionEvent event) throws IOException {
 
+
+    }
+
+    @FXML
+    void Ocultar(ActionEvent event) {
 
     }
 

@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="514.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaClientesController">
-    <TableView fx:id="tblClientes" prefHeight="356.0" prefWidth="523.0">
+<AnchorPane prefHeight="303.0" prefWidth="920.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaClientesController">
+    <TableView fx:id="tblClientes" layoutX="8.0" onMouseClicked="#Seleccionar" prefHeight="408.0" prefWidth="628.0">
       <columns>
-          <TableColumn fx:id="colNombres" prefWidth="109.33334064483643" text="Nombre" />
-          <TableColumn fx:id="colApellido" prefWidth="127.3333511352539" text="Apellido" />
-          <TableColumn fx:id="colCedulas" prefWidth="107.99998474121094" text="Cedula" />
-          <TableColumn fx:id="colCorreos" prefWidth="133.99998982747394" text="Correo" />
+          <TableColumn fx:id="colNombres" prefWidth="127.0" text="Nombre" />
+          <TableColumn fx:id="colApellido" prefWidth="158.0" text="Apellido" />
+          <TableColumn fx:id="colCedulas" prefWidth="159.0" text="Cedula" />
+          <TableColumn fx:id="colCorreos" prefWidth="189.0" text="Correo" />
       </columns>
     </TableView>
-    <Button fx:id="btnAgregar" layoutX="223.0" layoutY="360.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Agregar" textFill="WHITE" />
+   <Label layoutX="654.0" layoutY="52.0" prefHeight="18.0" prefWidth="51.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Nombre" textFill="#ff3d26" />
+   <Label layoutX="654.0" layoutY="111.0" prefHeight="0.0" prefWidth="51.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Apellido" textFill="#ff3d26" />
+   <Label alignment="CENTER" layoutX="651.0" layoutY="172.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cedula" textFill="#ff3d26" />
+   <Label alignment="CENTER" layoutX="651.0" layoutY="230.0" prefHeight="17.0" prefWidth="57.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Correo" textFill="#ff3d26" />
+   <TextField fx:id="txtNombre" layoutX="718.0" layoutY="48.0" prefHeight="26.0" prefWidth="164.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="txtApellido" layoutX="718.0" layoutY="107.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="txtCedula" layoutX="718.0" layoutY="168.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
+   <TextField fx:id="TxtCorreo" layoutX="718.0" layoutY="226.0" prefHeight="26.0" prefWidth="170.0" style="-fx-background-radius: 15;" />
+   <Label fx:id="labError" layoutX="704.0" layoutY="269.0" prefHeight="26.0" prefWidth="193.0" textFill="#ff3d26">
+      <font>
+         <Font name="System Bold Italic" size="17.0" />
+      </font>
+   </Label>
+    <AnchorPane layoutX="698.0" layoutY="295.0" prefHeight="56.0" prefWidth="193.0">
+        <Button fx:id="btnEliminar" layoutX="141.0" layoutY="8.0" mnemonicParsing="false" onAction="#Eliminar"
+                prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
+                text="Eliminar" textFill="WHITE"/>
+        <Button fx:id="btnEditar" layoutX="64.0" layoutY="8.0" mnemonicParsing="false" onAction="#Editar"
+                prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
+                text="Editar" textFill="WHITE"/>
+        <Button fx:id="btnAgregar" layoutX="-13.0" layoutY="8.0" mnemonicParsing="false" onAction="#Agregar"
+                prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;"
+                text="Agregar" textFill="WHITE"/>
+    </AnchorPane>
 </AnchorPane>

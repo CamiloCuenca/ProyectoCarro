@@ -10,26 +10,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaEmpleadoController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaEmpleadoController">
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="673.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <ImageView fx:id="imaCarro" fitHeight="95.0" fitWidth="103.0" layoutX="293.0" pickOnBounds="true">
+         <ImageView fx:id="imaCarro" fitHeight="95.0" fitWidth="103.0" layoutX="416.0" layoutY="4.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
          <ImageView fitHeight="98.0" fitWidth="140.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/Persons.png" />
          </ImageView>
-         <Label alignment="CENTER" layoutX="446.0" prefHeight="95.0" prefWidth="226.0" style="-fx-background-color: #333333;" text="Empleado" textFill="#ff3d26">
+         <Label alignment="CENTER" layoutX="774.0" prefHeight="100.0" prefWidth="285.0" style="-fx-background-color: #333333;" text="Empleado" textFill="#ff3d26">
             <font>
                <Font name="System Italic" size="14.0" />
             </font>
          </Label>
-         <Button fx:id="btnRegresar" layoutX="186.0" layoutY="35.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
+         <Button fx:id="btnRegresar" layoutX="309.0" layoutY="36.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
+         <Button fx:id="btnOcultar" layoutX="530.0" layoutY="39.0" mnemonicParsing="false" onAction="#Ocultar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
       </AnchorPane>
    </top>
    <center>
       <AnchorPane prefHeight="409.0" prefWidth="511.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="409.0" fitWidth="533.0" pickOnBounds="true">
+         <ImageView fitHeight="409.0" fitWidth="789.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/ElFondo.png" />
          </ImageView>
       </AnchorPane>
