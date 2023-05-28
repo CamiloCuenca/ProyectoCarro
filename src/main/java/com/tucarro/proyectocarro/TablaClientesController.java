@@ -46,7 +46,7 @@ public class TablaClientesController implements Initializable {
     @FXML
     private TextField TxtCorreo;
     @FXML
-    private  TextField pswContrasena;
+    private TextField pswContrasena;
     @FXML
     private Button btnAgregar;
     @FXML
@@ -59,7 +59,7 @@ public class TablaClientesController implements Initializable {
     private static String cedula;
     private static String correo;
 
-    private static  String contrasena;
+    private static String contrasena;
 
 
     /**
@@ -119,13 +119,13 @@ public class TablaClientesController implements Initializable {
     @FXML
     void Editar(ActionEvent event) {
         Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
-        if(a == null){
+        if (a == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Debes seleccionar un empleado");
             alert.showAndWait();
-        }else{
+        } else {
 
             a.setNombre(txtNombre.getText());
             a.setApellido(txtApellido.getText());
@@ -142,13 +142,13 @@ public class TablaClientesController implements Initializable {
     void Eliminar(ActionEvent event) {
 
         Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
-        if(a == null){
+        if (a == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Debes seleccionar un empleado");
             alert.showAndWait();
-        }else{
+        } else {
             DataBase.clientes.remove(a);
             this.tblClientes.refresh();
         }
@@ -161,7 +161,7 @@ public class TablaClientesController implements Initializable {
 
         Cliente a = (Cliente) this.tblClientes.getSelectionModel().getSelectedItem();
 
-        if(a != null){
+        if (a != null) {
             this.txtNombre.setText(a.getNombre());
             this.txtApellido.setText(a.getApellido());
             this.txtCedula.setText(a.getCedula());

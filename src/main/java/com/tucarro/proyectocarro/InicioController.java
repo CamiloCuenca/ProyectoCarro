@@ -100,7 +100,7 @@ public class InicioController implements Initializable {
         alert.setTitle("salir");
         alert.setHeaderText("Estas a punto de desconectarte");
         alert.setContentText("Estas seguro de desconectarte?");
-        if(alert.showAndWait().get() == ButtonType.OK) {
+        if (alert.showAndWait().get() == ButtonType.OK) {
             System.out.println("saliste correctamente");
             Stage stage = (Stage) btnCancelar.getScene().getWindow();
             stage.close();

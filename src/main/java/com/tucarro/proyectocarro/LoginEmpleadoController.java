@@ -31,7 +31,7 @@ public class LoginEmpleadoController implements Initializable {
     private static String nombre;
     private static String contrasena;
     private static String ID;
-    public static ArrayList<Empleado> listaEmpleados= new DataBase().setValoresQuemadosEmpleado();
+    public static ArrayList<Empleado> listaEmpleados = new DataBase().setValoresQuemadosEmpleado();
     @FXML
     private Button btnAceptar;
     @FXML
@@ -47,7 +47,9 @@ public class LoginEmpleadoController implements Initializable {
 
     @FXML
     private ImageView imaCarro;
-    /** este método se encarga de la accion del boton "Aceptar" el cual se encarga de verificar
+
+    /**
+     * este método se encarga de la accion del boton "Aceptar" el cual se encarga de verificar
      * si el empleado si esta registrado , y avre una nueva ventana para las funciones que cumple el epmpleado.
      *
      * @param event
@@ -64,23 +66,23 @@ public class LoginEmpleadoController implements Initializable {
         ((Node) (event.getSource())).getScene().getWindow().hide();
 
     }
+
     @FXML
     void Aceptar(ActionEvent event) throws IOException {
         nombre = txtNombre.getText();
         contrasena = pswContrasena.getText();
         ID = txtID.getText();
-        if(nombre.isEmpty()&&contrasena.isEmpty()&&ID.isEmpty()){
+        if (nombre.isEmpty() && contrasena.isEmpty() && ID.isEmpty()) {
             loginerror.setText("LLene todos los campos");
         } else if (nombre.isEmpty() || contrasena.isEmpty()) {
             loginerror.setText("algunos campos no estan llenos");
 
         }
 
-        for(int i = 0; i< DataBase.empleados.size(); i++){
+        for (int i = 0; i < DataBase.empleados.size(); i++) {
 
 
-
-            if(DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID) && DataBase.empleados.get(i).getEstado().equals(tipoEstado.ACTIVO)){
+            if (DataBase.empleados.get(i).getNombre().equals(nombre) && DataBase.empleados.get(i).getContraseña().equals(contrasena) && DataBase.empleados.get(i).getId().equals(ID) && DataBase.empleados.get(i).getEstado().equals(tipoEstado.ACTIVO)) {
                 loginerror.setText("Se inicio Secion correctamente");
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("VentanaEmpleado.fxml"));
@@ -88,9 +90,9 @@ public class LoginEmpleadoController implements Initializable {
                 stage.setScene(escena);
                 stage.show();
                 // en esta linea , esconde el stage del login y carga el nuevo stage
-                ( (Node) (event.getSource() ) ).getScene().getWindow().hide();
+                ((Node) (event.getSource())).getScene().getWindow().hide();
                 break;
-            } else{
+            } else {
                 loginerror.setText("Error no se encuentra registrado o su cuenta fue bloqueada");
             }
 

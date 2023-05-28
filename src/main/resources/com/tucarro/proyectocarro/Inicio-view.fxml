@@ -33,12 +33,12 @@
                <Font size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+         <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
             <font>
                <Font size="14.0" />
             </font>
          </TextField>
-         <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-radius: 15;">
+         <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
             <font>
                <Font size="14.0" />
             </font>

@@ -25,7 +25,7 @@
             </font>
          </Label>
          <Button fx:id="btnRegresar" layoutX="309.0" layoutY="36.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
-         <Button fx:id="btnOcultar" layoutX="530.0" layoutY="39.0" mnemonicParsing="false" onAction="#Ocultar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
+         <Button fx:id="btnOcultar" layoutX="530.0" layoutY="39.0" mnemonicParsing="false" onAction="#Ocultar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Ocultar" textFill="#ff3d26" />
       </AnchorPane>
    </top>
    <center>

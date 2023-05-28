@@ -18,12 +18,13 @@ public class main extends Application {
         stage.show();
         stage.setOnCloseRequest(event -> cancelButtonOnAction(stage));
     }
+
     public void cancelButtonOnAction(Stage stage) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("salir");
         alert.setHeaderText("Estas a punto de desconectarte");
         alert.setContentText("Estas seguro de desconectarte?");
-        if(alert.showAndWait().get() == ButtonType.OK) {
+        if (alert.showAndWait().get() == ButtonType.OK) {
             System.out.println("saliste correctamente");
             stage.close();
         }

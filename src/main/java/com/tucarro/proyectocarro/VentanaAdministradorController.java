@@ -23,6 +23,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class VentanaAdministradorController implements Initializable {
+
     @FXML
     private Button Ocultar;
     @FXML

@@ -41,7 +41,6 @@ public class VentanaEmpleadoController implements Initializable {
     private Button btnOcultar;
 
 
-
     /**
      * Este metodo se encarga de mostrar el panel donde se encuentra la tabla de los clientes.
      *

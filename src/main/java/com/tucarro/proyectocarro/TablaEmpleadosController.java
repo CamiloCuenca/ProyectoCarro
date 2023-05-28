@@ -47,7 +47,7 @@ public class TablaEmpleadosController implements Initializable {
     private Button btnEditar;
 
     @FXML
-    private Button btnEliminar ;
+    private Button btnEliminar;
 
     @FXML
     private TableColumn<Persona, String> colApellido;
@@ -75,15 +75,12 @@ public class TablaEmpleadosController implements Initializable {
     private TextField txtContrasena;
 
 
-
     private static String nombre;
     private static String apellido;
     private static String cedula;
     private static String correo;
     private static String contrasena;
     private static String ID;
-
-
 
 
     // Inizializo un ArrayList de empleados que va a ser metodo de quemar valores
@@ -100,8 +97,8 @@ public class TablaEmpleadosController implements Initializable {
      */
     @FXML
     void Agregar(ActionEvent event) throws IOException {
-       // Stage stage = new Stage();
-       // Parent root = FXMLLoader.load(getClass().getResource("RegistroEmpleados.fxml"));
+        // Stage stage = new Stage();
+        // Parent root = FXMLLoader.load(getClass().getResource("RegistroEmpleados.fxml"));
         //Scene escena = new Scene(root);
         //stage.setScene(escena);
         //stage.show();
@@ -121,10 +118,6 @@ public class TablaEmpleadosController implements Initializable {
             DataBase.empleados.add(empleadox);
 
         }
-
-
-
-
 
 
     }
@@ -148,7 +141,6 @@ public class TablaEmpleadosController implements Initializable {
     }
 
 
-
     /**
      * Este metodo nos permite editar los atributos de un empleado
      *
@@ -159,13 +151,13 @@ public class TablaEmpleadosController implements Initializable {
 
         //Persona p = this.tblEmpleados.getSelectionModel().getSelectedItem();
         Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
-        if(a == null){
+        if (a == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Debes seleccionar un empleado");
             alert.showAndWait();
-        }else{
+        } else {
 
             a.setNombre(txtNombre.getText());
             a.setApellido(txtApellido.getText());
@@ -188,13 +180,13 @@ public class TablaEmpleadosController implements Initializable {
     @FXML
     void Eliminar(ActionEvent event) {
         Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
-        if(a == null){
+        if (a == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Debes seleccionar un empleado");
             alert.showAndWait();
-        }else{
+        } else {
             DataBase.empleados.remove(a);
             this.tblEmpleados.refresh();
         }
@@ -207,7 +199,7 @@ public class TablaEmpleadosController implements Initializable {
         //Persona p = this.tblEmpleados.getSelectionModel().getSelectedItem();
         Empleado a = (Empleado) this.tblEmpleados.getSelectionModel().getSelectedItem();
 
-        if(a != null){
+        if (a != null) {
             this.txtNombre.setText(a.getNombre());
             this.txtApellido.setText(a.getApellido());
             this.txtCedula.setText(a.getCedula());
@@ -220,9 +212,6 @@ public class TablaEmpleadosController implements Initializable {
         }
 
     }
-
-
-
 
 
     /**
@@ -256,7 +245,6 @@ public class TablaEmpleadosController implements Initializable {
         cbEstado.setOnAction(this::getEstado);
 
     }
-
 
 
 }
