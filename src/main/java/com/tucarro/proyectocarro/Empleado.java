@@ -1,5 +1,6 @@
 package com.tucarro.proyectocarro;
 
+import model.Enums.tipoEstado;
 import model.Persona;
 import model.Vehiculo;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 public class Empleado extends Persona {
     //Atributos
 
-    private com.tucarro.proyectocarro.tipoEstado estado;
+    private tipoEstado estado;
 
     private String id;
 

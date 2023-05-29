@@ -1,5 +1,6 @@
 package com.tucarro.proyectocarro;
 
+import model.Enums.tipoEstado;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;

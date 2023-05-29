@@ -7,4 +7,6 @@ module com.tucarro.proyectocarro {
     exports com.tucarro.proyectocarro;
     exports model;
     opens model to javafx.fxml;
+    exports model.Enums;
+    opens model.Enums to javafx.fxml;
 }

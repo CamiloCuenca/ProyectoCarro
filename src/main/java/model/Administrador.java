@@ -1,7 +1,7 @@
 package model;
 
 import com.tucarro.proyectocarro.Empleado;
-import com.tucarro.proyectocarro.tipoEstado;
+import model.Enums.tipoEstado;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
