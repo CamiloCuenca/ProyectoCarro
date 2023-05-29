@@ -2,7 +2,7 @@ package model;
 
 import com.tucarro.proyectocarro.Cliente;
 import com.tucarro.proyectocarro.Empleado;
-import com.tucarro.proyectocarro.tipoEstado;
+import model.Enums.tipoEstado;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,12 @@ public class DataBase {
 
    public static  ArrayList<Cliente> clientes = new ArrayList<>();
    public static  ArrayList<Empleado> empleados = new ArrayList<>();
-
    public static ArrayList<Administrador> administradores = new ArrayList<>();
+
+
+   //Vehiculos
+
+    public static ArrayList<Moto> motos = new ArrayList<>();
 
     /**Este metodo quema a un administrador en el codigo
      * (Para Pruebas).

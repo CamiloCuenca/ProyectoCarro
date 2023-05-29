@@ -1,5 +1,10 @@
 package model;
 
+import model.Enums.Disponibilidad;
+import model.Enums.EsNuevo;
+import model.Enums.TipoCombustible;
+import model.Enums.TipoTrasmision;
+
 public abstract class Vehiculo {
     // Atributos clase padre
     private String marca;
@@ -9,30 +14,10 @@ public abstract class Vehiculo {
     private int velocidadMaxima;
     private int cilindraje;
     private String[] fotos;
-
-    public enum TipoCombustible {
-        GASOLINA, DISEL, ELECTRICO, HIBRIDO
-    };
-
-    TipoCombustible tipoCombustible;
-
-    public enum TipoTrasmision {
-        AUTOMATICO, MANUAL
-    };
-
-    TipoTrasmision tipoTrasmision;
-
-    public enum EsNuevo {
-        SI, NO
-    };
-
-    EsNuevo esNuevo;
-
-    public enum Disponibilidad {
-        DISPONIBLE, VENDIDO
-    };
-
-    Disponibilidad disponibilidad;
+    private TipoCombustible tipoCombustible;
+   private  TipoTrasmision tipoTrasmision;
+   private EsNuevo esNuevo;
+    private Disponibilidad disponibilidad;
 
     // Constructor
     public Vehiculo(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,

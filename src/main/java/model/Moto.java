@@ -1,5 +1,10 @@
 package model;
 
+import model.Enums.Disponibilidad;
+import model.Enums.EsNuevo;
+import model.Enums.TipoCombustible;
+import model.Enums.TipoTrasmision;
+
 public class Moto extends Vehiculo {
 
     // Constructor
@@ -10,6 +15,10 @@ public class Moto extends Vehiculo {
                 esNuevo,
                 disponibilidad);
     }
+
+
+
+
 
     // Metodo imprimir
     @Override
@@ -28,6 +37,7 @@ public class Moto extends Vehiculo {
 
         return v;
     }
+
 
 }
 

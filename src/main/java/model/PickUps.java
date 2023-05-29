@@ -1,5 +1,10 @@
 package model;
 
+import model.Enums.Disponibilidad;
+import model.Enums.EsNuevo;
+import model.Enums.TipoCombustible;
+import model.Enums.TipoTrasmision;
+
 public class PickUps extends AbsCamioneta {
     // Atributos
     private int capacidadadCaja;

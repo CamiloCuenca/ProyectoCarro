@@ -2,8 +2,13 @@ package com.tucarro.proyectocarro;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class TablasVehiculosController {
 
@@ -38,7 +43,13 @@ public class TablasVehiculosController {
     }
 
     @FXML
-    void Motos(ActionEvent event) {
+    void Motos(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("tablaMotos.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load();
+        bordenPane.setCenter(pane);
+
 
     }
 

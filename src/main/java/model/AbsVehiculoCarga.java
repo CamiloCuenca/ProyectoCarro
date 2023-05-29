@@ -1,5 +1,10 @@
 package model;
 
+import model.Enums.Disponibilidad;
+import model.Enums.EsNuevo;
+import model.Enums.TipoCombustible;
+import model.Enums.TipoTrasmision;
+
 public abstract class AbsVehiculoCarga extends Vehiculo {
     // Atributos
     private int numEjes;
