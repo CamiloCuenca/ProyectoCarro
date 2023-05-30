@@ -20,6 +20,10 @@ public abstract class AbsAutomovil extends Vehiculo {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
                 esNuevo,
                 disponibilidad);
+
+        this.numBolasAire=numBolasAire;
+        this.numerosPasajeros=numerosPasajeros;
+        this.numeroPuertas=numeroPuertas;
     }
 
     // Metodo imprimir

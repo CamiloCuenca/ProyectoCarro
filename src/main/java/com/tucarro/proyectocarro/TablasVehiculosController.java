@@ -3,17 +3,21 @@ package com.tucarro.proyectocarro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class TablasVehiculosController {
+public class TablasVehiculosController  implements Initializable {
 
     @FXML
-    private Button automoviles;
+    private Button btndeportivo;
 
     @FXML
     private BorderPane bordenPane;
@@ -28,7 +32,24 @@ public class TablasVehiculosController {
     private Button motos;
 
     @FXML
-    void AutoMoviles(ActionEvent event) {
+    void deportivos(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("tablaDeportivos.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load();
+        bordenPane.setCenter(pane);
+
+
+    }
+
+    @FXML
+    void Sedan(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("tablaDeportivos.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load();
+        bordenPane.setCenter(pane);
+
 
     }
 
@@ -54,4 +75,8 @@ public class TablasVehiculosController {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

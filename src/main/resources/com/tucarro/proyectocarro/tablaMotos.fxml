@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -46,7 +47,10 @@
     <ChoiceBox fx:id="cbEstado" layoutX="172.0" layoutY="259.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
     <ChoiceBox fx:id="cbDisponibilidad" layoutX="116.0" layoutY="318.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
     <Label layoutX="10.0" layoutY="208.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;" text="URL imagen" textFill="#ff3d26" />
-    <ImageView fx:id="imgFotos" fitHeight="280.0" fitWidth="314.0" layoutX="1040.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="imgFotos" fitHeight="280.0" fitWidth="314.0" layoutX="1040.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../com.tuCarro.Img/logo.png" />
+      </image></ImageView>
     <Button fx:id="btnCambiar" layoutX="1162.0" layoutY="288.0" mnemonicParsing="false" onAction="#CambiarFoto" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Cambiar" textFill="WHITE" />
     <Button fx:id="btnAgregar" layoutX="658.0" layoutY="367.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Agregar" textFill="WHITE" />
     <Button fx:id="btnEditar" layoutX="769.0" layoutY="367.0" mnemonicParsing="false" onAction="#Editar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Editar" textFill="WHITE" />

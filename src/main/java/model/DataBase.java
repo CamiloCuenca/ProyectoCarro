@@ -11,11 +11,21 @@ public class DataBase {
    public static  ArrayList<Cliente> clientes = new ArrayList<>();
    public static  ArrayList<Empleado> empleados = new ArrayList<>();
    public static ArrayList<Administrador> administradores = new ArrayList<>();
-
-
    //Vehiculos
 
     public static ArrayList<Moto> motos = new ArrayList<>();
+
+    //Automoviles
+
+    public static  ArrayList<Deportivo> deportivos= new ArrayList<>();
+    public static ArrayList<Sedan> sedans = new ArrayList<>();
+    public static ArrayList<Van> vans= new ArrayList<>();
+
+
+
+
+
+
 
     /**Este metodo quema a un administrador en el codigo
      * (Para Pruebas).

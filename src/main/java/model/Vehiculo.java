@@ -36,6 +36,9 @@ public abstract class Vehiculo {
         this.disponibilidad = disponibilidad;
     }
 
+    public Vehiculo() {
+    }
+
     // Metodo imprimir
     @Override
     public abstract String toString();

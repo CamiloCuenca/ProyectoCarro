@@ -1,10 +1,5 @@
 package com.tucarro.proyectocarro;
 
-import javafx.scene.image.Image;
-import model.Enums.Disponibilidad;
-import model.Enums.EsNuevo;
-import model.Enums.TipoCombustible;
-import model.Enums.TipoTrasmision;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,18 +7,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import model.DataBase;
-import model.Moto;
-import model.Vehiculo;
+import model.*;
+import model.Enums.Disponibilidad;
+import model.Enums.EsNuevo;
+import model.Enums.TipoCombustible;
+import model.Enums.TipoTrasmision;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-public class TablaMotosController  implements Initializable {
+public class TablaAutomovilesController  implements Initializable {
 
     @FXML
     private Button btnAgregar;
@@ -50,40 +48,59 @@ public class TablaMotosController  implements Initializable {
     private ChoiceBox<String> cbTrasmicion;
 
     @FXML
-    private TableColumn<Vehiculo, Integer> colCambios;
+    private TableColumn<AbsAutomovil, Integer> colCaballos;
+    @FXML
+    private TableColumn<AbsAutomovil, Double> colTiempo;
 
     @FXML
-    private TableColumn<Vehiculo, Integer> colCilindraje;
+    private TableColumn<AbsAutomovil, Integer> colCambios;
 
     @FXML
-    private TableColumn<Vehiculo, String> colCombustible; // crear el enum tipoCombustible como una clase aparte de enum
+    private TableColumn<AbsAutomovil, Integer> colCilindraje;
 
     @FXML
-    private TableColumn<Vehiculo, String> colDisponibilidad;
+    private TableColumn<AbsAutomovil, String> colCombustible;
 
     @FXML
-    private TableColumn<Vehiculo, String> colEstado;
+    private TableColumn<AbsAutomovil, String> colDisponibilidad;
 
     @FXML
-    private TableColumn<Vehiculo, String > colMarca;
+    private TableColumn<AbsAutomovil, String> colEstado;
 
     @FXML
-    private TableColumn<Vehiculo, String> colModelo;
+    private TableColumn<AbsAutomovil, String> colMarca;
 
     @FXML
-    private TableColumn<Vehiculo ,String > colPlaca;
+    private TableColumn<AbsAutomovil, String> colModelo;
 
     @FXML
-    private TableColumn<Vehiculo, String> colTrasmicion;
+    private TableColumn<AbsAutomovil,String> colPlaca;
 
     @FXML
-    private TableColumn<Vehiculo, Integer> colVelocidadMax;
+    private TableColumn<AbsAutomovil, String> colTrasmicion;
+
+    @FXML
+    private TableColumn<AbsAutomovil, Integer> colVelocidadMax;
+
+    @FXML
+    private TableColumn<AbsAutomovil, Integer> colBolsasAire;
+
+    @FXML
+    private TableColumn<AbsAutomovil, Integer> colPasajeros;
+    @FXML
+    private TableColumn<AbsAutomovil, Integer> colPuertas;
 
     @FXML
     private ImageView imgFotos;
 
     @FXML
-    private TableView<Vehiculo> tblMotos;
+    private Label motoError;
+
+    @FXML
+    private TableView<AbsAutomovil> tblDeportivos;
+
+    @FXML
+    private TextField txtBolsasAire;
 
     @FXML
     private TextField txtCambios;
@@ -92,27 +109,38 @@ public class TablaMotosController  implements Initializable {
     private TextField txtCilindraje;
 
     @FXML
+    private TextField txtImagen1;
+
+    @FXML
     private TextField txtMarca;
 
     @FXML
     private TextField txtModelo;
 
     @FXML
+    private TextField txtPasajeros;
+
+    @FXML
     private TextField txtPlaca;
 
     @FXML
-    private TextField txtVelocidad;
-    @FXML
-    private TextField txtImagen1;
+    private TextField txtPuertas;
 
     @FXML
-    private Label motoError;
+    private TextField txtVelocidad;
+
+    @FXML
+    private TextField txtCaballos;
+
+    @FXML
+    private TextField txtTiempo;
 
 
 
     private static String marca , modelo , placa , combustibleString , trasmisionString ,nuevoString,disponibilidadString;
     private static String[]  urlImg =new String[5];
     private  static int  velocidadMax,cambios , cilindraje;
+
 
     private String[] combustible={ "GASOLINA", "DISEL", "ELECTRICO", "HIBRIDO"};
     private String[] trasmision = { "AUTOMATICO", "MANUAL"};
@@ -124,8 +152,7 @@ public class TablaMotosController  implements Initializable {
     private TipoTrasmision auxTipoTrasmision;
     private TipoCombustible auxCombustible;
 
-    String u = "/";
-    Image myImage;
+
 
 
     public void getDisponibilidad(ActionEvent event) {
@@ -175,91 +202,102 @@ public class TablaMotosController  implements Initializable {
     }
 
 
+
     @FXML
     void Agregar(ActionEvent event) {
-
-        marca = txtMarca.getText();
-        modelo=txtModelo.getText();
-        placa=txtPlaca.getText();
+        String marca = txtMarca.getText();
+        String modelo=txtModelo.getText();
+        String placa=txtPlaca.getText();
         //urlImg= txtImagen1[0].getText();
-        u+=txtImagen1.getText();
-        String url = "/com.tuCarro.Img"+u;
-        myImage = new Image(getClass().getResourceAsStream(url));
+        //String u=txtImagen1.getText();
+        //String url = "/com.tuCarro.Img"+u;
+        //Image myImage = new Image(getClass().getResourceAsStream(url));
 
-        velocidadMax=Integer.parseInt(txtVelocidad.getText());
-        cambios=Integer.parseInt(txtCambios.getText());
-        cilindraje=Integer.parseInt(txtCilindraje.getText());
+        int velocidadMax=Integer.parseInt(txtVelocidad.getText());
+        int cambios=Integer.parseInt(txtCambios.getText());
+        int cilindraje=Integer.parseInt(txtCilindraje.getText());
         if(marca.isEmpty()&& modelo.isEmpty()&&placa.isEmpty()){
 
         } else  {
-            DataBase.motos.add(new Moto(marca,modelo,placa,cambios,velocidadMax,cilindraje,urlImg,auxCombustible,auxTipoTrasmision,auxEsNuevo,auxDisponibilidad));
+            DataBase.deportivos.add(new Deportivo(marca,modelo,placa,cambios,velocidadMax,cilindraje,Integer.parseInt(txtPasajeros.getText()),
+                    Integer.parseInt(txtPuertas.getText()) , Integer.parseInt(txtBolsasAire.getText()),Integer.parseInt(txtCaballos.getText()),Double.parseDouble(txtTiempo.getText()),urlImg,auxCombustible,auxTipoTrasmision,auxEsNuevo,auxDisponibilidad));
         }
+
+
+
 
 
     }
 
-    //String u = "/"+txtImagen1.getText();
-
-
     @FXML
     void CambiarFoto(ActionEvent event) {
-     imgFotos.setImage(myImage);
-
 
     }
 
     @FXML
     void Editar(ActionEvent event) {
-        Moto m =(Moto) this.tblMotos.getSelectionModel().getSelectedItem();
-        if(m==null){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("Error");
-            alert.setContentText("Debes seleccionar un empleado");
-            alert.showAndWait();
-        }else{
-            m.setMarca(txtMarca.getText());
-            m.setModelo(txtModelo.getText());
-            m.setCambios(Integer.parseInt(txtCambios.getText()));
-            m.setNumPlaca(txtPlaca.getText());
-            m.setCilindraje(Integer.parseInt(txtCilindraje.getText()));
-            //m.setFotos(txtImagen1[0].getText());
-            m.setTipoCombustible(auxCombustible);
-            m.setTipoTrasmision(auxTipoTrasmision);
-            m.setEsNuevo(auxEsNuevo);
-            m.setDisponibilidad(auxDisponibilidad);
-            this.tblMotos.refresh();
-        }
-    }
-
-    @FXML
-    void Eliminar(ActionEvent event) {
-        Moto m =(Moto) this.tblMotos.getSelectionModel().getSelectedItem();
-        if(m==null){
+        Deportivo d =(Deportivo) this.tblDeportivos.getSelectionModel().getSelectedItem();
+        if(d==null){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("Debes seleccionar un empleado");
             alert.showAndWait();
         }else {
-            DataBase.motos.remove(m);
-            this.tblMotos.refresh();
+            d.setMarca(txtMarca.getText());
+            d.setModelo(txtModelo.getText());
+            d.setCambios(Integer.parseInt(txtCambios.getText()));
+            d.setNumPlaca(txtPlaca.getText());
+            d.setCilindraje(Integer.parseInt(txtCilindraje.getText()));
+            //m.setFotos(txtImagen1[0].getText());
+            d.setTipoCombustible(auxCombustible);
+            d.setTipoTrasmision(auxTipoTrasmision);
+            d.setEsNuevo(auxEsNuevo);
+            d.setDisponibilidad(auxDisponibilidad);
+            d.setCaballosDeFuerza(Integer.parseInt(txtCaballos.getText()));
+            d.setTiempo100kl(Double.parseDouble(txtTiempo.getText()));
+            d.setNumBolasAire(Integer.parseInt(txtBolsasAire.getText()));
+            d.setNumeroPuertas(Integer.parseInt(txtPuertas.getText()));
+            d.setNumerosPasajeros(Integer.parseInt(txtPasajeros.getText()));
+            this.tblDeportivos.refresh();
+
         }
 
     }
 
     @FXML
-    void seleccionar(MouseEvent event) {
+    void Eliminar(ActionEvent event) {
+        Deportivo d =(Deportivo) this.tblDeportivos.getSelectionModel().getSelectedItem();
+        if(d==null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Debes seleccionar un empleado");
+            alert.showAndWait();
+        }else {
+            DataBase.deportivos.remove(d);
+            this.tblDeportivos.refresh();
+        }
 
-        Moto m =(Moto) this.tblMotos.getSelectionModel().getSelectedItem();
-        if(m!=null){
-            this.txtMarca.setText(m.getMarca());
-            this.txtModelo.setText(m.getModelo());
-            this.txtCambios.setText(String.valueOf(m.getCambios()));
-            this.txtPlaca.setText(m.getNumPlaca());
-            this.txtCilindraje.setText(String.valueOf(m.getCilindraje()));
-            this.txtVelocidad.setText(String.valueOf(m.getVelocidadMaxima()));
-            this.txtImagen1.setText(Arrays.toString(m.getFotos()));
+
+    }
+
+    @FXML
+    void seleccionar(MouseEvent event) {
+        Deportivo d =(Deportivo) this.tblDeportivos.getSelectionModel().getSelectedItem();
+        if(d!=null){
+            this.txtMarca.setText(d.getMarca());
+            this.txtModelo.setText(d.getModelo());
+            this.txtCambios.setText(String.valueOf(d.getCambios()));
+            this.txtPlaca.setText(d.getNumPlaca());
+            this.txtCilindraje.setText(String.valueOf(d.getCilindraje()));
+            this.txtVelocidad.setText(String.valueOf(d.getVelocidadMaxima()));
+            this.txtImagen1.setText(Arrays.toString(d.getFotos()));
+            this.txtPasajeros.setText(String.valueOf(d.getNumerosPasajeros()));
+            this.txtBolsasAire.setText(String.valueOf(d.getNumBolasAire()));
+            this.txtCaballos.setText(String.valueOf(d.getCaballosDeFuerza()));
+            this.txtTiempo.setText(String.valueOf(d.getTiempo100kl()));
+            this.txtPuertas.setText(String.valueOf(d.getNumeroPuertas()));
             this.cbEstado.setValue(String.valueOf(auxEsNuevo));
             this.cbTrasmicion.setValue(String.valueOf(auxTipoTrasmision));
             this.cbDisponibilidad.setValue(String.valueOf(auxDisponibilidad));
@@ -270,6 +308,7 @@ public class TablaMotosController  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         //Configura las columnas
         colMarca.setCellValueFactory(new PropertyValueFactory<>("marca"));
         colModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
@@ -283,15 +322,21 @@ public class TablaMotosController  implements Initializable {
         colEstado.setCellValueFactory(new PropertyValueFactory<>("esNuevo"));
         colDisponibilidad.setCellValueFactory(new PropertyValueFactory<>("disponibilidad"));
 
+        colPuertas.setCellValueFactory(new PropertyValueFactory<>("numeroPuertas"));
+        colPasajeros.setCellValueFactory(new PropertyValueFactory<>("numerosPasajeros"));
+        colBolsasAire.setCellValueFactory(new PropertyValueFactory<>("numBolasAire"));
+        colCaballos.setCellValueFactory(new PropertyValueFactory<>("caballosDeFuerza"));
+        colTiempo.setCellValueFactory(new PropertyValueFactory<>("tiempo100kl"));
+
 
         //Crear lista de Motos
-        ArrayList<Moto> listaMotos = DataBase.motos;
+        ArrayList<Deportivo> listaDeportivos = DataBase.deportivos;
 
         //Convertir la lista a un ObservableList
-        ObservableList<Vehiculo> datosMotos = FXCollections.observableArrayList(listaMotos);
+        ObservableList<AbsAutomovil> datosDeportivos = FXCollections.observableArrayList(listaDeportivos);
 
         //Asignar los datos a la tabla
-        tblMotos.setItems(datosMotos);
+        tblDeportivos.setItems(datosDeportivos);
 
         cbEstado.getItems().addAll(nuevo);
         cbCombustible.getItems().addAll(combustible);
@@ -305,6 +350,6 @@ public class TablaMotosController  implements Initializable {
 
 
 
+
     }
 }
-
