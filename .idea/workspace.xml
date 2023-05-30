@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta">
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se hizo mas modificaciones a la interfaz">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/tablaCamionesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaCamiones.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaMotosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablaMotosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablasVehiculosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/TablasVehiculosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaDeportivos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaDeportivos.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaMotos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaMotos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaSedan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaSedan.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,7 @@
         <option value="Kotlin Class" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -131,7 +133,9 @@
       <workItem from="1685428743711" duration="46000" />
       <workItem from="1685428806441" duration="118000" />
       <workItem from="1685428945785" duration="100000" />
-      <workItem from="1685429194677" duration="1245000" />
+      <workItem from="1685429194677" duration="1491000" />
+      <workItem from="1685465939182" duration="8611000" />
+      <workItem from="1685476159010" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
       <created>1682203486092</created>
@@ -245,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685424067651</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Se hizo mas modificaciones a la interfaz">
+      <created>1685430663095</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685430663095</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +327,8 @@
     <MESSAGE value="si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado" />
     <MESSAGE value="Se organizo un poco el codigo" />
     <MESSAGE value="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta" />
-    <option name="LAST_COMMIT_MESSAGE" value="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta" />
+    <MESSAGE value="Se hizo mas modificaciones a la interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se hizo mas modificaciones a la interfaz" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

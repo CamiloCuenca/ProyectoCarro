@@ -54,7 +54,12 @@ public class TablasVehiculosController  implements Initializable {
     }
 
     @FXML
-    void Camiones(ActionEvent event) {
+    void Camiones(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("tablaCamiones.fxml"));
+        AnchorPane pane = (AnchorPane) loader.load();
+        bordenPane.setCenter(pane);
 
     }
 

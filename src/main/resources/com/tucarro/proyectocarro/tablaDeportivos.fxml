@@ -10,68 +10,98 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.TablaAutomovilesController">
-   <children>
-      <TableView fx:id="tblDeportivos" layoutX="412.0" layoutY="16.0" onMouseClicked="#seleccionar" prefHeight="349.0" prefWidth="717.0">
-         <columns>
-            <TableColumn fx:id="colMarca" prefWidth="57.0" text="Marca" />
-            <TableColumn fx:id="colModelo" prefWidth="59.0" text="Modelo" />
-            <TableColumn fx:id="colPlaca" prefWidth="48.0" text="Placa" />
-            <TableColumn fx:id="colCambios" prefWidth="60.0" text="Cambios" />
-            <TableColumn fx:id="colVelocidadMax" minWidth="0.0" prefWidth="78.0" text="VelocidadMaxima" />
-            <TableColumn fx:id="colCilindraje" prefWidth="67.0" text="Cilindraje" />
-            <TableColumn fx:id="colCombustible" prefWidth="87.0" text="combustible" />
-            <TableColumn fx:id="colTrasmicion" prefWidth="81.0" text="Trasmicion" />
-            <TableColumn fx:id="colEstado" prefWidth="67.0" text="Estado" />
-            <TableColumn fx:id="colDisponibilidad" prefWidth="114.0" text="disponible" />
-            <TableColumn fx:id="colPasajeros" prefWidth="75.0" text="numPasajeros" />
-            <TableColumn fx:id="colPuertas" prefWidth="75.0" text="puertas" />
-            <TableColumn fx:id="colBolsasAire" prefWidth="75.0" text="bolsasAire" />
-            <TableColumn fx:id="colCaballos" prefWidth="75.0" text="Caballos F" />
-            <TableColumn fx:id="colTiempo" prefWidth="75.0" text="Tiempo100kl" />
-         </columns>
-      </TableView>
-      <Label layoutX="30.0" layoutY="35.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Marca" textFill="#ff3d26" />
-      <Label layoutX="284.0" layoutY="35.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Modelo" textFill="#ff3d26" />
-      <Label layoutX="283.0" layoutY="75.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cambios" textFill="#ff3d26" />
-      <Label layoutX="21.0" layoutY="121.0" prefHeight="18.0" prefWidth="55.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Velocidad" textFill="#ff3d26" />
-      <Label layoutX="35.0" layoutY="75.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Placa" textFill="#ff3d26" />
-      <Label layoutX="279.0" layoutY="121.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Cilindraje" textFill="#ff3d26" />
-      <Label layoutX="14.0" layoutY="252.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: #000000;" text="Disponibilidad" textFill="#ff3d26" />
-      <Label layoutX="286.0" layoutY="209.0" style="-fx-background-color: #000000;" text="Nuevo" textFill="#ff3d26" />
-      <Label layoutX="22.0" layoutY="209.0" prefHeight="18.0" prefWidth="55.0" style="-fx-background-color: #000000;" text="trasmicion" textFill="#ff3d26" />
-      <Label layoutX="277.0" layoutY="165.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;" text="combustible" textFill="#ff3d26" />
-      <TextField fx:id="txtMarca" layoutX="78.0" layoutY="31.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtModelo" layoutX="182.0" layoutY="31.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtPlaca" layoutX="79.0" layoutY="71.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtCambios" layoutX="184.0" layoutY="71.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtVelocidad" alignment="CENTER" layoutX="78.0" layoutY="117.0" prefHeight="26.0" prefWidth="97.0" promptText="maxima" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtCilindraje" layoutX="183.0" layoutY="117.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15;" />
-      <TextField fx:id="txtImagen1" alignment="CENTER" layoutX="75.0" layoutY="161.0" prefHeight="26.0" prefWidth="97.0" promptText="Imagen" style="-fx-background-radius: 15;" />
-      <ChoiceBox fx:id="cbCombustible" layoutX="180.0" layoutY="161.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
-      <ChoiceBox fx:id="cbTrasmicion" layoutX="77.0" layoutY="205.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
-      <ChoiceBox fx:id="cbEstado" layoutX="182.0" layoutY="205.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
-      <ChoiceBox fx:id="cbDisponibilidad" layoutX="103.0" layoutY="248.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" />
-      <Label layoutX="18.0" layoutY="165.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;" text="URL imagen" textFill="#ff3d26" />
-      <ImageView fx:id="imgFotos" fitHeight="160.0" fitWidth="183.0" layoutX="1130.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../com.tuCarro.Img/logo.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnCambiar" layoutX="1172.0" layoutY="298.0" mnemonicParsing="false" onAction="#CambiarFoto" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Cambiar" textFill="WHITE" />
-      <Button fx:id="btnAgregar" layoutX="668.0" layoutY="377.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Agregar" textFill="WHITE" />
-      <Button fx:id="btnEditar" layoutX="779.0" layoutY="377.0" mnemonicParsing="false" onAction="#Editar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Editar" textFill="WHITE" />
-      <Button fx:id="btnEliminar" layoutX="559.0" layoutY="377.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Eliminar" textFill="WHITE" />
-      <Label fx:id="motoError" alignment="CENTER" layoutX="218.0" layoutY="366.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
-      <Label layoutX="21.0" layoutY="290.0" text="Pasajeros" />
-      <Label layoutX="21.0" layoutY="323.0" text="Puertas" />
-      <Label layoutX="18.0" layoutY="357.0" text="Bolsas de Aire" />
-      <TextField fx:id="txtPasajeros" layoutX="98.0" layoutY="286.0" prefHeight="25.0" prefWidth="97.0" />
-      <TextField fx:id="txtPuertas" layoutX="98.0" layoutY="319.0" prefHeight="25.0" prefWidth="97.0" />
-      <TextField fx:id="txtBolsasAire" layoutX="102.0" layoutY="354.0" prefHeight="25.0" prefWidth="97.0" />
-      <Label layoutX="219.0" layoutY="290.0" prefHeight="17.0" prefWidth="41.0" text="caballos fuerza" />
-      <Label layoutX="219.0" layoutY="315.0" text="tiempo100kl" />
-      <TextField fx:id="txtCaballos" layoutX="271.0" layoutY="286.0" prefHeight="25.0" prefWidth="83.0" />
-      <TextField fx:id="txtTiempo" layoutX="297.0" layoutY="319.0" prefHeight="25.0" prefWidth="75.0" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tucarro.proyectocarro.TablaAutomovilesController">
+   <TableView fx:id="tblDeportivos" layoutX="396.0" layoutY="16.0" onMouseClicked="#seleccionar" prefHeight="349.0"
+              prefWidth="593.0">
+      <columns>
+         <TableColumn fx:id="colMarca" prefWidth="57.0" text="Marca"/>
+         <TableColumn fx:id="colModelo" prefWidth="59.0" text="Modelo"/>
+         <TableColumn fx:id="colPlaca" prefWidth="48.0" text="Placa"/>
+         <TableColumn fx:id="colCambios" prefWidth="60.0" text="Cambios"/>
+         <TableColumn fx:id="colVelocidadMax" minWidth="0.0" prefWidth="78.0" text="VelocidadMaxima"/>
+         <TableColumn fx:id="colCilindraje" prefWidth="67.0" text="Cilindraje"/>
+         <TableColumn fx:id="colCombustible" prefWidth="87.0" text="combustible"/>
+         <TableColumn fx:id="colTrasmicion" prefWidth="81.0" text="Trasmicion"/>
+         <TableColumn fx:id="colEstado" prefWidth="67.0" text="Estado"/>
+         <TableColumn fx:id="colDisponibilidad" prefWidth="114.0" text="disponible"/>
+         <TableColumn fx:id="colPasajeros" prefWidth="75.0" text="numPasajeros"/>
+         <TableColumn fx:id="colPuertas" prefWidth="75.0" text="puertas"/>
+         <TableColumn fx:id="colBolsasAire" prefWidth="75.0" text="bolsasAire"/>
+         <TableColumn fx:id="colCaballos" prefWidth="75.0" text="Caballos F"/>
+         <TableColumn fx:id="colTiempo" prefWidth="75.0" text="Tiempo100kl"/>
+      </columns>
+   </TableView>
+   <Label layoutX="30.0" layoutY="35.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Marca"
+          textFill="#ff3d26"/>
+   <Label layoutX="284.0" layoutY="35.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Modelo"
+          textFill="#ff3d26"/>
+   <Label layoutX="283.0" layoutY="75.0" style="-fx-background-color: #000000; -fx-background-radius: 15;"
+          text="Cambios" textFill="#ff3d26"/>
+   <Label layoutX="21.0" layoutY="121.0" prefHeight="18.0" prefWidth="55.0"
+          style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Velocidad" textFill="#ff3d26"/>
+   <Label layoutX="35.0" layoutY="75.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Placa"
+          textFill="#ff3d26"/>
+   <Label layoutX="279.0" layoutY="121.0" style="-fx-background-color: #000000; -fx-background-radius: 15;"
+          text="Cilindraje" textFill="#ff3d26"/>
+   <Label layoutX="14.0" layoutY="252.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: #000000;"
+          text="Disponibilidad" textFill="#ff3d26"/>
+   <Label layoutX="286.0" layoutY="209.0" style="-fx-background-color: #000000;" text="Nuevo" textFill="#ff3d26"/>
+   <Label layoutX="22.0" layoutY="209.0" prefHeight="18.0" prefWidth="55.0" style="-fx-background-color: #000000;"
+          text="trasmicion" textFill="#ff3d26"/>
+   <Label layoutX="277.0" layoutY="165.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;"
+          text="combustible" textFill="#ff3d26"/>
+   <TextField fx:id="txtMarca" layoutX="78.0" layoutY="31.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtModelo" layoutX="182.0" layoutY="31.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtPlaca" layoutX="79.0" layoutY="71.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtCambios" layoutX="184.0" layoutY="71.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtVelocidad" alignment="CENTER" layoutX="78.0" layoutY="117.0" prefHeight="26.0" prefWidth="97.0"
+              promptText="maxima" style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtCilindraje" layoutX="183.0" layoutY="117.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15;"/>
+   <TextField fx:id="txtImagen1" alignment="CENTER" layoutX="75.0" layoutY="161.0" prefHeight="26.0" prefWidth="97.0"
+              promptText="Imagen" style="-fx-background-radius: 15;"/>
+   <ChoiceBox fx:id="cbCombustible" layoutX="180.0" layoutY="161.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"/>
+   <ChoiceBox fx:id="cbTrasmicion" layoutX="77.0" layoutY="205.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"/>
+   <ChoiceBox fx:id="cbEstado" layoutX="182.0" layoutY="205.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"/>
+   <ChoiceBox fx:id="cbDisponibilidad" layoutX="103.0" layoutY="248.0" prefHeight="26.0" prefWidth="97.0"
+              style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"/>
+   <Label layoutX="18.0" layoutY="165.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;"
+          text="URL imagen" textFill="#ff3d26"/>
+   <ImageView fx:id="imgFotos" fitHeight="160.0" fitWidth="183.0" layoutX="1130.0" layoutY="16.0" pickOnBounds="true"
+              preserveRatio="true">
+      <image>
+         <Image url="@../../../com.tuCarro.Img/logo.png"/>
+      </image>
+   </ImageView>
+   <Button fx:id="btnCambiar" layoutX="1172.0" layoutY="298.0" mnemonicParsing="false" onAction="#CambiarFoto"
+           style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Cambiar" textFill="WHITE"/>
+   <Button fx:id="btnAgregar" layoutX="668.0" layoutY="377.0" mnemonicParsing="false" onAction="#Agregar"
+           prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"
+           text="Agregar" textFill="WHITE"/>
+   <Button fx:id="btnEditar" layoutX="779.0" layoutY="377.0" mnemonicParsing="false" onAction="#Editar"
+           prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"
+           text="Editar" textFill="WHITE"/>
+   <Button fx:id="btnEliminar" layoutX="559.0" layoutY="377.0" mnemonicParsing="false" onAction="#Eliminar"
+           prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;"
+           text="Eliminar" textFill="WHITE"/>
+   <Label fx:id="motoError" alignment="CENTER" layoutX="218.0" layoutY="366.0" prefHeight="22.0" prefWidth="221.0"
+          textFill="#ea3535"/>
+   <Label layoutX="21.0" layoutY="290.0" text="Pasajeros"/>
+   <Label layoutX="21.0" layoutY="323.0" text="Puertas"/>
+   <Label layoutX="18.0" layoutY="357.0" text="Bolsas de Aire"/>
+   <TextField fx:id="txtPasajeros" layoutX="98.0" layoutY="286.0" prefHeight="25.0" prefWidth="97.0"/>
+   <TextField fx:id="txtPuertas" layoutX="98.0" layoutY="319.0" prefHeight="25.0" prefWidth="97.0"/>
+   <TextField fx:id="txtBolsasAire" layoutX="102.0" layoutY="354.0" prefHeight="25.0" prefWidth="97.0"/>
+   <Label layoutX="219.0" layoutY="290.0" prefHeight="17.0" prefWidth="41.0" text="caballos fuerza"/>
+   <Label layoutX="219.0" layoutY="315.0" text="tiempo100kl"/>
+   <TextField fx:id="txtCaballos" layoutX="271.0" layoutY="286.0" prefHeight="25.0" prefWidth="83.0"/>
+   <TextField fx:id="txtTiempo" layoutX="297.0" layoutY="319.0" prefHeight="25.0" prefWidth="75.0"/>
 </AnchorPane>
