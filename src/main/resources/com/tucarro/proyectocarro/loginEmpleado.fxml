@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginEmpleadoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginEmpleadoController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
          <ImageView fx:id="imaCarro" fitHeight="167.0" fitWidth="193.0" layoutX="9.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
@@ -19,18 +19,18 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="428.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="196.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+      <AnchorPane prefHeight="426.0" prefWidth="521.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="205.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/candado.png" />
          </ImageView>
-         <Label layoutX="53.0" layoutY="183.0" text="Nombre" />
-         <Label layoutX="33.0" layoutY="220.0" text="Contraseña" />
-         <Label layoutX="79.0" layoutY="256.0" text="ID" />
-         <TextField fx:id="txtNombre" layoutX="106.0" layoutY="179.0" prefHeight="26.0" prefWidth="270.0" style="-fx-background-radius: 15;" />
-         <PasswordField fx:id="pswContrasena" layoutX="105.0" layoutY="216.0" prefHeight="26.0" prefWidth="272.0" style="-fx-background-radius: 15;" />
-         <TextField fx:id="txtID" layoutX="108.0" layoutY="252.0" prefHeight="26.0" prefWidth="270.0" style="-fx-background-radius: 15;" />
-         <Button fx:id="btnAceptar" layoutX="133.0" layoutY="312.0" mnemonicParsing="false" onAction="#Aceptar" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE" />
-         <Label fx:id="loginerror" alignment="CENTER" layoutX="48.0" layoutY="284.0" prefHeight="22.0" prefWidth="389.0" textFill="#ea3535" />
+         <Label layoutX="61.0" layoutY="183.0" text="Nombre" />
+         <Label layoutX="41.0" layoutY="220.0" text="Contraseña" />
+         <Label layoutX="87.0" layoutY="256.0" text="ID" />
+         <TextField fx:id="txtNombre" layoutX="115.0" layoutY="179.0" prefHeight="26.0" prefWidth="270.0" style="-fx-background-radius: 15;" />
+         <PasswordField fx:id="pswContrasena" layoutX="114.0" layoutY="216.0" prefHeight="26.0" prefWidth="272.0" style="-fx-background-radius: 15;" />
+         <TextField fx:id="txtID" layoutX="115.0" layoutY="252.0" prefHeight="26.0" prefWidth="270.0" style="-fx-background-radius: 15;" />
+         <Button fx:id="btnAceptar" layoutX="146.0" layoutY="314.0" mnemonicParsing="false" onAction="#Aceptar" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE" />
+         <Label fx:id="loginerror" alignment="CENTER" layoutX="56.0" layoutY="284.0" prefHeight="22.0" prefWidth="389.0" textFill="#ea3535" />
       </AnchorPane>
    </center>
 </BorderPane>

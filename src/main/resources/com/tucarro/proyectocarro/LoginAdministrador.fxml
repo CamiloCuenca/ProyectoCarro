@@ -8,8 +8,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginAdministradorController">
-   <AnchorPane prefHeight="411.0" prefWidth="200.0" style="-fx-background-color: #333333;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.LoginAdministradorController">
+   <AnchorPane prefHeight="430.0" prefWidth="200.0" style="-fx-background-color: #333333;">
       <ImageView fx:id="imaCarro" fitHeight="167.0" fitWidth="193.0" layoutX="9.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../../com.tuCarro.Img/logo.png" />
       </ImageView>

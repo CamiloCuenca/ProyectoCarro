@@ -10,49 +10,47 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <ImageView fx:id="imaCarro" fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../../com.tuCarro.Img/logo.png" />
-         </ImageView>
-         <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="27.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Empleado" textFill="#ff3d26" AnchorPane.topAnchor="237.0" />
-         <Button fx:id="btnCancelar" layoutX="42.0" layoutY="270.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Salir" textFill="#ff3d26" />
-         <Button fx:id="btnadmi" layoutX="42.0" layoutY="205.0" mnemonicParsing="false" onAction="#admi" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Administrador" textFill="#ff3d26" AnchorPane.topAnchor="205.0" />
-      </AnchorPane>
-   </left>
-   <center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430" prefWidth="700" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.InicioController">
+   <top>
       <AnchorPane prefHeight="426.0" prefWidth="478.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <Label fx:id="lblNombre" layoutX="25.0" layoutY="195.0" text="Nombre">
+         <Label fx:id="lblNombre" layoutX="226.0" layoutY="195.0" text="Nombre">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <Label fx:id="lblContrasena" layoutX="14.0" layoutY="233.0" text="Contraseña">
+         <Label fx:id="lblContrasena" layoutX="215.0" layoutY="233.0" text="Contraseña">
             <font>
                <Font size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="txtNombre" layoutX="92.0" layoutY="190.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
+         <TextField fx:id="txtNombre" layoutX="301.0" layoutY="190.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
             <font>
                <Font size="14.0" />
             </font>
          </TextField>
-         <PasswordField fx:id="pswContasena" layoutX="92.0" layoutY="228.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
+         <PasswordField fx:id="pswContasena" layoutX="301.0" layoutY="228.0" prefHeight="30.0" prefWidth="308.0" style="-fx-background-radius: 15;">
             <font>
                <Font size="14.0" />
             </font>
          </PasswordField>
-         <Button fx:id="btnAceptar" layoutX="119.0" layoutY="296.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE">
+         <Button fx:id="btnAceptar" layoutX="320.0" layoutY="293.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Aceptar" textFill="WHITE">
             <font>
                <Font size="14.0" />
             </font>
          </Button>
-         <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="199.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="85.0" fitWidth="102.0" layoutX="413.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../com.tuCarro.Img/candado.png" />
          </ImageView>
-         <Label fx:id="loginerror" alignment="CENTER" layoutX="131.0" layoutY="267.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
-         <Button fx:id="btnRegistrarse" layoutX="247.0" layoutY="297.0" mnemonicParsing="false" onAction="#Registrarse" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" textFill="WHITE" />
+         <Label fx:id="loginerror" alignment="CENTER" layoutX="345.0" layoutY="264.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
+         <Button fx:id="btnRegistrarse" layoutX="455.0" layoutY="292.0" mnemonicParsing="false" onAction="#Registrarse" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #ff3d26; -fx-background-radius: 15;" text="Registrarse" textFill="WHITE" />
+         <AnchorPane prefHeight="432.0" prefWidth="200.0" style="-fx-background-color: #ff3d26;">
+            <ImageView fx:id="imaCarro" fitHeight="172.0" fitWidth="193.0" layoutX="6.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../../com.tuCarro.Img/logo.png" />
+            </ImageView>
+            <Button fx:id="btnEmpleado" layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginEmpleado" prefHeight="27.0" prefWidth="124.0" style="-fx-background-radius: 15; -fx-background-color: #000000;" text="Empleado" textFill="#ff3d26" AnchorPane.topAnchor="237.0" />
+            <Button fx:id="btnCancelar" layoutX="42.0" layoutY="270.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Salir" textFill="#ff3d26" />
+            <Button fx:id="btnadmi" layoutX="42.0" layoutY="205.0" mnemonicParsing="false" onAction="#admi" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Administrador" textFill="#ff3d26" AnchorPane.topAnchor="205.0" />
+         </AnchorPane>
       </AnchorPane>
-   </center>
+   </top>
 </BorderPane>

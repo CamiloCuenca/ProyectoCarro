@@ -103,6 +103,8 @@ public class TablaMotosController  implements Initializable {
     private TextField txtVelocidad;
     @FXML
     private TextField txtImagen1;
+    @FXML
+    private Label motoError;
 
     private static String marca , modelo , placa , combustibleString , trasmisionString ,nuevoString,disponibilidadString;
     private static String[]  urlImg;

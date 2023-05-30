@@ -51,4 +51,5 @@
     <Button fx:id="btnAgregar" layoutX="658.0" layoutY="367.0" mnemonicParsing="false" onAction="#Agregar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Agregar" textFill="WHITE" />
     <Button fx:id="btnEditar" layoutX="769.0" layoutY="367.0" mnemonicParsing="false" onAction="#Editar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Editar" textFill="WHITE" />
     <Button fx:id="btnEliminar" layoutX="549.0" layoutY="367.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Eliminar" textFill="WHITE" />
+   <Label fx:id="motoError" alignment="CENTER" layoutX="62.0" layoutY="356.0" prefHeight="22.0" prefWidth="221.0" textFill="#ea3535" />
 </AnchorPane>

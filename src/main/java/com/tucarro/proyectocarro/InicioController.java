@@ -58,6 +58,7 @@ public class InicioController implements Initializable {
     private ImageView imaCarro;
 
 
+
     /**
      * Este método se encarga de la accion del boton "Aceptar" en el cual nos verifica si el cliente
      * ya se encuentra registrado en la DataBase

@@ -11,7 +11,7 @@
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tucarro.proyectocarro.VentanaEmpleadoController">
    <top>
       <AnchorPane prefHeight="103.0" prefWidth="1360.0" style="-fx-background-color: #ff3d26;" BorderPane.alignment="CENTER">
-         <ImageView fx:id="imaCarro" fitHeight="95.0" fitWidth="103.0" layoutX="526.0" layoutY="-1.0" pickOnBounds="true">
+         <ImageView fx:id="imaCarro" fitHeight="95.0" fitWidth="103.0" layoutX="629.0" layoutY="10.0" pickOnBounds="true">
             <Image url="@../../../com.tuCarro.Img/logo.png" />
          </ImageView>
          <ImageView fitHeight="113.0" fitWidth="140.0" pickOnBounds="true">
@@ -23,9 +23,9 @@
             </font>
          </Label>
          <Button fx:id="btnRegresar" layoutX="148.0" layoutY="44.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Regresar" textFill="#ff3d26" />
-         <Button fx:id="btnCliente" layoutX="409.0" layoutY="31.0" mnemonicParsing="false" onAction="#Cliente" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Clientes" textFill="#ff3d26" />
-         <Button fx:id="btnVehiculos" layoutX="409.0" layoutY="70.0" mnemonicParsing="false" onAction="#Vehiculos" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Vehiculo" textFill="#ff3d26" />
-         <Button fx:id="btnOcultar" layoutX="627.0" layoutY="31.0" mnemonicParsing="false" onAction="#Ocultar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Ocultar" textFill="#ff3d26" />
+         <Button fx:id="btnCliente" layoutX="512.0" layoutY="31.0" mnemonicParsing="false" onAction="#Cliente" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Clientes" textFill="#ff3d26" />
+         <Button fx:id="btnVehiculos" layoutX="512.0" layoutY="70.0" mnemonicParsing="false" onAction="#Vehiculos" prefHeight="26.0" prefWidth="117.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Vehiculo" textFill="#ff3d26" />
+         <Button fx:id="btnOcultar" layoutX="732.0" layoutY="31.0" mnemonicParsing="false" onAction="#Ocultar" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Ocultar" textFill="#ff3d26" />
       </AnchorPane>
    </top>
    <center>
