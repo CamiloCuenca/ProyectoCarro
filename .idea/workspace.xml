@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se organizo un poco el codigo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" afterDir="false" />
+    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta">
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaMotos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablaMotos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +104,7 @@
       <workItem from="1685338530245" duration="537000" />
       <workItem from="1685377164396" duration="4252000" />
       <workItem from="1685418287111" duration="5436000" />
+      <workItem from="1685423979474" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
       <created>1682203486092</created>
@@ -214,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685312918887</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta">
+      <created>1685424067651</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685424067651</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +288,8 @@
     <MESSAGE value="Se hizo algunos cambios en las interfaz darle boto salir para ver el power." />
     <MESSAGE value="si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado" />
     <MESSAGE value="Se organizo un poco el codigo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se organizo un poco el codigo" />
+    <MESSAGE value="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta" />
+    <option name="LAST_COMMIT_MESSAGE" value="se modofico las ventanas de tablaMotos.fxml, tablasVehiculos.fxml, venta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,147 @@
+Index: src/main/java/com/tucarro/proyectocarro/InicioController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.tucarro.proyectocarro;\n\nimport javafx.animation.Interpolator;\nimport javafx.animation.RotateTransition;\nimport javafx.animation.TranslateTransition;\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.Node;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.*;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.transform.Rotate;\nimport javafx.stage.Stage;\nimport javafx.util.Duration;\nimport model.DataBase;\nimport model.Vehiculo;\n\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ResourceBundle;\n\npublic class InicioController implements Initializable {\n\n    //Atributos\n    //public static ArrayList<Cliente> listaClientes= new DataBase().SetValoresQuemadosCliente();\n    //public static ArrayList<Administrador> listaAdministradores= new DataBase().setValoresQuemadosAdministrador();\n\n    public static String nombre;\n    public static String contrasena;\n    @FXML\n    public Button btnadmi;\n    @FXML\n    private Button btnEmpleado;\n    @FXML\n    private Button btnCancelar;\n    @FXML\n    private Label loginerror;\n    @FXML\n    private Button btnRegistrarse;\n    @FXML\n    private Button btnAceptar;\n    @FXML\n    private Label lblNombre;\n    @FXML\n    private Label lblContrasena;\n    @FXML\n    private TextField txtNombre;\n    @FXML\n    private PasswordField pswContasena;\n    @FXML\n    private ImageView imaCarro;\n\n\n    /**\n     * Este método se encarga de la accion del boton \"Aceptar\" en el cual nos verifica si el cliente\n     * ya se encuentra registrado en la DataBase\n     *\n     * @param event\n     * @throws IOException\n     */\n    public void loginButtonOnAction(ActionEvent event) throws IOException {\n\n        nombre = txtNombre.getText();\n        contrasena = pswContasena.getText();\n        if (nombre.isEmpty() && contrasena.isEmpty()) {\n            loginerror.setText(\"LLene todos los campos\");\n        } else if (nombre.isEmpty() || contrasena.isEmpty()) {\n            loginerror.setText(\"algunos campos no estan llenos\");\n\n        }\n\n        for (int i = 0; i < DataBase.clientes.size(); i++) {\n            if (DataBase.clientes.get(i).getNombre().equals(nombre) && DataBase.clientes.get(i).getContraseña().equals(contrasena)) {\n                loginerror.setText(\"Se inicio Secion correctamente\");\n                Stage stage = new Stage();\n                Parent root = FXMLLoader.load(getClass().getResource(\"VentanaPrincipal.fxml\"));\n                Scene escena = new Scene(root);\n                stage.setScene(escena);\n                stage.show();\n                // en esta linea , esconde el stage del login y carga el nuevo stage\n                ((Node) (event.getSource())).getScene().getWindow().hide();\n                break;\n            } else {\n                loginerror.setText(\"Error no se encuentra registrado\");\n            }\n\n        }\n    }\n\n    /**\n     * Este método se encarga de la accion del boton \"cerrar\" el cual cierra la aplicacion\n     *\n     * @param event\n     */\n    public void cancelButtonOnAction(ActionEvent event) {\n        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);\n        alert.setTitle(\"salir\");\n        alert.setHeaderText(\"Estas a punto de desconectarte\");\n        alert.setContentText(\"Estas seguro de desconectarte?\");\n        if (alert.showAndWait().get() == ButtonType.OK) {\n            System.out.println(\"saliste correctamente\");\n            Stage stage = (Stage) btnCancelar.getScene().getWindow();\n            stage.close();\n        }\n    }\n\n\n    /**Este método se encarag de abrir una nueva ventana en donde podremos registrar un nuevo cliente\n     *\n     * @param event\n     * @throws IOException\n     */\n\n\n    /**\n     * Este metodo se encarga de la accion del boton \"soy empleado\" la cual nos abre una nueva ventana\n     * donde podemos logiarnos como un empleado.\n     *\n     * @param event\n     * @throws IOException\n     */\n    @FXML\n    void loginEmpleado(ActionEvent event) throws IOException {\n        Stage stage = new Stage();\n        Parent root = FXMLLoader.load(getClass().getResource(\"loginEmpleado.fxml\"));\n        Scene escena = new Scene(root);\n        stage.setScene(escena);\n        stage.show();\n        // en esta linea , esconde el stage del login y carga el nuevo stage\n        ((Node) (event.getSource())).getScene().getWindow().hide();\n    }\n\n    public void Registrarse(ActionEvent actionEvent) throws IOException {\n        Stage stage = new Stage();\n        Parent root = FXMLLoader.load(getClass().getResource(\"RegistroClientes.fxml\"));\n        Scene escena = new Scene(root);\n        stage.setScene(escena);\n        stage.show();\n    }\n\n    @FXML\n    void admi(ActionEvent event) throws IOException {\n        Stage stage = new Stage();\n        Parent root = FXMLLoader.load(getClass().getResource(\"LoginAdministrador.fxml\"));\n        Scene escena = new Scene(root);\n        stage.setScene(escena);\n        stage.show();\n        // en esta linea , esconde el stage del login y carga el nuevo stage\n        ((Node) (event.getSource())).getScene().getWindow().hide();\n\n    }\n\n\n    @Override\n    public void initialize(URL location, ResourceBundle resources) {\n        RotateTransition rotate = new RotateTransition();\n        rotate.setNode(imaCarro);\n        rotate.setDuration(Duration.millis(1700));\n        rotate.setCycleCount(TranslateTransition.INDEFINITE);\n        rotate.setInterpolator(Interpolator.LINEAR);\n        rotate.setByAngle(360);\n        rotate.setAxis(Rotate.Y_AXIS);\n        rotate.play();\n\n\n    }\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/tucarro/proyectocarro/InicioController.java b/src/main/java/com/tucarro/proyectocarro/InicioController.java
+--- a/src/main/java/com/tucarro/proyectocarro/InicioController.java	(revision d3d387dd8a2fb53628b5d1881f8871bb8c3241d6)
++++ b/src/main/java/com/tucarro/proyectocarro/InicioController.java	(date 1685337299383)
+@@ -12,6 +12,7 @@
+ import javafx.scene.Scene;
+ import javafx.scene.control.*;
+ import javafx.scene.image.ImageView;
++import javafx.scene.input.MouseEvent;
+ import javafx.scene.transform.Rotate;
+ import javafx.stage.Stage;
+ import javafx.util.Duration;
+@@ -30,6 +31,9 @@
+ 
+     public static String nombre;
+     public static String contrasena;
++
++    @FXML
++    private Button btnAbrirVentana;
+     @FXML
+     public Button btnadmi;
+     @FXML
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"0186c453-d5cb-4ba7-96f6-b4be7f986039\" name=\"Changes\" comment=\"si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeStyleSettingsInfer\">\n    <option name=\"done\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"FxmlFile\" />\n        <option value=\"Kotlin Class\" />\n        <option value=\"JavaFXApplication\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectCodeStyleSettingsMigration\">\n    <option name=\"version\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2Oni0ZxgMx4kUFwHxicH13gKLP9\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"master\",\n    \"last_opened_file_path\": \"/home/brandon/Descargas/TheFinalProyect/ProyectoCarro\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"project.structure.last.edited\": \"Artifacts\",\n    \"project.structure.proportion\": \"0.0\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro\" />\n      <recent name=\"$PROJECT_DIR$/src/main/resources/com.tuCarro.Img\" />\n      <recent name=\"C:\\Users\\camilo\\IdeaProjects\\ProyectoCarro\\src\\main\\resources\\com.tuCarro.Img\" />\n      <recent name=\"C:\\Users\\camilo\\IdeaProjects\\ProyectoCarro\\src\\main\\resources\" />\n    </key>\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\n      <recent name=\"com.tucarro.proyectocarro\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"model\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"main\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.tucarro.proyectocarro.main\" />\n      <module name=\"ProyectoCarro\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.tucarro.proyectocarro.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"0186c453-d5cb-4ba7-96f6-b4be7f986039\" name=\"Changes\" comment=\"\" />\n      <created>1682202527287</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1682202527287</updated>\n      <workItem from=\"1685311273840\" duration=\"238000\" />\n      <workItem from=\"1685311522409\" duration=\"1296000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados\">\n      <created>1682203486092</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1682203486092</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Se modifico dos botones\">\n      <created>1684902633326</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684902633326</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Se modificaron algunas interfaz\">\n      <created>1684904237007</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684904237007</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Se modifico varias clases interfaz\">\n      <created>1684906151877</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684906151877</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Se hizo algunas modificaciones a la interfaz\">\n      <created>1684950089139</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684950089139</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Se agrego una imagen, y se coloco la imgen en vistaAdministrador\">\n      <created>1684952725086</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684952725086</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"se modificaron varias interfaz\">\n      <created>1684956796865</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684956796865</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Se realizo cambios a la interfaz o\">\n      <created>1684959914976</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684959914976</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Ya\">\n      <created>1684959956303</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1684959956303</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Se creo la interfaz administrador y su respectivo funcionamiento\">\n      <created>1685041748759</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685041748759</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Hice algunas modificaciones en lo ulltimo que hicimos\">\n      <created>1685082883691</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685082883691</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml\">\n      <created>1685130957061</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685130957061</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Se hizo algunos cambios en las interfaz darle boto salir para ver el power.\">\n      <created>1685170125146</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685170125146</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado\">\n      <created>1685259343228</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1685259343228</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"15\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"OPEN_GENERIC_TABS\">\n      <map>\n        <entry key=\"62793df0-333b-4052-a1bb-74b67bd151f8\" value=\"TOOL_WINDOW\" />\n      </map>\n    </option>\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"62793df0-333b-4052-a1bb-74b67bd151f8\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"HEAD\" />\n                      </list>\n                    </value>\n                  </entry>\n                  <entry key=\"roots\">\n                    <value>\n                      <list>\n                        <option value=\"$PROJECT_DIR$\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n              <option name=\"SHOW_ONLY_AFFECTED_CHANGES\" value=\"true\" />\n            </State>\n          </value>\n        </entry>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados\" />\n    <MESSAGE value=\"Se modifico dos botones\" />\n    <MESSAGE value=\"Se modificaron algunas interfaz\" />\n    <MESSAGE value=\"Se modifico varias clases interfaz\" />\n    <MESSAGE value=\"Se hizo algunas modificaciones a la interfaz\" />\n    <MESSAGE value=\"Se agrego una imagen, y se coloco la imgen en vistaAdministrador\" />\n    <MESSAGE value=\"se modificaron varias interfaz\" />\n    <MESSAGE value=\"Se realizo cambios a la interfaz o\" />\n    <MESSAGE value=\"Ya\" />\n    <MESSAGE value=\"Se creo la interfaz administrador y su respectivo funcionamiento\" />\n    <MESSAGE value=\"Hice algunas modificaciones en lo ulltimo que hicimos\" />\n    <MESSAGE value=\"Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml\" />\n    <MESSAGE value=\"Se hizo algunos cambios en las interfaz darle boto salir para ver el power.\" />\n    <MESSAGE value=\"si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/LoginEmpleadoController.java</url>\n          <line>34</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d3d387dd8a2fb53628b5d1881f8871bb8c3241d6)
++++ b/.idea/workspace.xml	(date 1685337402893)
+@@ -4,14 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado">
++    <list default="true" id="0186c453-d5cb-4ba7-96f6-b4be7f986039" name="Changes" comment="Se organizo un poco el codigo">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro/InicioController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/Inicio-view.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/VentanaEmpleado.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/clientes.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/loginEmpleado.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tucarro/proyectocarro/tablasVehiculos.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -49,24 +44,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "master",
+-    "last_opened_file_path": "/home/brandon/Descargas/TheFinalProyect/ProyectoCarro",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Artifacts",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/brandon/Descargas/TheFinalProyect/ProyectoCarro&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/main/java/com/tucarro/proyectocarro" />
+@@ -105,7 +100,8 @@
+       <option name="presentableId" value="Default" />
+       <updated>1682202527287</updated>
+       <workItem from="1685311273840" duration="238000" />
+-      <workItem from="1685311522409" duration="1296000" />
++      <workItem from="1685311522409" duration="5626000" />
++      <workItem from="1685324243906" duration="3528000" />
+     </task>
+     <task id="LOCAL-00001" summary="Se creo el primer commit y se agregaron la vista de inicio de seccion y la ventana principal , a su vez se creo el modelo de registro de los empleados">
+       <created>1682203486092</created>
+@@ -205,7 +201,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685259343228</updated>
+     </task>
+-    <option name="localTasksCounter" value="15" />
++    <task id="LOCAL-00015" summary="Se organizo un poco el codigo">
++      <created>1685312918887</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1685312918887</updated>
++    </task>
++    <option name="localTasksCounter" value="16" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -246,7 +249,13 @@
+         </entry>
+         <entry key="MAIN">
+           <value>
+-            <State />
++            <State>
++              <option name="CUSTOM_BOOLEAN_PROPERTIES">
++                <map>
++                  <entry key="Show.Git.Branches" value="true" />
++                </map>
++              </option>
++            </State>
+           </value>
+         </entry>
+       </map>
+@@ -268,7 +277,8 @@
+     <MESSAGE value="Se hizo la validacion de RegistroClientes.fxml y RegistroEmpleados.fxml" />
+     <MESSAGE value="Se hizo algunos cambios en las interfaz darle boto salir para ver el power." />
+     <MESSAGE value="si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado" />
+-    <option name="LAST_COMMIT_MESSAGE" value="si hizo algunos cambios a la interfaz, deje listo la VentanaEmpleado.fxml para que haga lo mismo que ventantaAdministrado" />
++    <MESSAGE value="Se organizo un poco el codigo" />
++    <option name="LAST_COMMIT_MESSAGE" value="Se organizo un poco el codigo" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
