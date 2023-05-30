@@ -46,7 +46,7 @@ public class TablasVehiculosController  implements Initializable {
     void Sedan(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("tablaDeportivos.fxml"));
+        loader.setLocation(getClass().getResource("tablaSedan.fxml"));
         AnchorPane pane = (AnchorPane) loader.load();
         bordenPane.setCenter(pane);
 

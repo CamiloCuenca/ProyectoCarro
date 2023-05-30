@@ -1,9 +1,6 @@
 package model;
 
-import model.Enums.Disponibilidad;
-import model.Enums.EsNuevo;
-import model.Enums.TipoCombustible;
-import model.Enums.TipoTrasmision;
+import model.Enums.*;
 
 public class CamionetaSav extends AbsCamioneta {
     // Atributos
@@ -14,6 +11,7 @@ public class CamionetaSav extends AbsCamioneta {
     };
 
     TieneVelocidadCrucero tieneVelocidadCrucero;
+    TieneAireAcondicionado tieneAireAcondicionado;
 
     public enum TieneSensorColision {
         SI, NO

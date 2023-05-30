@@ -1,78 +1,31 @@
 package model;
 
-import model.Enums.Disponibilidad;
-import model.Enums.EsNuevo;
-import model.Enums.TipoCombustible;
-import model.Enums.TipoTrasmision;
+import model.Enums.*;
 
 public class Sedan extends AbsAutomovil {
     private int capMaletero;
 
-    public enum TieneAireAcondicionado {
-        SI, NO
-    }
+    TieneAireAcondicionado tieneAireAcondicionado;
+    TieneCamaraReversa tieneCamaraReversa;
 
-    ;
+    TieneVelocidadCrucero tieneVelocidadCrucero;
 
-    AbsCamioneta.TieneAireAcondicionado tieneAireAcondicionado;
-
-    public enum TieneCamaraReversa {
-        SI, NO
-    }
-
-    ;
-
-    AbsCamioneta.TieneCamaraReversa tieneCamaraReversa;
-
-    public enum TieneVelocidadCrucero {
-        SI, NO
-    }
-
-    ;
-
-    CamionetaSav.TieneVelocidadCrucero tieneVelocidadCrucero;
-
-    public enum TieneSensorColision {
-        SI, NO
-    }
-
-    ;
-
-    CamionetaSav.TieneSensorColision tieneSensorColision;
-
-    public enum TIeneSensorCruzado {
-        SI, NO
-    }
-
-    ;
-
-    CamionetaSav.TIeneSensorCruzado tIeneSensorCruzado;
-
-    public enum TieneAsistentePerCarril {
-        SI, NO
-    }
-
-    ;
-
-    CamionetaSav.TieneAsistentePerCarril tieneAsistentePerCarril;
+    TieneSensorColision tieneSensorColision;
 
 
-    public enum TieneABS {
-        SI, NO
-    }
+    TIeneSensorCruzado tieneSensorCruzado;
 
-    ;
+    TieneAsistentePerCarril tieneAsistentePerCarril;
+    TieneABS tieneABS;
 
-    AbsCamioneta.TieneABS tieneABS;
-
-    public Sedan(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje, int numerosPasajeros, int numeroPuertas, int numBolasAire, String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad, int capMaletero, AbsCamioneta.TieneAireAcondicionado tieneAireAcondicionado, AbsCamioneta.TieneCamaraReversa tieneCamaraReversa, CamionetaSav.TieneVelocidadCrucero tieneVelocidadCrucero, CamionetaSav.TieneSensorColision tieneSensorColision, CamionetaSav.TIeneSensorCruzado tIeneSensorCruzado, CamionetaSav.TieneAsistentePerCarril tieneAsistentePerCarril, AbsCamioneta.TieneABS tieneABS) {
+    public Sedan(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje, int numerosPasajeros, int numeroPuertas, int numBolasAire, String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad, int capMaletero, TieneAireAcondicionado tieneAireAcondicionado, TieneCamaraReversa tieneCamaraReversa, TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril, TieneABS tieneABS) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas, numBolasAire, fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad);
         this.capMaletero = capMaletero;
         this.tieneAireAcondicionado = tieneAireAcondicionado;
         this.tieneCamaraReversa = tieneCamaraReversa;
         this.tieneVelocidadCrucero = tieneVelocidadCrucero;
         this.tieneSensorColision = tieneSensorColision;
-        this.tIeneSensorCruzado = tIeneSensorCruzado;
+        this.tieneSensorCruzado = tIeneSensorCruzado;
         this.tieneAsistentePerCarril = tieneAsistentePerCarril;
         this.tieneABS = tieneABS;
     }
@@ -85,59 +38,59 @@ public class Sedan extends AbsAutomovil {
         this.capMaletero = capMaletero;
     }
 
-    public AbsCamioneta.TieneAireAcondicionado getTieneAireAcondicionado() {
+    public TieneAireAcondicionado getTieneAireAcondicionado() {
         return tieneAireAcondicionado;
     }
 
-    public void setTieneAireAcondicionado(AbsCamioneta.TieneAireAcondicionado tieneAireAcondicionado) {
+    public void setTieneAireAcondicionado(TieneAireAcondicionado tieneAireAcondicionado) {
         this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
 
-    public AbsCamioneta.TieneCamaraReversa getTieneCamaraReversa() {
+    public TieneCamaraReversa getTieneCamaraReversa() {
         return tieneCamaraReversa;
     }
 
-    public void setTieneCamaraReversa(AbsCamioneta.TieneCamaraReversa tieneCamaraReversa) {
+    public void setTieneCamaraReversa(TieneCamaraReversa tieneCamaraReversa) {
         this.tieneCamaraReversa = tieneCamaraReversa;
     }
 
-    public CamionetaSav.TieneVelocidadCrucero getTieneVelocidadCrucero() {
+    public TieneVelocidadCrucero getTieneVelocidadCrucero() {
         return tieneVelocidadCrucero;
     }
 
-    public void setTieneVelocidadCrucero(CamionetaSav.TieneVelocidadCrucero tieneVelocidadCrucero) {
+    public void setTieneVelocidadCrucero(TieneVelocidadCrucero tieneVelocidadCrucero) {
         this.tieneVelocidadCrucero = tieneVelocidadCrucero;
     }
 
-    public CamionetaSav.TieneSensorColision getTieneSensorColision() {
+    public TieneSensorColision getTieneSensorColision() {
         return tieneSensorColision;
     }
 
-    public void setTieneSensorColision(CamionetaSav.TieneSensorColision tieneSensorColision) {
+    public void setTieneSensorColision(TieneSensorColision tieneSensorColision) {
         this.tieneSensorColision = tieneSensorColision;
     }
 
-    public CamionetaSav.TIeneSensorCruzado gettIeneSensorCruzado() {
-        return tIeneSensorCruzado;
+    public TIeneSensorCruzado getTieneSensorCruzado() {
+        return tieneSensorCruzado;
     }
 
-    public void settIeneSensorCruzado(CamionetaSav.TIeneSensorCruzado tIeneSensorCruzado) {
-        this.tIeneSensorCruzado = tIeneSensorCruzado;
+    public void setTieneSensorCruzado(TIeneSensorCruzado tieneSensorCruzado) {
+        this.tieneSensorCruzado = tieneSensorCruzado;
     }
 
-    public CamionetaSav.TieneAsistentePerCarril getTieneAsistentePerCarril() {
+    public TieneAsistentePerCarril getTieneAsistentePerCarril() {
         return tieneAsistentePerCarril;
     }
 
-    public void setTieneAsistentePerCarril(CamionetaSav.TieneAsistentePerCarril tieneAsistentePerCarril) {
+    public void setTieneAsistentePerCarril(TieneAsistentePerCarril tieneAsistentePerCarril) {
         this.tieneAsistentePerCarril = tieneAsistentePerCarril;
     }
 
-    public AbsCamioneta.TieneABS getTieneABS() {
+    public TieneABS getTieneABS() {
         return tieneABS;
     }
 
-    public void setTieneABS(AbsCamioneta.TieneABS tieneABS) {
+    public void setTieneABS(TieneABS tieneABS) {
         this.tieneABS = tieneABS;
     }
 
@@ -154,7 +107,7 @@ public class Sedan extends AbsAutomovil {
                 + ", \nAire acondicionado: " + tieneAireAcondicionado + ", \nVelocidad Crucero: "
                 + tieneVelocidadCrucero
                 + ", \nSensor de colisión: " + tieneSensorColision
-                + ", \nSensor cruzado: " + tIeneSensorCruzado + ",\nPermanencia de carril: " + tieneAsistentePerCarril
+                + ", \nSensor cruzado: " + tieneSensorCruzado + ",\nPermanencia de carril: " + tieneAsistentePerCarril
                 + ", \nABS: " + tieneABS;
         return v;
     }

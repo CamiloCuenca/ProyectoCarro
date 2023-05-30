@@ -1,9 +1,6 @@
 package model;
 
-import model.Enums.Disponibilidad;
-import model.Enums.EsNuevo;
-import model.Enums.TipoCombustible;
-import model.Enums.TipoTrasmision;
+import model.Enums.*;
 
 public class PickUps extends AbsCamioneta {
     // Atributos

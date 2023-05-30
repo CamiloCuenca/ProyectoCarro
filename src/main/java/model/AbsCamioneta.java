@@ -1,9 +1,6 @@
 package model;
 
-import model.Enums.Disponibilidad;
-import model.Enums.EsNuevo;
-import model.Enums.TipoCombustible;
-import model.Enums.TipoTrasmision;
+import model.Enums.*;
 
 public abstract class AbsCamioneta extends Vehiculo {
     // Atributos
@@ -11,9 +8,7 @@ public abstract class AbsCamioneta extends Vehiculo {
     private int numeroPuertas;
     private int numBolasAire;
 
-    public enum TieneAireAcondicionado {
-        SI, NO
-    };
+
 
     TieneAireAcondicionado tieneAireAcondicionado;
 
