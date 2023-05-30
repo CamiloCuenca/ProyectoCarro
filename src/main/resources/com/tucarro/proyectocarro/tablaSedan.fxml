@@ -83,9 +83,7 @@
    <Label layoutX="9.0" layoutY="115.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: #000000;"
           text="URL imagen" textFill="#ff3d26"/>
    <ImageView fx:id="imgFotos" fitHeight="286.0" fitWidth="299.0" layoutX="1047.0" layoutY="17.0" pickOnBounds="true">
-      <image>
-         <Image url="@../../../com.tuCarro.Img/logo.png"/>
-      </image>
+      <Image url="@../../../com.tuCarro.Img/logo.png"/>
    </ImageView>
    <Button fx:id="btnCambiar" layoutX="1162.0" layoutY="308.0" mnemonicParsing="false" onAction="#CambiarFoto"
            style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Cambiar" textFill="WHITE"/>

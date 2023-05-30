@@ -77,9 +77,7 @@
           text="URL imagen" textFill="#ff3d26"/>
    <ImageView fx:id="imgFotos" fitHeight="160.0" fitWidth="183.0" layoutX="1130.0" layoutY="16.0" pickOnBounds="true"
               preserveRatio="true">
-      <image>
-         <Image url="@../../../com.tuCarro.Img/logo.png"/>
-      </image>
+      <Image url="@../../../com.tuCarro.Img/logo.png"/>
    </ImageView>
    <Button fx:id="btnCambiar" layoutX="1172.0" layoutY="298.0" mnemonicParsing="false" onAction="#CambiarFoto"
            style="-fx-background-radius: 15; -fx-background-color: #ff3d26;" text="Cambiar" textFill="WHITE"/>
